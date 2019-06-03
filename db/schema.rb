@@ -10,10 +10,43 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_03_143102) do
+ActiveRecord::Schema.define(version: 2019_06_03_162719) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "challenges", force: :cascade do |t|
+    t.string "title"
+    t.string "description"
+    t.string "category"
+    t.bigint "role_models_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["role_models_id"], name: "index_challenges_on_role_models_id"
+  end
+
+  create_table "participations", force: :cascade do |t|
+    t.string "feedback"
+    t.integer "difficulty"
+    t.integer "appreciation"
+    t.bigint "challenges_id"
+    t.bigint "users_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["challenges_id"], name: "index_participations_on_challenges_id"
+    t.index ["users_id"], name: "index_participations_on_users_id"
+  end
+
+  create_table "role_models", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "sector"
+    t.string "gender"
+    t.string "description"
+    t.string "picture"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -28,4 +61,7 @@ ActiveRecord::Schema.define(version: 2019_06_03_143102) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "challenges", "role_models", column: "role_models_id"
+  add_foreign_key "participations", "challenges", column: "challenges_id"
+  add_foreign_key "participations", "users", column: "users_id"
 end
