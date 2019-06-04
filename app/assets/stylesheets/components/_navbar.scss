@@ -1,12 +1,34 @@
-.navbar-lewagon {
+.navbar-challenger {
   justify-content: space-between;
   background: white;
 }
 
-.navbar-lewagon .navbar-collapse {
+.navbar-challenger .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
+.navbar-challenger .navbar-brand img {
   width: 40px;
+}
+
+.dropdown-item {
+  opacity: 0.7;
+}
+
+.dropdown-item:hover {
+  opacity: 1;
+}
+
+.dropdown-toggle {
+  border: none;
+  background-color: transparent;
+}
+
+.dropdown-toggle::after {
+  display:none;
+}
+
+.dropdown-toggle:hover {
+  border: none;
+  background-color: transparent;
 }

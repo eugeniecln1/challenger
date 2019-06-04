@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   resources :challenges, only: [:index, :show]
   resources :participations
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  get "/dashboard", to: "pages#dashboard"
 end
