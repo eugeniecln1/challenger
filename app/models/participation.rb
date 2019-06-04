@@ -1,5 +1,5 @@
 class Participation < ApplicationRecord
-  belongs_to :challenges
-  belongs_to :users
+  belongs_to :challenge
+  belongs_to :user
   validates :feedback
 end
