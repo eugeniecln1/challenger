@@ -2,15 +2,23 @@
   <h1 class="mt-5" style="text-align: center">Challenge yourself today!</h1>
 
   <div class="d-flex">
-    <div class="row justify-content-around align-items-center">
-        <div class="col-ml-6">
+    <div class="row justify-content-around align-items-center panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+        <div class="col-ml-6 panel panel-default">
           <%= link_to challenges_daily_activities_path do %>
-          <div class="card-category m-5 bg-dailyactivities">
+          <div class="card-category m-5 bg-dailyactivities panel-heading" role="tab" id="headingOne">
             <i class="fas fa-walking"></i>
-            <p class="m-0">Daily activities</p>
+            <p class="panel-title m-0">
+              <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Daily activities</a>
+            </p>
           </div>
           <% end %>
+          <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+            <div class="panel-body">
+              Description of this category of challenge ...
+            </div>
+          </div>
         </div>
+
         <div class="col-ml-6">
           <%= link_to challenges_future_me_path do %>
           <div class="card-category m-5 bg-futureme">
