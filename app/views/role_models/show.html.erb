@@ -1,11 +1,14 @@
 <!-- # profile card
 # infos about one role model -->
 <div class="container">
+
   <div class="model_card">
-      <%= image_tag(@role_model.picture, alt:'', title:(@role_model.first_name + " " + @role_model.last_name)  )if @role_model.picture %>
-      <h4><%= @role_model.first_name %> <%= @role_model.last_name %></h4>
-      <p><%= @role_model.sector %></p>
-      <p><%= @role_model.description %></p>
+    <div class="model_card_image">
+      <%= image_tag(@role_model.picture, alt:'', title:(@role_model.first_name + " " + @role_model.last_name) )if @role_model.picture %>
+    </div>
+      <h4 class="card-title"><%= @role_model.first_name %> <%= @role_model.last_name %></h4>
+      <p class="card-subtitle mb-2 text-muted "><%= @role_model.sector %></p>
+      <p class="card-text"><%= @role_model.description %></p>
   </div>
  <button><%= link_to "Back to search", role_models_path, title:"Back to search" %></button>
 </div>

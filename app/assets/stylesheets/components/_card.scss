@@ -12,7 +12,15 @@
 }
 
 .model_card {
-
+  background: #FFFF;
+  width: 300px;
+  padding: 30px;
+  margin: 55px 0px;
+  .model_card_image {
+    object-fit: cover;
+    display: inline-block;
+    margin-bottom: 40px;
+  }
 }
 
 .card-category {
@@ -49,4 +57,3 @@
 .bg-interactions {
   background-color: $interactions;
 }
-
