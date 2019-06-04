@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   get 'challenges/curiosity', to: 'challenges#curiosity', as: :challenges_curiosity
   resources :participations
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  get "/dashboard", to: "pages#dashboard"
 end

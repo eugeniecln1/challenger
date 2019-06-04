@@ -1,0 +1,58 @@
+.nav {
+  position: relative;
+  position: sticky;
+  width: 200px;
+  height: 100vh;
+}
+
+.menu {
+  height: 70vh;
+  width: 100%;
+}
+
+.logo {
+  text-align: center;
+  margin: 20px 80px;
+  width: 20px;
+  height: 20px;
+  color: black;
+  border: 1px solid black;
+  border-radius: 50px;
+  padding: 20px 40px 20px 0px;
+}
+
+.logo-d,
+.logo-j {
+  margin: 15px 30px 10px 20px;
+}
+
+.logo-i {
+  margin: 15px 33px 10px 22px;
+}
+
+.logo-s {
+  margin: 15px 30px 0px 20px;
+}
+
+#collapse {
+  color: #5B5B5B;
+  margin: 20px 80px;
+}
+
+a.navlink {
+  color: #5B5B5B;
+  width: 100%;
+}
+
+a.navlink:hover {
+  color: white;
+  font-style: bold;
+  background-color: black;
+  text-decoration: none;
+}
+
+.log > .logo-s {
+  position: absolute;
+  bottom: 0;
+  margin: 15px 33px 15px 22px;
+}
