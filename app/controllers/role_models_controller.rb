@@ -1,11 +1,21 @@
 class RoleModelsController < ApplicationController
   def index
-    @role_models = RoleModel.all
+    if params[:query].present?
+      sql_query = " \
+        first_name ILIKE :query \
+        OR last_name ILIKE :query \
+        OR sector ILIKE :query \
+        OR gender ILIKE :query \
+        OR description ILIKE :query \
+      "
+      @role_models = RoleModel.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @role_models = RoleModel.all
+    end
   end
 
   def show
     @role_model = RoleModel.find(params[:id])
     @challenge = Challenge.new
-    authorize @model
   end
 end

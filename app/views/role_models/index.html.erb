@@ -1,1 +1,30 @@
-<p>hello</p>
+<!-- # search bar
+# profile cards -->
+<div class="container">
+<%= form_tag role_models_path, method: :get do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Find an inspiring model 🤗  "
+  %>
+  <%= button_tag "Inspire me!", type:"submit"%>
+<% end %>
+</div>
+
+<!-- search bar -->
+
+<!-- list role models -->
+<div class="container">
+  <div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+      <div class="model_profile_card">
+        <% @role_models.each do |role_model| %>
+          <h4><%= role_model.first_name %> <%= role_model.last_name %></h4>
+          <p><%= role_model.sector %></p>
+          <p><%= role_model.gender %></p>
+          <p><%= role_model.description %></p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
