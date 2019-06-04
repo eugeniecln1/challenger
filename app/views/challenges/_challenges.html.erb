@@ -12,7 +12,7 @@
                 <h2 class="card-title"><em><%= challenge.title %></em></h5>
                 <h6 class="card-text"><%= challenge.description %></p>
                 <br>
-                <a href="#" class="btn btn-dark mt-auto p-2 bd-highlight">I accept this challenge!</a>
+                <button type="button" class="btn btn-dark"><%= link_to "Challenge accepted!", challenge_participations_path(challenge), method: :post %></button>
               </div>
             </div>
         </div>

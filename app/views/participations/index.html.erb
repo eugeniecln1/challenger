@@ -5,7 +5,7 @@
 
 <!-- Bouton NEW CHALLENGE -->
       <div class="d-flex flex-row-reverse">
-        <button type="button" class="btn btn-danger"><%= link_to "NEW CHALLENGE !", challenges_home_path %></button>
+        <button type="button" class="btn btn-dark"><%= link_to "NEW CHALLENGE !", challenges_home_path %></button>
       </div>
 
       <!-- card_participations = Challenge.title + Feedback + Ratings -->
@@ -21,20 +21,26 @@
           </div>
           <div class="card-trip-pricing">
             <h2>
-              Difficulty :
-                <% participation.difficulty.times do %>
-                  <i class="fas fa-dragon"></i>
+              <!-- Si les ratings sont nil, un bouton apparait pour creer un feedback -->
+              <% if participation.difficulty && participation.appreciation %>
+                Difficulty :
+                  <% participation.difficulty.times do %>
+                    <i class="fas fa-dragon"></i>
+                  <% end %>
+                  <% (5 - participation.difficulty).times  do %>
+                    <%= image_tag("dragon_vide.png", size: "19") %>
+                  <% end %>
+                  <br>
+                Appreciation :
+                <% participation.appreciation.times do %>
+                  <i class="fas fa-heart"></i>
                 <% end %>
-                <% (5 - participation.difficulty).times  do %>
-                  <%= image_tag("dragon_vide.png", size: "19") %>
+                <% (5 - participation.appreciation).times do %>
+                  <i class="far fa-heart"></i>
                 <% end %>
-                <br>
-              Appreciation :
-              <% participation.appreciation.times do %>
-                <i class="fas fa-heart"></i>
-              <% end %>
-              <% (5 - participation.appreciation).times do %>
-                <i class="far fa-heart"></i>
+              <% else %>
+                <button type="button" class="btn btn-dark"><%= link_to "Validate your challenge!" %></button>
+                <!-- participation_path(participation), method: :patch  -->
               <% end %>
             </h2>
           </div>
