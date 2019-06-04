@@ -15,6 +15,6 @@ class ChallengesController < ApplicationController
   end
 
   def curiosity
-    @challenges = Challenge.where(category: "curiosity")
+    @challenges = Challenge.where(category: "Curiosity")
   end
 end

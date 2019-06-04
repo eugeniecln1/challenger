@@ -7,13 +7,11 @@
         <% @challenges.each_with_index do |challenge, index| %>
         <% active = index == 0 ? "active" : "" %>
         <div class="carousel-item <%= active%>">
-            <div class="card bg-<%= challenge.category.downcase.lstrip %>" style="height: 500px">
-              <div class="card-body">
+            <div class="card bg-<%= challenge.category.gsub(/\s+/, "").downcase %>" style="height: 400px">
+              <div class="card-body padd">
                 <h2 class="card-title"><em><%= challenge.title %></em></h5>
                 <h6 class="card-text"><%= challenge.description %></p>
                 <br>
-                <!-- create a participation -->
-
                 <button type="button" class="btn btn-dark"><%= link_to "Challenge accepted!", challenge_participations_path(challenge), method: :post %></button>
               </div>
             </div>
@@ -36,10 +34,11 @@
   </div>
 
   <div class="col-4">
-    <div class="card">
+    <h5>A role model to inspire you ...</h5>
+    <div class="card mb-3">
       <div class="card-body">
-        <h5 class="card-title">Role model</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <h5 class="card-title"><%= @challenges.sample.role_model.first_name %> <strong><%= @challenges.sample.role_model.last_name %></strong></h5>
+        <p class="card-text"><%= @challenges.sample.role_model.description %></p>
       </div>
     </div>
   </div>
