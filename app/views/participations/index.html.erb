@@ -1,0 +1,11 @@
+<h1>JOURNAL</h1>
+
+<ul>
+  <% @participations.each do |participation| %>
+    <li>
+      <%= participation.challenge.name %>
+      <%= participation.feedback %>
+      <%= participation.difficulty %>
+      <%= participation.appreciation %>
+    </li>
+</ul>

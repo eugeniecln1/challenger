@@ -19,22 +19,22 @@ ActiveRecord::Schema.define(version: 2019_06_03_162719) do
     t.string "title"
     t.string "description"
     t.string "category"
-    t.bigint "role_models_id"
+    t.bigint "role_model_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["role_models_id"], name: "index_challenges_on_role_models_id"
+    t.index ["role_model_id"], name: "index_challenges_on_role_model_id"
   end
 
   create_table "participations", force: :cascade do |t|
     t.string "feedback"
     t.integer "difficulty"
     t.integer "appreciation"
-    t.bigint "challenges_id"
-    t.bigint "users_id"
+    t.bigint "challenge_id"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["challenges_id"], name: "index_participations_on_challenges_id"
-    t.index ["users_id"], name: "index_participations_on_users_id"
+    t.index ["challenge_id"], name: "index_participations_on_challenge_id"
+    t.index ["user_id"], name: "index_participations_on_user_id"
   end
 
   create_table "role_models", force: :cascade do |t|
@@ -61,7 +61,7 @@ ActiveRecord::Schema.define(version: 2019_06_03_162719) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "challenges", "role_models", column: "role_models_id"
-  add_foreign_key "participations", "challenges", column: "challenges_id"
-  add_foreign_key "participations", "users", column: "users_id"
+  add_foreign_key "challenges", "role_models"
+  add_foreign_key "participations", "challenges"
+  add_foreign_key "participations", "users"
 end
