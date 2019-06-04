@@ -13,10 +13,11 @@
 
 .model_card {
   background: #FFFF;
-  width: 300px;
+  width: 80%;
   padding: 30px;
   margin: 55px 0px;
-  .model_card_image {
+  .card_image img {
+    width: 200px;
     object-fit: cover;
     display: inline-block;
     margin-bottom: 40px;
