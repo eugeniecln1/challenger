@@ -13,18 +13,27 @@
   padding: 0px 80px;
 }
 
+.card-category:hover {
+  opacity: 0.8;
+}
+
 .bg-curiosity {
   background-color: $curiosity;
 }
 
-.bg-daily-activities {
+.bg-dailyactivities {
   background-color: $daily-activities;
 }
 
-.bg-future-me {
+.bg-futureme {
   background-color: $future-me;
 }
 
 .bg-interactions {
   background-color: $interactions;
+}
+
+.card-body {
+  padding: 60px 60px;
+  text-align: center;
 }

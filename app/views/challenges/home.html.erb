@@ -4,28 +4,36 @@
   <div class="d-flex">
     <div class="row justify-content-around align-items-center">
         <div class="col-ml-6">
-          <div class="card-category m-5 bg-daily-activities">
+          <%= link_to challenges_daily_activities_path do %>
+          <div class="card-category m-5 bg-dailyactivities">
             <i class="fas fa-walking"></i>
             <p class="m-0">Daily activities</p>
           </div>
+          <% end %>
         </div>
         <div class="col-ml-6">
-          <div class="card-category m-5 bg-future-me">
+          <%= link_to challenges_future_me_path do %>
+          <div class="card-category m-5 bg-futureme">
             <i class="fas fa-rocket"></i>
             <p class="m-0">Future me</p>
           </div>
+          <% end %>
         </div>
         <div class="col-ml-6">
+          <%= link_to challenges_interactions_path do  %>
           <div class="card-category m-5 bg-interactions">
             <i class="fas fa-handshake"></i>
             <p class="m-0">Interactions</p>
           </div>
+          <% end %>
         </div>
         <div class="col-ml-6">
+          <%= link_to challenges_curiosity_path do  %>
           <div class="card-category m-5 bg-curiosity">
             <i class="fas fa-globe-americas"></i>
             <p class="m-0">Curiosity</p>
           </div>
+          <% end %>
         </div>
     </div>
   </div>

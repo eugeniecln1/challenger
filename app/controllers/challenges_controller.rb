@@ -1,10 +1,20 @@
 class ChallengesController < ApplicationController
-  def index
-    @challenges = Challenge.all
+  def home
   end
 
-  def show
-    @challenge = Challenge.find(params[:id])
-    @role_model = @challenge.role_model
+  def daily_activities
+    @challenges = Challenge.where(category: "Daily activities")
+  end
+
+  def future_me
+    @challenges = Challenge.where(category: "Future me")
+  end
+
+  def interactions
+    @challenges = Challenge.where(category: "Interactions")
+  end
+
+  def curiosity
+    @challenges = Challenge.where(category: "curiosity")
   end
 end
