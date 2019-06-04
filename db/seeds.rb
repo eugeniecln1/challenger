@@ -5,3 +5,26 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+puts "Start"
+
+Challenge.destroy_all
+RoleModel.destroy_all
+Participation.destroy_all
+User.destroy_all
+
+user = User.create(email:"a@a.com", password: "challenge", username: "aha")
+user2 = User.create(email:"yo@yo.com", password: "challenge", username: "yoyo")
+
+mascotte = RoleModel.create(last_name: "Mascotte", description: "I am here to motivate you and help you grow into the best version of yourself!")
+einstein = RoleModel.create(last_name: "Einstein", description: "Science!")
+
+challenge = Challenge.create(title: "Start planning for the future", category: "Future me", description: "Where do you picture yourself in 5 years ? At university ? Studying ? Travelling ? Where ? What ? Why ? Now is the time to be ambitious !", role_model_id: mascotte.id)
+challenge2 = Challenge.create(title: "Go outside", category: "Daily activities", description: "Go out in the sun and take a moment to appreciate the beauty of your world", role_model_id: einstein.id)
+
+
+Participation.create(user_id: user.id, challenge_id: challenge.id, feedback: "I loved it", appreciation: 5, difficulty: 2)
+Participation.create(user_id: user.id, challenge_id: challenge2.id, feedback: "It sucked", appreciation: 1, difficulty: 4)
+Participation.create(user_id: user2.id, challenge_id: challenge.id, feedback: "Cool, i want more !", appreciation: 4, difficulty: 3)
+Participation.create(user_id: user2.id, challenge_id: challenge2.id, feedback: "I thought it was amusing", appreciation: 3, difficulty: 1)
+
+puts "End"

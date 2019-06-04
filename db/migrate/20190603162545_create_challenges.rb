@@ -4,7 +4,7 @@ class CreateChallenges < ActiveRecord::Migration[5.2]
       t.string :title
       t.string :description
       t.string :category
-      t.references :role_models, foreign_key: true
+      t.references :role_model, foreign_key: true
 
       t.timestamps
     end
