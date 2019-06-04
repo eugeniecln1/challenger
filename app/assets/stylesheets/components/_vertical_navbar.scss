@@ -15,8 +15,8 @@
   margin: 20px 80px;
   width: 20px;
   height: 20px;
-  color: black;
-  border: 1px solid black;
+  color: $dashboard;
+  border: 1px solid $dashboard;
   border-radius: 50px;
   padding: 20px 40px 20px 0px;
 }
@@ -35,19 +35,19 @@
 }
 
 #collapse {
-  color: #5B5B5B;
+  color: $dashboard;
   margin: 20px 80px;
 }
 
 a.navlink {
-  color: #5B5B5B;
+  color: $dashboard;
   width: 100%;
 }
 
 a.navlink:hover {
   color: white;
   font-style: bold;
-  background-color: black;
+  background-color: $dashboard;
   text-decoration: none;
 }
 

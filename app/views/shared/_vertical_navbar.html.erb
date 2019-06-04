@@ -1,18 +1,16 @@
 <div class="nav d-flex">
-  <%= link_to "#", class: "navbar-logo mt-0" do %>
-    <i class="logo fas fa-lightbulb fa-lg"></i>
-  <% end %>
+  <%= image_tag("logo-c") %>
 
   <div class="menu d-flex flex-column">
-    <%= link_to root_path, class: "navlink" do %>
+    <%= link_to dashboard_path, class: "navlink" do %>
       <i class="logo-d fas fa-home"></i>Dashboard
     <% end %>
 
-    <%= link_to root_path, class: "navlink" do %>
+    <%= link_to participations_path, class: "navlink" do %>
       <i class="logo-j far fa-newspaper"></i>Journal
     <% end %>
 
-    <%= link_to root_path, class: "navlink" do %>
+    <%= link_to role_models_path, class: "navlink" do %>
       <i class="logo-i fas fa-lightbulb"></i>Inspiration
     <% end %>
 
@@ -20,7 +18,11 @@
 
   </div>
 
-  <%= link_to root_path, class: "navlink mb-0" do %>
+
+
+
+
+  <%= link_to destroy_user_session_path, class: "navlink mb-0" do %>
     <i class="logo-s fas fa-sign-out-alt"></i>Sign out
   <% end %>
 </div>
