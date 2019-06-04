@@ -23,9 +23,9 @@ challenge = Challenge.create(title: "Start planning for the future", category: "
 challenge2 = Challenge.create(title: "Go outside", category: "Daily activities", description: "Go out in the sun and take a moment to appreciate the beauty of your world", role_model_id: einstein.id)
 
 
-Participation.create(user_id: user.id, challenge_id: challenge.id, feedback: "I loved it")
-Participation.create(user_id: user.id, challenge_id: challenge2.id, feedback: "It sucked")
-Participation.create(user_id: user2.id, challenge_id: challenge.id, feedback: "Cool, i want more !")
-Participation.create(user_id: user2.id, challenge_id: challenge2.id, feedback: "I thought it was amusing")
+Participation.create(user_id: user.id, challenge_id: challenge.id, feedback: "I loved it", appreciation: 5, difficulty: 2)
+Participation.create(user_id: user.id, challenge_id: challenge2.id, feedback: "It sucked", appreciation: 1, difficulty: 4)
+Participation.create(user_id: user2.id, challenge_id: challenge.id, feedback: "Cool, i want more !", appreciation: 4, difficulty: 3)
+Participation.create(user_id: user2.id, challenge_id: challenge2.id, feedback: "I thought it was amusing", appreciation: 3, difficulty: 1)
 
 puts "End"
