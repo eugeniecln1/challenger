@@ -4,9 +4,17 @@
     <i class="logo fab fa-cuttlefish fa-lg"></i>
   <% end %>
 
-    <%= link_to challenges_home_path, class: "navlink new" do %>
-      <i class="logo-n fas fa-plus"></i>Challenge
-    <% end unless yield(:page) == "challenges" || yield(:page) == 'challenge'%>
+  <% if user_signed_in? %>
+    <div class="user-id d-flex">
+      <div class="online-badge"></div>
+      <p><%= current_user.username %></p>
+    </div>
+  <% else %>
+  <% end %>
+
+  <%= link_to challenges_home_path, class: "navlink new" do %>
+    <i class="logo-n fas fa-plus"></i>Challenge
+  <% end unless yield(:page) == "challenges" || yield(:page) == 'challenge'%>
 
   <div class="menu d-flex flex-column">
 
@@ -26,10 +34,9 @@
       <i class="logo-i fas fa-lightbulb"></i>Inspiration
     <% end %>
 
+    <%= link_to destroy_user_session_path, method: :delete, data: { confirm: 'Are you sure?' }, class: "navlink bottom" do %>
+      <i class="logo-s fas fa-sign-out-alt"></i>Sign out
+    <% end %>
   </div>
-
-  <%= link_to destroy_user_session_path, class: "navlink mb-2" do %>
-    <i class="logo-s fas fa-sign-out-alt"></i>Sign out
-  <% end %>
 </div>
 
