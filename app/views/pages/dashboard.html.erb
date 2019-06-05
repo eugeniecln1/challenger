@@ -1,3 +1,4 @@
+<%= content_for(:page, "dashboard") %>
 
 <div class="container d-flex flex-column">
   <div class="scrollbar scrollbar-primary">
@@ -60,15 +61,47 @@
       </div>
     </div>
   </div>
+</div>
 
-  <div class="bottom-dash d-flex">
+<!-- cards d'instances de Participation qui montre le détail du challenge -->
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-sm">
+      <% @participations.each do |participation| %>
+        <div class="card-trip">
+          <div class="card-trip-infos">
+            <h2>Challenge : <%= participation.challenge.title %></h2>
+            <h4>Category : <%= participation.challenge.category %></h4>
+            <h5>Proposed to you by : <%= participation.challenge.role_model.first_name %> <%= participation.challenge.role_model.last_name %></h5>
+            <p>link_to "learn more about <%= participation.challenge.role_model.gender == "Female" ? "her" : "him" %> ", role_model_path(participation.challenge.role_model) </p>
+            <p><%= participation.challenge.description %></p>
+          </div>
+          <div class="card-challenge-success">
+            <% if participation.validated? %>
+              <div>
+                <p> Yeah ! You're the best !<i class="far fa-check-circle"></i></p>
+              </div>
+            <% else %>
+              <div>
+                <p>You need to give a feedback to validate your challenge ! <i class="fas fa-chevron-circle-right"></i></p>
+              </div>
+            <% end %>
+          </div>
+        </div>
+          <!-- Si participation.validated? (si les ratings + feedback sont complétés = true sinon false), on affiche un boutton pour envoyer le form de feedback -->
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<!--   <div class="bottom-dash d-flex">
     <div>
       <canvas id="barChart"></canvas>
     </div>
     <div>
       <canvas id="polarChart"></canvas>
     </div>
-  </div>
-</div>
+  </div> -->
+
 
 

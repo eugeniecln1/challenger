@@ -12,7 +12,7 @@
   </head>
   <body>
     <div class="d-flex">
-      <%= render 'shared/vertical_navbar' %>
+      <%= render 'shared/vertical_navbar' unless yield(:page) == 'home' || yield(:page) == 'sign' %>
       <div class="container">
         <%= yield %>
       </div>

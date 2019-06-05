@@ -1,13 +1,17 @@
+<%= content_for(:page, "inspiration") %>
+
 <!-- # search bar
 # profile cards -->
 <div class="container">
 <%= form_tag role_models_path, method: :get do %>
-  <%= text_field_tag :query,
-    params[:query],
-    class: "form-control",
-    placeholder: "Find an inspiring model 🤗  "
-  %>
-  <%= button_tag "Inspire me!", type:"submit", title:"Inspire me!"%>
+  <div class="search-form-control form-group">
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control string required", type: "text",
+      placeholder: "Find an inspiring model 🤗  "
+    %>
+    <%= button_tag "Inspire me !", name:"button", type:"submit", title:"Inspire me!", class:"btn btn-flat btn-success"%>
+  </div>
 <% end %>
 </div>
 
@@ -23,8 +27,6 @@
             <%= image_tag(role_model.picture, class:"avatar-large", alt: "avatar-large" ) if role_model.picture %>
             <h5 class="card-title"><%= role_model.first_name %> <%= role_model.last_name %></h5>
             <p class="card-subtitle mb-2 text-muted "><%= role_model.sector %></p>
-<!--                 <p class="card-text small"><%= role_model.gender %></p>
-                <p class="card-text "><%= role_model.description %></p> -->
         </blockquote>
       </div>
     <% end %>
