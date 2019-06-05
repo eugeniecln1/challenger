@@ -24,7 +24,7 @@
       <div class="model_profile_card card p-3" title='<%= role_model.first_name %> <%= role_model.last_name %>'>
         <blockquote class="card-body mb-0">
             <%= link_to '', role_model_path(role_model), class: "stretched-link" %>
-            <%= image_tag(role_model.picture, class:"avatar-large", alt: "avatar-large" ) if role_model.picture %>
+            <%= image_tag(role_model.picture, class:"avatar-large card_image", alt: "avatar-large" ) if role_model.picture %>
             <h5 class="card-title"><%= role_model.first_name %> <%= role_model.last_name %></h5>
             <p class="card-subtitle mb-2 text-muted "><%= role_model.sector %></p>
         </blockquote>
