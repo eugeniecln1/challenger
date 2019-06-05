@@ -1,12 +1,19 @@
 <div class="nav d-flex">
-
   <%= link_to dashboard_path, class: "navbar-logo mt-0" do %>
-    <i class="logo fab fa-cuttlefish fa-lg"></i>
+    <%= image_tag "dragon_logo.png", size: "100" %>
   <% end %>
 
-    <%= link_to challenges_home_path, class: "navlink new" do %>
-      <i class="logo-n fas fa-plus"></i>Challenge
-    <% end unless yield(:page) == "challenges" || yield(:page) == 'challenge'%>
+  <% if user_signed_in? %>
+    <div class="user-id d-flex">
+      <div class="online-badge"></div>
+      <p style="color: white"><%= current_user.username %></p>
+    </div>
+  <% else %>
+  <% end %>
+
+  <%= link_to challenges_home_path, class: "navlink new" do %>
+    <i class="logo-n fas fa-plus"></i>Challenge
+  <% end unless yield(:page) == "challenges" || yield(:page) == 'challenge'%>
 
   <div class="menu d-flex flex-column">
 
@@ -26,10 +33,9 @@
       <i class="logo-i fas fa-lightbulb"></i>Inspiration
     <% end %>
 
+    <%= link_to destroy_user_session_path, method: :delete, data: { confirm: 'Are you sure?' }, class: "navlink bottom" do %>
+      <i class="logo-s fas fa-sign-out-alt"></i>Sign out
+    <% end %>
   </div>
-
-  <%= link_to destroy_user_session_path, class: "navlink mb-2" do %>
-    <i class="logo-s fas fa-sign-out-alt"></i>Sign out
-  <% end %>
 </div>
 

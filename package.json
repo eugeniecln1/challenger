@@ -7,6 +7,7 @@
     "chart.js": "^2.8.0",
     "chartjs": "^0.3.24",
     "jquery": "^3.4.1",
+    "jquery-bar-rating": "^1.2.2",
     "mdbootstrap": "^4.8.2",
     "popper.js": "^1.15.0"
   },

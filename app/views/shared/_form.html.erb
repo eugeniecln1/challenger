@@ -1,0 +1,6 @@
+<%= simple_form_for @participation do |f| %>
+  <%= f.input :feedback, as: :text, label: 'Go on and describe your experience !', error: 'Be able to look back and analyse your experience is a huge part of building self confidence. Put a feedback !', placeholder: 'I was not sure I could it, I waited a lot, then I pulled myself out there and I felt great afterward, because I could push my self.' %>
+  <%= f.input :appreciation, hint: 'No special characters.' %>
+  <%= f.input :difficulty, placeholder: 'user@domain.com' %>
+  <%= f.button :submit %>
+<% end %>
