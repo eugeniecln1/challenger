@@ -1,24 +1,31 @@
 <div class="row">
 
   <div class="col-8">
-    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
 
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
         <% @challenges.each_with_index do |challenge, index| %>
-        <% active = index == 0 ? "active" : "" %>
-        <div class="carousel-item <%= active%>">
+          <% active = index == 0 ? "active" : "" %>
+          <div class="carousel-item <%= active%>">
             <div class="card bg-<%= challenge.category.gsub(/\s+/, "").downcase %>" style="height: 400px">
-              <div class="card-body padd">
-                <h2 class="card-title"><em><%= challenge.title %></em></h5>
-                <h6 class="card-text"><%= challenge.description %></p>
-                <br>
-                <button type="button" class="btn btn-dark"><%= link_to "Challenge accepted!", challenge_participations_path(challenge), method: :post %></button>
-              </div>
+              <% if challenge.participations.where(user_id: current_user.id).present? %>
+                <div class="card-body padd">
+                  <h2 class="card-title"><em><%= challenge.title %></em></h5>
+                  <h6 class="card-text"><%= challenge.description %></p>
+                  <br>
+                  <p><em>You have completed this challenge already!</em></p>
+                </div>
+              <% else %>
+                <div class="card-body padd">
+                  <h2 class="card-title"><em><%= challenge.title %></em></h5>
+                  <h6 class="card-text"><%= challenge.description %></p>
+                  <br>
+                  <button type="button" class="btn btn-dark"><%= link_to "Challenge accepted!", challenge_participations_path(challenge), method: :post %></button>
+                </div>
+              <% end %>
             </div>
-        </div>
+          </div>
         <% end %>
-
-
 
         <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -31,17 +38,22 @@
 
       </div>
     </div>
+
   </div>
 
   <div class="col-4">
     <h5>A role model to inspire you ...</h5>
     <div class="card mb-3">
       <div class="card-body">
-        <h5 class="card-title"><%= @challenges.sample.role_model.first_name %> <strong><%= @challenges.sample.role_model.last_name %></strong></h5>
-        <p class="card-text"><%= @challenges.sample.role_model.description %></p>
+        <% if !@challenges.sample.nil? %>
+          <h5 class="card-title"><%= @challenges.sample.role_model.first_name %> <strong><%= @challenges.sample.role_model.last_name %></strong></h5>
+          <p class="card-text"><%= @challenges.sample.role_model.description %></p>
+        <% end %>
       </div>
     </div>
   </div>
+
 </div>
+
 <br>
 <%= link_to "Back to challenge categories", challenges_home_path, class: "btn btn-dark"  %>
