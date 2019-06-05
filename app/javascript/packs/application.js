@@ -6,3 +6,6 @@ import initPolar from "../components/dashboard";
 initPolar()
 
 
+import { deployDescription } from "../components/card_category";
+deployDescription();
+
