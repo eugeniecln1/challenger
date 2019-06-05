@@ -1,11 +1,12 @@
 import "bootstrap";
 
 // import initVerticalNavbar from "../components/vertical_navbar"
-import initDashboard from "../components/dashboard";
+// import initDashboard from "../components/dashboard";
 
-// initVerticalNavbar()
-initDashboard()
+// // initVerticalNavbar()
+// initDashboard();
 
 
-import "components/card-category"
+import { deployDescription } from "../components/card_category";
+deployDescription();
 
