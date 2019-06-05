@@ -1,8 +1,8 @@
 import "bootstrap";
-import "components/card-category"
+import "../components/card_category"
 
-import initDashboard from "../components/dashboard";
+import initPolar from "../components/dashboard";
 
-initDashboard()
+initPolar()
 
 
