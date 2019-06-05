@@ -1,7 +1,6 @@
 <div class="nav d-flex">
-
   <%= link_to dashboard_path, class: "navbar-logo mt-0" do %>
-    <i class="logo fab fa-cuttlefish fa-lg"></i>
+    <%= image_tag "dragon_logo.png", size: "100" %>
   <% end %>
 
   <% if user_signed_in? %>
