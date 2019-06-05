@@ -1,4 +1,5 @@
 import Chart from "chart.js";
+
 //bar
 const initDashboard = () => {
   var ctxB = document.getElementById("barChart").getContext('2d');
