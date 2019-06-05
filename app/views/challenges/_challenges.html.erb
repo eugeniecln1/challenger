@@ -38,7 +38,8 @@
     <div class="card mb-3">
       <div class="card-body">
         <h5 class="card-title"><%= @challenges.sample.role_model.first_name %> <strong><%= @challenges.sample.role_model.last_name %></strong></h5>
-        <p class="card-text"><%= @challenges.sample.role_model.description %></p>
+        <p class="card-text"><%= @challenges.sample.role_model.sector %></p>
+        <%= link_to '', role_model_path(@challenges.sample.role_model), class: "stretched-link" %>
       </div>
     </div>
   </div>
