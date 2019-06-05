@@ -4,7 +4,10 @@
   "dependencies": {
     "@rails/webpacker": "^4.0.6",
     "bootstrap": "^4.3.1",
+    "chart.js": "^2.8.0",
+    "chartjs": "^0.3.24",
     "jquery": "^3.4.1",
+    "mdbootstrap": "^4.8.2",
     "popper.js": "^1.15.0"
   },
   "devDependencies": {
