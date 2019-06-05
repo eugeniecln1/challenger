@@ -5,11 +5,6 @@
     <div class="col-sm">
       <h1>JOURNAL</h1>
 
-<!-- Bouton NEW CHALLENGE -->
-      <div class="d-flex flex-row-reverse">
-        <button type="button" class="btn btn-dark"><%= link_to "NEW CHALLENGE !", challenges_home_path %></button>
-      </div>
-
       <!-- card_participations = Challenge.title + Feedback + Ratings -->
       <% @participations.each do |participation| %>
         <!-- Si participation.validated? (si les ratings + feedback sont complétés = true sinon false), on n'affiche pas la participation -->
