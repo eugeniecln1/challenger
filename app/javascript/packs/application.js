@@ -1,8 +1,8 @@
 import "bootstrap";
-import "components/card-category"
 
 import initDashboard from "../components/dashboard";
-
 initDashboard()
 
+import { deployDescription } from "../components/card_category";
+deployDescription();
 
