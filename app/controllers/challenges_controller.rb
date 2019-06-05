@@ -7,7 +7,6 @@ class ChallengesController < ApplicationController
   end
 
   def future_me
-    # @role_model = RoleModel.find(params[:id])
     @challenges = Challenge.where(category: "Future me")
   end
 
