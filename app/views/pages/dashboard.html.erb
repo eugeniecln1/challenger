@@ -73,10 +73,11 @@
             <h2>Challenge : <%= participation.challenge.title %></h2>
             <h4>Category : <%= participation.challenge.category %></h4>
             <h5>Proposed to you by : <%= participation.challenge.role_model.first_name %> <%= participation.challenge.role_model.last_name %></h5>
-            <p>link_to "learn more about <%= participation.challenge.role_model.gender == "Female" ? "her" : "him" %> ", role_model_path(participation.challenge.role_model) </p>
+            <p> <%= link_to "learn more about #{participation.challenge.role_model.gender?}", role_model_path(participation.challenge.role_model) %>  </p>
             <p><%= participation.challenge.description %></p>
           </div>
           <div class="card-challenge-success">
+            <!-- Si participation.validated? (si les ratings + feedback sont complétés = true sinon false), on affiche un boutton pour envoyer le form de feedback -->
             <% if participation.validated? %>
               <div>
                 <p> Yeah ! You're the best !<i class="far fa-check-circle"></i></p>
@@ -84,15 +85,44 @@
             <% else %>
               <div>
                 <p>You need to give a feedback to validate your challenge ! <i class="fas fa-chevron-circle-right"></i></p>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal<%= participation.id %>">
+                  Launch demo modal
+                </button>
               </div>
             <% end %>
           </div>
         </div>
-          <!-- Si participation.validated? (si les ratings + feedback sont complétés = true sinon false), on affiche un boutton pour envoyer le form de feedback -->
       <% end %>
     </div>
   </div>
 </div>
+
+<!-- Modal -->
+<% @participations.each do |participation| %>
+  <div class="modal fade" id="exampleModal<%= participation.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel"><%= participation.id %></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <%= simple_form_for participation do |f| %>
+            <%= f.input :feedback, as: :text, label: 'Go on and describe your experience !', error: 'Be able to look back and analyse your experience is a huge part of building self confidence. Put a feedback !', placeholder: 'I was not sure I could it, I waited a lot, then I pulled myself out there and I felt great afterward, because I could push my self.' %>
+            <%= f.input :appreciation, collection: (1..5).to_a, label: 'How much did you appreciate this challenge ?', input_html: {class: "modal-rating"} %>
+            <%= f.input :difficulty, collection: (1..5).to_a, label: 'How much did you find it difficult ?', input_html: {class: "modal-rating"} %>
+            <%= f.button :submit, class: "btn btn-primary" %>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
+
+
 
 <!--   <div class="bottom-dash d-flex">
     <div>
