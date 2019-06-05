@@ -4,12 +4,14 @@
 # profile cards -->
 <div class="container">
 <%= form_tag role_models_path, method: :get do %>
-  <%= text_field_tag :query,
-    params[:query],
-    class: "form-control",
-    placeholder: "Find an inspiring model 🤗  "
-  %>
-  <%= button_tag "Inspire me!", type:"submit", title:"Inspire me!"%>
+  <div class="search-form-control form-group">
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control string required", type: "text",
+      placeholder: "Find an inspiring model 🤗  "
+    %>
+    <%= button_tag "Inspire me !", name:"button", type:"submit", title:"Inspire me!", class:"btn btn-flat btn-success"%>
+  </div>
 <% end %>
 </div>
 
