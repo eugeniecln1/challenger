@@ -10,41 +10,39 @@
 
       <!-- card_participations = Challenge.title + Feedback + Ratings -->
       <% @participations.each do |participation| %>
-        <div class="card-trip">
-          <div class="card-trip-infos">
-            <div>
-              <h2>Challenge : <%= participation.challenge.title %></h2>
-              <p>Your feedback : <%= participation.feedback %>
-                Diamlorem repellendus quisquam corrupti. Aptent ac? Vivamus! Metus blanditiis felis iure deleniti massa repudiandae provident. Sint reprehenderit inventore enim? Minim fames optio varius, ipsam nemo eros, elit libero, provident velit laborum sed accumsan cupidatat magni. Minim! Maiores incididunt culpa ratione.
-              </p>
+        <!-- Si participation.validated? (si les ratings + feedback sont complétés = true sinon false), on n'affiche pas la participation -->
+        <% if participation.validated? %>
+
+          <div class="card-trip">
+            <div class="card-trip-infos">
+              <div>
+                <h2>Challenge : <%= participation.challenge.title %></h2>
+                <p>Your feedback : <%= participation.feedback %>
+                  Diamlorem repellendus quisquam corrupti. Aptent ac? Vivamus! Metus blanditiis felis iure deleniti massa repudiandae provident. Sint reprehenderit inventore enim? Minim fames optio varius, ipsam nemo eros, elit libero, provident velit laborum sed accumsan cupidatat magni. Minim! Maiores incididunt culpa ratione.
+                </p>
+              </div>
+            </div>
+            <div class="card-trip-pricing">
+              <h2>
+                  Difficulty :
+                    <% participation.difficulty.times do %>
+                      <i class="fas fa-dragon"></i>
+                    <% end %>
+                    <% (5 - participation.difficulty).times  do %>
+                      <%= image_tag("dragon_vide.png", size: "19") %>
+                    <% end %>
+                    <br>
+                  Appreciation :
+                  <% participation.appreciation.times do %>
+                    <i class="fas fa-heart"></i>
+                  <% end %>
+                  <% (5 - participation.appreciation).times do %>
+                    <i class="far fa-heart"></i>
+                  <% end %>
+              </h2>
             </div>
           </div>
-          <div class="card-trip-pricing">
-            <h2>
-              <!-- Si les ratings sont nil, un bouton apparait pour creer un feedback -->
-              <% if participation.difficulty && participation.appreciation %>
-                Difficulty :
-                  <% participation.difficulty.times do %>
-                    <i class="fas fa-dragon"></i>
-                  <% end %>
-                  <% (5 - participation.difficulty).times  do %>
-                    <%= image_tag("dragon_vide.png", size: "19") %>
-                  <% end %>
-                  <br>
-                Appreciation :
-                <% participation.appreciation.times do %>
-                  <i class="fas fa-heart"></i>
-                <% end %>
-                <% (5 - participation.appreciation).times do %>
-                  <i class="far fa-heart"></i>
-                <% end %>
-              <% else %>
-                <button type="button" class="btn btn-dark"><%= link_to "Validate your challenge!" %></button>
-                <!-- participation_path(participation), method: :patch  -->
-              <% end %>
-            </h2>
-          </div>
-        </div>
+        <% end %>
       <% end %>
 
 
