@@ -8,16 +8,18 @@ class ParticipationsController < ApplicationController
     @participation = Participation.new(challenge: @challenge, user: current_user)
     if @participation.save
       # alert
-      redirect_to participations_path
+      redirect_to dashboard_path
     else
       # alert
-      redirect_to participations_path
+      redirect_to dashboard_path
     end
   end
 
   def update
     @participation = Participation.find(params[:id])
     @participation.assign_attributes(participation_params)
+    @participation.save
+    redirect_to dashboard_path
   end
 
   private
