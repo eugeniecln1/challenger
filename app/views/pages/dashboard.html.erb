@@ -61,6 +61,27 @@
     </div>
   </div>
 
+<% @participations.each do |participation| %>
+    <div class="card-challenge">
+      <div class="card-challenge-infos">
+        <h2>Challenge : <%= participation.challenge.title %></h2>
+        <h4>Category : <%= participation.challenge.category %></h4>
+        <h5>Proposed to you by : <%= participation.challenge.role_model.first_name %> <%= participation.challenge.role_model.last_name %></h5>
+        <p>link_to "learn more about <%= participation.challenge.role_model.gender == female ? "her" : "him" %> ", role_model_path(participation.challenge.role_model) </p>
+        <p><%= participation.challenge.description %></p>
+      </div>
+    <!-- Si participation.validated? (si les ratings + feedback sont complétés = true sinon false), on affiche un boutton pour envoyer le form de feedback -->
+    <% if participation.validated? %>
+      <div class="card-challenge-success">
+
+      </div>
+    <% else %>
+
+
+    </div>
+  <% end %>
+<% end %>
+
   <div class="bottom-dash d-flex">
     <div>
       <canvas id="barChart"></canvas>
