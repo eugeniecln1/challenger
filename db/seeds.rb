@@ -23,7 +23,7 @@ ada = RoleModel.create(first_name: "Ada", last_name: "Lovelace", sector: "Mathem
 
 
 challenge = Challenge.create(title: "Start planning for the future", category: "Future me", description: "Where do you picture yourself in 5 years ? At university ? Studying ? Travelling ? Where ? What ? Why ? Now is the time to be ambitious !", role_model_id: sofia.id)
-challenge2 = Challenge.create(title: "Go outside", category: "Daily activities", description: "Go out in the sun and take a moment to appreciate the beauty of your world", role_model_id: riri.id)
+challenge2 = Challenge.create(title: "Go outside", category: "Daily activities", description: "Go out in the sun and take a moment to appreciate the beauty of your world", role_model: riri)
 challenge3 = Challenge.create(title: "Discover the world", category: "Curiosity", description: "There's a great documentary for you to watch", role_model_id: elon.id)
 challenge4 = Challenge.create(title: "Interested in politics?", category: "Curiosity", description: "Did you know that agriculture is the most polluting industry in the world?", role_model_id: mascotte.id)
 
