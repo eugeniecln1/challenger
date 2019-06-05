@@ -12,7 +12,16 @@
 }
 
 .model_card {
-
+  background: #FFFF;
+  width: 80%;
+  padding: 30px;
+  margin: 55px 0px;
+  .card_image img {
+    width: 200px;
+    object-fit: cover;
+    display: inline-block;
+    margin-bottom: 40px;
+  }
 }
 
 .card-category {
@@ -50,7 +59,7 @@
   background-color: $interactions;
 }
 
-.card-body {
+.padd {
   padding: 60px 60px;
   text-align: center;
 }

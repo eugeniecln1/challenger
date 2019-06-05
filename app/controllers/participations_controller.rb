@@ -3,15 +3,26 @@ class ParticipationsController < ApplicationController
     @participations = current_user.participations
   end
 
-  # def create
-  #   @user = current_user
-  #   @challenge = Challenge.find(params[:challenge_id])
-  #   @participation = Participation.new(participation_params)
-  # end
+  def create
+    @challenge = Challenge.find(params[:challenge_id])
+    @participation = Participation.new(challenge: @challenge, user: current_user)
+    if @participation.save
+      # alert
+      redirect_to participations_path
+    else
+      # alert
+      redirect_to participations_path
+    end
+  end
 
-  # private
+  def update
+    @participation = Participation.find(params[:id])
+    @participation.assign_attributes(participation_params)
+  end
 
-  # def participation_params
-  #   params.require(:participation).permit(:feedback, :difficulty, :appreciation)
-  # end
+  private
+
+  def participation_params
+    params.require(:participation).permit(:feedback, :difficulty, :appreciation)
+  end
 end

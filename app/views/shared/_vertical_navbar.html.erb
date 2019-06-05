@@ -1,5 +1,8 @@
 <div class="nav d-flex">
-  <%= image_tag("logo-c") %>
+
+  <%= link_to challenges_home_path, class: "navbar-logo mt-0" do %>
+    <i class="logo fas fa-lightbulb fa-lg"></i>
+  <% end %>
 
   <div class="menu d-flex flex-column">
     <%= link_to dashboard_path, class: "navlink" do %>
@@ -17,10 +20,6 @@
     <a href="" id="collapse" data-toggle="collapse"><i class="fas fa-chevron-left fa-lg"></i></a>
 
   </div>
-
-
-
-
 
   <%= link_to destroy_user_session_path, class: "navlink mb-0" do %>
     <i class="logo-s fas fa-sign-out-alt"></i>Sign out
