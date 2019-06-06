@@ -8,6 +8,7 @@
     </div>
       <h4 class="card-title"><%= @role_model.first_name %> <%= @role_model.last_name %></h4>
       <p class="card-subtitle mb-2 text-muted "><%= @role_model.sector %></p>
+      <hr>
       <p class="card-text"><%= @role_model.description %></p>
       <% if @role_model.first_name && @role_model.last_name %>
       <div class="link-wiki">
@@ -16,5 +17,5 @@
       </div>
       <% end %>
   </div>
- <button><%= link_to "Back to search", role_models_path, title:"Back to search" %></button>
+ <%= link_to "Back to search", role_models_path, title:"Back to search", class: "btn-3d" %>
 </div>

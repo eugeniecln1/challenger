@@ -28,6 +28,11 @@
     display: flex;
   justify-content: flex-end;
 }
+
+hr {
+  width: 30%;
+}
+
 .model_profile_card:hover {
   // box-shadow: 0 0 15px rgba(0,0,0,0.2);
   // transform: translateZ(5px);
