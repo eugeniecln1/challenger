@@ -12,7 +12,6 @@ buttonBack();
 //import { deployDescription } from "../components/card_category";
 //deployDescription();
 
-
 // import { initVerticalNavbar } from "../components/vertical_navbar"
 // initVerticalNavbar();
 
