@@ -12,7 +12,8 @@
 }
 
 .logo {
-  margin: 30px 60px;;
+  margin: 30px 60px;
+  animation-delay: 1s;
 }
 
 .user-id {
@@ -65,7 +66,9 @@ a.navlink.new {
   border-radius: 4px;
   opacity: 0.8;
 }
-
+.btn-challenge:active {
+  color:red;
+}
 a.navlink.new:hover {
   // border: 0.5px solid $dashboard;
   opacity: 1;

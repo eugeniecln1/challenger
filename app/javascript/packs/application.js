@@ -7,6 +7,9 @@ initStarRating();
 import { buttonBack } from "../components/button_back";
 buttonBack();
 
+import { buttonChallenge } from "../components/button_challenge";
+buttonChallenge();
+
 //import { deployDescription } from "../components/card_category";
 //deployDescription();
 
