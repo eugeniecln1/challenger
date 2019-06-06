@@ -12,17 +12,23 @@
             <div class="card bg-<%= challenge.category.gsub(/\s+/, "").downcase %>" style="height: 400px">
               <% if challenge.participations.where(user_id: current_user.id).present? %>
                 <div class="card-body padd">
-                  <h2 class="card-title"><em><%= challenge.title %></em></h5>
-                  <h6 class="card-text"><%= challenge.description %></p>
-                  <br>
-                  <p class="card-title"><em>You have completed this challenge already!</em></p>
+                  <div class="card-inside-color-<%= challenge.category.gsub(/\s+/, "").downcase %>">
+                    <h2 class="card-title"><em><%= challenge.title %></em></h2>
+                    <%= image_tag challenge.show_category_logo, size: "100" %>
+                    <h6 class="card-text"><%= challenge.description %></p>
+                    <br>
+                    <p class="card-title"><em>You have completed this challenge already!</em></p>
+                  </div>
                 </div>
-              <% else %>
+                <% else %>
                 <div class="card-body padd">
-                  <h2 class="card-title"><em><%= challenge.title %></em></h5>
-                  <h6 class="card-text"><%= challenge.description %></p>
-                  <br>
-                  <button type="button" class="btn btn-dark"><%= link_to "Challenge accepted!", challenge_participations_path(challenge), method: :post %></button>
+                  <div class="card-inside-color-<%= challenge.category.gsub(/\s+/, "").downcase %>">
+                    <h2 class="card-title"><em><%= challenge.title %></em></h2>
+                    <%= image_tag challenge.show_category_logo, size: "100" %>
+                    <h6 class="card-text"><%= challenge.description %></p>
+                    <br>
+                    <button type="button" class="btn btn-dark"><%= link_to "Challenge accepted!", challenge_participations_path(challenge), method: :post %></button>
+                  </div>
                 </div>
               <% end %>
             </div>

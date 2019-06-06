@@ -131,6 +131,32 @@
   text-align: center;
 }
 
+.padd img{
+  padding: 10px;
+  max-width: 100px;
+  max-height: 100px;
+}
+
+.card-inside-color-curiosity {
+  background-color: $curiosity;
+  padding: 10px;
+}
+
+.card-inside-color-interactions {
+  background-color: $interactions;
+  padding: 10px;
+}
+
+.card-inside-color-futureme {
+  background-color: $future-me;
+  padding: 10px;
+}
+
+.card-inside-color-dailyactivities {
+  background-color: $daily-activities;
+  padding: 10px;
+}
+
 /* This container is needed to position the front and back side */
 .flip-card-inner {
   position: relative;
