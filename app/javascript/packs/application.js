@@ -1,5 +1,8 @@
 import "bootstrap";
 
+import initPolar from "../components/dashboard";
+initPolar();
+
 import { initStarRating } from "../plugins/init_star_rating";
 initStarRating();
 
@@ -12,9 +15,6 @@ animateChallengeButton();
 
 import { toggleNav } from "../components/vertical_navbar"
 toggleNav();
-
-import initPolar from "../components/dashboard";
-initPolar();
 
 //import { deployDescription } from "../components/card_category";
 //deployDescription();
