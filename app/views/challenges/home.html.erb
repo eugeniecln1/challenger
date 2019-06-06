@@ -4,75 +4,76 @@
   <h1 class="mt-5" style="text-align: center">Challenge yourself today!</h1>
 
   <div class="d-flex">
-    <div class="row justify-content-around align-items-center panel-group" id="accordion" role="tablist" aria-multiselectable="true" style="margin-right: 30px; margin-left: 30px;">
-      <div class="card-category-col col-ml-6 panel panel-default">
-        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-          <div class="card-category m-5 bg-dailyactivities panel-heading" role="tab" id="headingOne">
+    <div class="row justify-content-around align-items-center" style="margin-right: 30px; margin-left: 30px;">
+
+      <div class="card-category-col col-ml-6">
+        <div class="flip-card">
+          <div class="flip-card-inner">
             <%= link_to challenges_daily_activities_path do %>
-            <div class="panel-title d-flex justify-content-around align-items-center" style="color: white;">
-                <i class="fas fa-walking" style="margin-right: 10px"></i>
-                <p class="m-0">Daily activities</p>
-            </div>
+                <div class="flip-card-front bg-dailyactivities">
+                  <div class="d-flex justify-content-around align-items-center" style="color: white;">
+                    <i class="fas fa-walking" style="margin-right: 10px"></i>
+                    <p class="m-0">Daily activities</p>
+                  </div>
+                </div>
+                <div class="flip-card-back">
+                  <p>Description</p>
+                </div>
             <% end %>
-          </div>
-        </a>
-        <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne" style="margin: 50px;">
-          <div class="panel-body">
-            Description
           </div>
         </div>
       </div>
 
-      <div class="card-category-col col-ml-6 panel panel-default">
-        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-          <div class="card-category m-5 bg-futureme panel-heading" role="tab" id="headingTwo">
+      <div class="card-category-col col-ml-6">
+        <div class="flip-card">
+          <div class="flip-card-inner">
             <%= link_to challenges_future_me_path do %>
-            <div class="panel-title d-flex justify-content-around align-items-center" style="color: white;">
-              <i class="fas fa-rocket" style="margin-right: 10px"></i>
-              <p class="m-0">Future me</p>
-            </div>
+                <div class="flip-card-front bg-futureme">
+                  <div class="d-flex justify-content-around align-items-center" style="color: white;">
+                    <i class="fas fa-rocket" style="margin-right: 10px"></i>
+                    <p class="m-0">Future me</p>
+                  </div>
+                </div>
+                <div class="flip-card-back">
+                  <p>Description</p>
+                </div>
             <% end %>
-          </div>
-        </a>
-        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo" style="margin: 50px;">
-          <div class="panel-body">
-            Description
           </div>
         </div>
       </div>
 
-      <div class="card-category-col col-ml-6 panel panel-default">
-        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
-          <div class="card-category m-5 bg-interactions panel-heading" role="tab" id="headingThree">
-            <%= link_to challenges_interactions_path do  %>
-            <div class="panel-title d-flex justify-content-between align-items-center" style="color: white;">
-              <i class="fas fa-handshake" style="margin-right: 10px"></i>
-              <p class="m-0">Interactions</p>
-            </div>
+      <div class="card-category-col col-ml-6">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <%= link_to challenges_interactions_path do %>
+                <div class="flip-card-front bg-interactions">
+                  <div class="d-flex justify-content-around align-items-center" style="color: white;">
+                    <i class="fas fa-handshake" style="margin-right: 10px"></i>
+                    <p class="m-0">Interactions</p>
+                  </div>
+                </div>
+                <div class="flip-card-back">
+                  <p>Description</p>
+                </div>
             <% end %>
-          </div>
-        </a>
-        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree" style="margin: 50px;">
-          <div class="panel-body">
-            Description
           </div>
         </div>
       </div>
 
-      <div class="card-category-col col-ml-6 panel panel-default">
-        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
-          <div class="card-category m-5 bg-curiosity panel-heading" role="tab" id="headingFour">
-            <%= link_to challenges_curiosity_path do  %>
-            <div class="panel-title d-flex justify-content-around align-items-center" style="color: white;">
-              <i class="fas fa-globe-americas" style="margin-right: 10px"></i>
-              <p class="m-0">Curiosity</p>
-            </div>
+      <div class="card-category-col col-ml-6">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <%= link_to challenges_curiosity_path do %>
+                <div class="flip-card-front bg-curiosity">
+                  <div class="d-flex justify-content-around align-items-center" style="color: white;">
+                    <i class="fas fa-globe-americas" style="margin-right: 10px"></i>
+                    <p class="m-0">Curiosity</p>
+                  </div>
+                </div>
+                <div class="flip-card-back">
+                  <p>Description</p>
+                </div>
             <% end %>
-          </div>
-        </a>
-        <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour" style="margin: 50px;">
-          <div class="panel-body">
-            Description
           </div>
         </div>
       </div>
