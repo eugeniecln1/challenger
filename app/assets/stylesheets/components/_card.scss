@@ -24,7 +24,10 @@
 //   height: inherit;
 //   border-radius: 30px;
 // }
-
+.link-wiki {
+    display: flex;
+  justify-content: flex-end;
+}
 .model_profile_card:hover {
   // box-shadow: 0 0 15px rgba(0,0,0,0.2);
   // transform: translateZ(5px);

@@ -43,3 +43,11 @@
   background-color: $navbar;
   text-decoration: none;
 }
+
+.btn-wiki {
+  color: $navbar;
+}
+
+.btn-wiki:hover {
+  color: lightgrey;
+}
