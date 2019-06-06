@@ -16,6 +16,10 @@
   animation-delay: 1s;
 }
 
+.logo:hover {
+  animation-iteration-count:infinite;
+}
+
 .user-id {
   margin-top: 20px;
   border-top: 0.2px solid $dashboard;
