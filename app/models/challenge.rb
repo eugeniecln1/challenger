@@ -9,9 +9,9 @@ class Challenge < ApplicationRecord
     if category == "Daily activities"
       @logo = "dragon_mauve.png"
     elsif category == "Future me"
-      @logo = "logo_rocket.png"
+      @logo = "rocket_mauve.png"
     elsif category == "Interactions"
-      @logo = "coffee-1s-383px.svg"
+      @logo = "coffee_mauve.png"
     elsif category == "Curiosity"
       @logo = "logo_world.png"
     end
