@@ -12,6 +12,12 @@
   text-shadow: 0px 0px 2px rgba(0,0,0,0.2);
   // box-shadow: 0 10px 30px rgba(0,0,0,.1);
   margin: 20px 0;
+  border-style: none;
+  text-align: center;
+  .card_image {
+    display: inline-block;
+    margin-bottom: 10px;
+  }
 }
 // .model_profile_card .card_image {
 //   width: inherit;
@@ -23,21 +29,29 @@
   // box-shadow: 0 0 15px rgba(0,0,0,0.2);
   // transform: translateZ(5px);
   transform: scale(1.08, 1.08);
+  // border-style: solid;
 }
 
 .model_card {
   background: #FFFF;
-  width: 80%;
+  text-align: center;
+  width: 90%;
   padding: 30px;
-  margin: 55px 0px;
+  margin: 55px auto;
   border-radius: 4px;
-  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+  // box-shadow: 0 0 8px rgba(0,0,0,0.2);
   text-shadow: 0px 0px 1px rgba(0,0,0,0.2);
   .card_image img {
     width: 200px;
+    height: 200px;
     object-fit: cover;
     display: inline-block;
     margin-bottom: 40px;
+  }
+  .card-text {
+    text-align: justify;
+    width: 85%;
+    margin: 40px auto;
   }
 }
 
@@ -57,6 +71,7 @@
 
 .card-category:hover {
   opacity: 0.8;
+
 }
 
 // .bg-curiosity {
@@ -114,6 +129,32 @@
 .padd {
   padding: 60px 60px;
   text-align: center;
+}
+
+.padd img{
+  padding: 10px;
+  max-width: 100px;
+  max-height: 100px;
+}
+
+.card-inside-color-curiosity {
+  background-color: $curiosity;
+  padding: 10px;
+}
+
+.card-inside-color-interactions {
+  background-color: $interactions;
+  padding: 10px;
+}
+
+.card-inside-color-futureme {
+  background-color: $future-me;
+  padding: 10px;
+}
+
+.card-inside-color-dailyactivities {
+  background-color: $daily-activities;
+  padding: 10px;
 }
 
 /* This container is needed to position the front and back side */

@@ -17,7 +17,14 @@
 }
 
 .logo {
-  margin: 30px 60px;;
+  margin: 30px 60px;
+  animation-play-state: paused;
+
+}
+
+.logo:hover {
+  animation-play-state: running;
+  animation-iteration-count: infinite;
 }
 
 .user-id {
@@ -69,11 +76,13 @@ a.navlink.new {
   padding-bottom: 2px;
   border-radius: 4px;
   opacity: 0.8;
+  // animation-play-state: paused;
 }
 
 a.navlink.new:hover {
   // border: 0.5px solid $dashboard;
   opacity: 1;
+  // animation-play-state: play;
 }
 
 a.navlink {
@@ -81,6 +90,7 @@ a.navlink {
   width: 100%;
   transition: 0.3s;
 }
+
 
 a.navlink:hover {
   color: $navbar;
