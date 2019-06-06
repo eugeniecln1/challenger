@@ -30,6 +30,7 @@ import Chart from "chart.js";
 
 const initPolar = () => {
   //polar
+  console.log("hello");
   var ctxPA = document.getElementById("polarChart").getContext('2d');
   var myPolarChart = new Chart(ctxPA, {
     type: 'polarArea',
@@ -49,6 +50,6 @@ const initPolar = () => {
       responsive: true
     }
   });
-}
+};
 
 export default initPolar
