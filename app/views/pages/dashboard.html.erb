@@ -43,7 +43,7 @@
 
 <div class="bottom-dash d-flex">
   <div>
-    <canvas id="polarChart"></canvas>
+    <canvas id="polarChart" data-daily="<%= @counter[:dailyactivities] %>" data-future="<%= @counter[:futureme] %>" data-interactions="<%= @counter[:interactiions] %>" data-curiosity="<%= @counter[:curiosity] %>"></canvas>
   </div>
   <div class="scrollbar scrollbar-primary box">
     <div class="force-overflow rewards">
