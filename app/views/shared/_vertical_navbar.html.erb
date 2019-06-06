@@ -1,4 +1,7 @@
-<div class="nav d-flex fixed-top">
+<div class="nav fixed-top" id="mySidenav">
+
+  <a id="myBtn">&times;</a>
+
   <%= link_to dashboard_path, class: "navbar-logo" do %>
     <%= image_tag "dragon_blanc.png", size: "80", class: "logo" %>
   <% end %>
@@ -12,29 +15,33 @@
   <% end %>
 
   <%= link_to challenges_home_path, class: "navlink new" do %>
-    <i class="logo-n fas fa-plus"></i>Challenge
+    <i class="logo-n fas fa-plus"></i><span class="element-navbar">Challenge</span>
   <% end unless yield(:page) == "challenges" || yield(:page) == 'challenge'%>
 
   <div class="menu d-flex flex-column">
 
     <%= link_to dashboard_path, class: "navlink #{'active' if yield(:page) == 'dashboard'}" do %>
-      <i class="logo-d fas fa-home"></i>Dashboard
+      <i class="logo-d fas fa-home"></i><span class="element-navbar">Dashboard</span>
     <% end %>
 
     <%= link_to challenges_home_path, class: "navlink #{'active' if yield(:page) == 'challenges' || yield(:page) == 'challenge' }" do %>
-      <i class="logo-c fab fa-cuttlefish"></i>Challenges
+      <i class="logo-c fab fa-cuttlefish"></i><span class="element-navbar">Challenges</span>
     <% end %>
 
     <%= link_to participations_path, class: "navlink #{'active' if yield(:page) == 'journal'}" do %>
-      <i class="logo-j far fa-newspaper"></i>Journal
+      <i class="logo-j far fa-newspaper"></i><span class="element-navbar">Journal</span>
     <% end %>
 
     <%= link_to role_models_path, class: "navlink #{'active' if yield(:page) == 'inspiration'}" do %>
-      <i class="logo-i fas fa-lightbulb"></i>Inspiration
+      <i class="logo-i fas fa-lightbulb"></i><span class="element-navbar">Inspirations</span>
     <% end %>
 
     <%= link_to destroy_user_session_path, method: :delete, data: { confirm: 'Are you sure?' }, class: "navlink bottom" do %>
-      <i class="logo-s fas fa-sign-out-alt"></i>Sign out
+      <i class="logo-s fas fa-sign-out-alt"></i><span class="element-navbar">Sign out</span>
     <% end %>
   </div>
+</div>
+
+<div id="main">
+
 </div>
