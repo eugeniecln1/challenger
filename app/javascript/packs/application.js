@@ -1,5 +1,7 @@
 import "bootstrap";
 
+import initPolar from "../components/dashboard";
+initPolar();
 
 import { initStarRating } from "../plugins/init_star_rating";
 initStarRating();
@@ -9,9 +11,6 @@ buttonBack();
 
 //import { deployDescription } from "../components/card_category";
 //deployDescription();
-
-import initPolar from "../components/dashboard";
-initPolar();
 
 // import { initVerticalNavbar } from "../components/vertical_navbar"
 // initVerticalNavbar();

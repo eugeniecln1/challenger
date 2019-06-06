@@ -2,14 +2,16 @@ import Chart from "chart.js";
 
 const initPolar = () => {
   //polar
-  console.log("hello");
-  var ctxPA = document.getElementById("polarChart").getContext('2d');
+  const canvas = document.getElementById("polarChart");
+  var ctxPA = canvas.getContext('2d');
+
+  console.log(canvas.dataset.daily)
   var myPolarChart = new Chart(ctxPA, {
     type: 'polarArea',
     data: {
       labels: ["Daily Activities", "Future Me", "Interactions", "Curiosity"],
       datasets: [{
-        data: [200, 150, 90, 120],
+        data: [canvas.dataset.daily, canvas.dataset.future, canvas.dataset.interactions, canvas.dataset.curiosity],
         backgroundColor: ["rgba(247, 221, 74, 0.7)", "rgba(250, 123, 119, 0.7)", "rgba(244, 159, 187, 0.7)",
           "rgba(255, 182, 104, 0.7)"
         ],
