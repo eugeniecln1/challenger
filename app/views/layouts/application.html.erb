@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="shortcut icon" href="<%= asset_path('logo.png')%>"/>
+    <link rel="shortcut icon" href="<%= asset_path('dragon_vide.png')%>"/>
     <title>Challenger</title>
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
@@ -13,7 +13,7 @@
   <body>
     <div class="d-flex">
       <%= render 'shared/vertical_navbar' unless yield(:page) == 'home' || yield(:page) == 'sign' %>
-      <div class="container">
+      <div class="container mt-3">
         <%= yield %>
       </div>
     </div>

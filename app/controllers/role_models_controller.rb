@@ -5,10 +5,10 @@ class RoleModelsController < ApplicationController
         first_name ILIKE :query \
         OR last_name ILIKE :query \
         OR sector ILIKE :query \
-        OR gender ILIKE :query \
         OR description ILIKE :query \
       "
-      @role_models = RoleModel.where(sql_query, query: "%#{params[:query]}%")
+      @role_models = RoleModel.where(sql_query, query: "%#{params[:query]}%").or(RoleModel.where(gender: params[:query].capitalize))
+      params[:query] = nil
     else
       @role_models = RoleModel.all
     end

@@ -12,12 +12,7 @@
 }
 
 .logo {
-  text-align: center;
-  margin: 30px 80px;
-  width: 20px;
-  height: 20px;
-  color: $dashboard;
-  font-size: 60px;
+  margin: 30px 60px;;
 }
 
 .user-id {
@@ -103,6 +98,10 @@ a.navlink.active {
 }
 
 a.navlink.bottom {
-  margin-top: 250px;
+  margin-top: 200px;
   padding-bottom: 5px;
+}
+
+.navbar-logo {
+
 }
