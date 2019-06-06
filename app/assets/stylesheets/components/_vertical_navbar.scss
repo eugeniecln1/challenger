@@ -1,9 +1,14 @@
 .nav {
   position: relative;
-  position: sticky;
-  width: 200px;
+  position: fixed;
+  width: 250px;
   height: 100vh;
   background-color: $navbar;
+  transition: 0.5s;
+  z-index: 1;
+  top: 0;
+  left: 0;
+
 }
 
 .menu {
@@ -83,6 +88,7 @@ a.navlink.new:hover {
 a.navlink {
   color: $dashboard;
   width: 100%;
+  transition: 0.3s;
 }
 
 
@@ -112,6 +118,28 @@ a.navlink.bottom {
   padding-bottom: 5px;
 }
 
-.navbar-logo {
+/* Position and style the close button (top right corner) */
+.nav #myBtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
 
+#myBtn:hover {
+  background-color: #444;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .5s; /* If you want a transition effect */
+  padding: 20px;
+  margin-left: 250px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .nav {padding-top: 15px;}
+  .nav a {font-size: 18px;}
 }
