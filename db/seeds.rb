@@ -26,6 +26,13 @@ challenge = Challenge.create(title: "Start planning for the future", category: "
 challenge2 = Challenge.create(title: "Go outside", category: "Daily activities", description: "Go out in the sun and take a moment to appreciate the beauty of your world", role_model: riri)
 challenge3 = Challenge.create(title: "Discover the world", category: "Curiosity", description: "There's a great documentary for you to watch", role_model_id: elon.id)
 challenge4 = Challenge.create(title: "Interested in politics?", category: "Curiosity", description: "Did you know that agriculture is the most polluting industry in the world?", role_model_id: mascotte.id)
+challenge5 = Challenge.create(title: "Challenge 5", category: "Interactions", description: "Did you know that agriculture is the most polluting industry in the world?", role_model_id: mascotte.id)
+challenge6 = Challenge.create(title: "Challenge 6", category: "Interactions", description: "Did you know that agriculture is the most polluting industry in the world?", role_model_id: mascotte.id)
+challenge7 = Challenge.create(title: "Challenge 7", category: "Daily activities", description: "Did you know that agriculture is the most polluting industry in the world?", role_model_id: mascotte.id)
+challenge8 = Challenge.create(title: "Challenge 8", category: "Future me", description: "Did you know that agriculture is the most polluting industry in the world?", role_model_id: mascotte.id)
+challenge9 = Challenge.create(title: "Challenge 9", category: "Future me", description: "Did you know that agriculture is the most polluting industry in the world?", role_model_id: mascotte.id)
+challenge10 = Challenge.create(title: "Challenge 10", category: "Daily activities", description: "Did you know that agriculture is the most polluting industry in the world?", role_model_id: mascotte.id)
+
 
 Participation.create(user_id: user.id, challenge_id: challenge.id, feedback: "I loved it", appreciation: 5, difficulty: 2)
 Participation.create(user_id: user.id, challenge_id: challenge2.id, feedback: "It sucked", appreciation: 1, difficulty: 4)
