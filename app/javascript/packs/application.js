@@ -13,7 +13,6 @@ buttonBack();
 import initPolar from "../components/dashboard";
 initPolar();
 
-
 // import { initVerticalNavbar } from "../components/vertical_navbar"
 // initVerticalNavbar();
 
