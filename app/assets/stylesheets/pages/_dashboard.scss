@@ -121,30 +121,51 @@ background-color: $scrollbar;
   font-size: 16px;
 }
 
+//background color progress bar
 .done-back {
   background-color: #8cb2ea;
 }
 
-.future {
-  color: $future-me;
+.progress .dailyactivities {
+  background-color: $daily-activities;
 }
 
-.future-back {
+.progress .futureme {
   background-color: $future-me;
 }
 
-.interaction {
-  color: $interactions;
+.progress .interactions {
+  background-color: $interactions;
 }
 
-.curiosity {
-  color: $curiosity;
-}
-
-.curiosity-back {
+.progress .curiosity {
   background-color: $curiosity;
 }
 
-.notification small {
+// color for medal
+.reward .dailyactivities {
+  color: $daily-activities;
+}
+
+.reward .futureme {
+  color: $future-me;
+}
+
+.reward .interactions {
+  color: $interactions;
+}
+
+.reward .curiosity {
+  color: $curiosity;
+}
+
+.notification small a {
   font-size: 16px;
+  color: #999999;
+  opacity: 0.6;
+}
+
+.notification small a:hover {
+  text-decoration: none;
+  opacity: 1;
 }

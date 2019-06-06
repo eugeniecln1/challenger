@@ -4,61 +4,39 @@
   <div class="scrollbar scrollbar-primary">
     <div class="force-overflow">
 
-        <div class="follow">
-          <div class="notification">
-            <div class="notification-content">
-              <p><strong>Future Me</strong></p>
-              <p>Title - Short description | <small>Nom</small></p>
+      <% @participations.each do |participation| %>
+        <% if participation.validated? %>
+          <div class="follow done">
+            <div class="notification">
+              <div class="notification-content">
+                <p><strong><%= participation.challenge.category %></strong></p>
+                <p><%= participation.challenge.title %> | <small><%= link_to "#{participation.challenge.role_model.first_name} #{participation.challenge.role_model.last_name}", role_model_path(participation.challenge.role_model) %></small></p>
+              </div>
+              <div class="notification-actions">
+                <p><em>Validated !</em></p>
+              </div>
             </div>
-            <div class="notification-actions">
-              <a href="#"><i class="far fa-check-circle fa-lg"></i></a>
-              <a href="#"><i id="fail" class="far fa-times-circle fa-lg"></i></a>
-            </div>
-          </div>
-          <div class="progress">
-            <div class="progress-bar progress-bar-striped future-back" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-          </div>
-        </div>
-
-        <div class="follow">
-          <div class="notification">
-            <div class="notification-content">
-              <p><strong>Curiosity</strong></p>
-              <p>Title - Short description | <small>Nom</small></p>
-            </div>
-            <div class="notification-actions">
-              <a href="#"><i class="far fa-check-circle fa-lg"></i></a>
-              <a href="#"><i id="fail" class="far fa-times-circle fa-lg"></i></a>
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped done-back" role="progressbar" style="width: 100%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
             </div>
           </div>
-          <div class="progress">
-            <div class="progress-bar progress-bar-striped curiosity-back" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-          </div>
-        </div>
-
-        <div class="follow done">
-          <div class="notification">
-            <div class="notification-content">
-              <p><strong>Future Me</strong></p>
-              <p>Title - Short description | <small>Nom</small></p>
+        <% else %>
+          <div class="follow">
+            <div class="notification">
+              <div class="notification-content">
+                <p><strong><%= participation.challenge.category %></strong></p>
+                <p><%= participation.challenge.title %> | <small><%= link_to "#{participation.challenge.role_model.first_name} #{participation.challenge.role_model.last_name}", role_model_path(participation.challenge.role_model) %></small></p>
+              </div>
+              <div class="notification-actions">
+                <a href="#" id="check" data-toggle="modal" data-target="#exampleModal<%= participation.id %>"><i class="far fa-check-circle fa-lg"></i></a>
+              </div>
+            </div>
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped <%= participation.challenge.category.gsub(/\s+/, "").downcase %>" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
             </div>
           </div>
-          <div class="progress">
-            <div class="progress-bar progress-bar-striped done-back" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-          </div>
-        </div>
-
-        <div class="follow done">
-          <div class="notification">
-            <div class="notification-content">
-              <p><strong>Curitosity</strong></p>
-              <p>Title - Short description | <small>Nom</small></p>
-            </div>
-          </div>
-          <div class="progress">
-            <div class="progress-bar progress-bar-striped done-back" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-          </div>
-        </div>
+        <% end %>
+      <% end %>
     </div>
   </div>
 </div>
@@ -70,17 +48,24 @@
   <div class="scrollbar scrollbar-primary box">
     <div class="force-overflow rewards">
       <div class="reward">
-        <i class="future fas fa-medal fa-lg"></i>
+        <i class="futureme fas fa-medal fa-lg"></i>
         <div class="reward-content">
           <p><strong>Future Me</strong></p>
           <p>Congratulations ! You completed 5 challenges</p>
         </div>
       </div>
       <div class="reward">
-        <i class="interaction fas fa-medal fa-lg"></i>
+        <i class="dailyactivities fas fa-medal fa-lg"></i>
+        <div class="reward-content">
+          <p><strong>Daily Activities</strong></p>
+          <p>Congratulations ! You completed 10 challenges</p>
+        </div>
+      </div>
+      <div class="reward">
+        <i class="interactions fas fa-medal fa-lg"></i>
         <div class="reward-content">
           <p><strong>Interactions</strong></p>
-          <p>Congratulations ! You completed 10 challenges</p>
+          <p>Congratulations ! You completed 5 challenges</p>
         </div>
       </div>
       <div class="reward">
@@ -90,19 +75,12 @@
           <p>Congratulations ! You completed 5 challenges</p>
         </div>
       </div>
-      <div class="reward">
-        <i class="future fas fa-medal fa-lg"></i>
-        <div class="reward-content">
-          <p><strong>Future Me</strong></p>
-          <p>Congratulations ! You completed 5 challenges</p>
-        </div>
-      </div>
     </div>
   </div>
 </div>
 
 <!-- cards d'instances de Participation qui montre le détail du challenge -->
-<div class="container">
+<!-- <div class="container">
   <div class="row justify-content-center">
     <div class="col-sm">
       <% @participations.each do |participation| %>
@@ -115,7 +93,7 @@
             <p><%= participation.challenge.description %></p>
           </div>
           <div class="card-challenge-success">
-            <!-- Si participation.validated? (si les ratings + feedback sont complétés = true sinon false), on affiche un boutton pour envoyer le form de feedback -->
+            Si participation.validated? (si les ratings + feedback sont complétés = true sinon false), on affiche un boutton pour envoyer le form de feedback
             <% if participation.validated? %>
               <div>
                 <p> Yeah ! You're the best !<i class="far fa-check-circle"></i></p>
@@ -134,14 +112,14 @@
     </div>
   </div>
 </div>
-
+ -->
 <!-- Modal -->
 <% @participations.each do |participation| %>
   <div class="modal fade" id="exampleModal<%= participation.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel"><%= participation.id %></h5>
+          <h5 class="modal-title" id="exampleModalLabel">Give your feedback</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -159,9 +137,3 @@
     </div>
   </div>
 <% end %>
-
-
-
-
-
-
