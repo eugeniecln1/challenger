@@ -1,47 +1,40 @@
-<div class="nav fixed-top d-flex">
+<div class="nav d-flex fixed-top">
+  <%= link_to dashboard_path, class: "navbar-logo" do %>
+    <%= image_tag "dragon_blanc.png", size: "80", class: "logo" %>
+  <% end %>
 
-  <div class="nav d-flex">
-    <%= link_to dashboard_path, class: "navbar-logo" do %>
-      <%= image_tag "dragon_blanc.png", size: "80", class: "logo" %>
-    <% end %>
-
-    <%= link_to dashboard_path, class: "navbar-logo mt-0" do %>
-      <i class="logo fab fa-cuttlefish fa-lg"></i>
-    <% end %>
-
-    <% if user_signed_in? %>
-      <div class="user-id d-flex">
-        <div class="online-badge"></div>
-        <p style="color: white"><%= current_user.username %></p>
-      </div>
-    <% else %>
-    <% end %>
-
-    <%= link_to challenges_home_path, class: "navlink new" do %>
-      <i class="logo-n fas fa-plus"></i>Challenge
-    <% end unless yield(:page) == "challenges" || yield(:page) == 'challenge'%>
-
-    <div class="menu d-flex flex-column">
-
-      <%= link_to dashboard_path, class: "navlink #{'active' if yield(:page) == 'dashboard'}" do %>
-        <i class="logo-d fas fa-home"></i>Dashboard
-      <% end %>
-
-      <%= link_to challenges_home_path, class: "navlink #{'active' if yield(:page) == 'challenges' || yield(:page) == 'challenge' }" do %>
-        <i class="logo-c fab fa-cuttlefish"></i>Challenges
-      <% end %>
-
-      <%= link_to participations_path, class: "navlink #{'active' if yield(:page) == 'journal'}" do %>
-        <i class="logo-j far fa-newspaper"></i>Journal
-      <% end %>
-
-      <%= link_to role_models_path, class: "navlink #{'active' if yield(:page) == 'inspiration'}" do %>
-        <i class="logo-i fas fa-lightbulb"></i>Inspiration
-      <% end %>
-
-      <%= link_to destroy_user_session_path, method: :delete, data: { confirm: 'Are you sure?' }, class: "navlink bottom" do %>
-        <i class="logo-s fas fa-sign-out-alt"></i>Sign out
-      <% end %>
+  <% if user_signed_in? %>
+    <div class="user-id d-flex">
+      <div class="online-badge"></div>
+      <p style="color: white"><%= current_user.username %></p>
     </div>
+  <% else %>
+  <% end %>
+
+  <%= link_to challenges_home_path, class: "navlink new" do %>
+    <i class="logo-n fas fa-plus"></i>Challenge
+  <% end unless yield(:page) == "challenges" || yield(:page) == 'challenge'%>
+
+  <div class="menu d-flex flex-column">
+
+    <%= link_to dashboard_path, class: "navlink #{'active' if yield(:page) == 'dashboard'}" do %>
+      <i class="logo-d fas fa-home"></i>Dashboard
+    <% end %>
+
+    <%= link_to challenges_home_path, class: "navlink #{'active' if yield(:page) == 'challenges' || yield(:page) == 'challenge' }" do %>
+      <i class="logo-c fab fa-cuttlefish"></i>Challenges
+    <% end %>
+
+    <%= link_to participations_path, class: "navlink #{'active' if yield(:page) == 'journal'}" do %>
+      <i class="logo-j far fa-newspaper"></i>Journal
+    <% end %>
+
+    <%= link_to role_models_path, class: "navlink #{'active' if yield(:page) == 'inspiration'}" do %>
+      <i class="logo-i fas fa-lightbulb"></i>Inspiration
+    <% end %>
+
+    <%= link_to destroy_user_session_path, method: :delete, data: { confirm: 'Are you sure?' }, class: "navlink bottom" do %>
+      <i class="logo-s fas fa-sign-out-alt"></i>Sign out
+    <% end %>
   </div>
 </div>
