@@ -14,6 +14,8 @@
   margin: 20px 0;
   border-style: none;
   text-align: center;
+  border-top: solid 15px;
+  border-color: $scrollbar;
   .card_image {
     display: inline-block;
     margin-bottom: 10px;
@@ -24,24 +26,27 @@
 //   height: inherit;
 //   border-radius: 30px;
 // }
+.model_profile_card:hover {
+  // box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  // transform: translateZ(5px);
+  transform: scale(1.08, 1.08);
+}
 .link-wiki {
-    display: flex;
+  display: flex;
   justify-content: flex-end;
 }
 
 hr {
   width: 30%;
+  color: $scrollbar;
+  border: solid 1.5px;
 }
 
-.model_profile_card:hover {
-  // box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  // transform: translateZ(5px);
-  transform: scale(1.08, 1.08);
-  // border-style: solid;
-}
 
 .model_card {
   background: #FFFF;
+  border: solid 25px;
+  border-color: $scrollbar;
   text-align: center;
   width: 90%;
   padding: 30px;
