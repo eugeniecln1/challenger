@@ -11,7 +11,7 @@
   <% else %>
   <% end %>
 
-  <%= link_to challenges_home_path, class: "navlink new btn-challenge animated bounce delay-2s" do %>
+  <%= link_to challenges_home_path, class: "navlink new" do %>
     <i class="logo-n fas fa-plus"></i>Challenge
   <% end unless yield(:page) == "challenges" || yield(:page) == 'challenge'%>
 
