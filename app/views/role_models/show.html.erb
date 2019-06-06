@@ -3,6 +3,7 @@
 
 <div class="container">
   <div class="model_card">
+  <div class="border">
     <div class="card_image">
       <%= image_tag(@role_model.picture, alt:'', title:(@role_model.first_name + " " + @role_model.last_name) )if @role_model.picture %>
     </div>
@@ -19,3 +20,5 @@
   </div>
  <%= link_to "Back to search", role_models_path, title:"Back to search", class: "btn-3d" %>
 </div>
+
+  </div>

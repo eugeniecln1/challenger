@@ -21,6 +21,7 @@
     margin-bottom: 10px;
   }
 }
+
 // .model_profile_card .card_image {
 //   width: inherit;
 //   height: inherit;
@@ -45,8 +46,9 @@ hr {
 
 .model_card {
   background: #FFFF;
-  border: solid 25px;
-  border-color: $scrollbar;
+  // border: solid 25px;
+  // border-color: $scrollbar;
+  background-color: $scrollbar;
   text-align: center;
   width: 90%;
   padding: 30px;
@@ -66,6 +68,15 @@ hr {
     width: 85%;
     margin: 40px auto;
   }
+  .btn-3d {
+    margin: 10px 10px -10px !important;
+  }
+}
+
+.border {
+  border-radius: 3px;
+  background-color: white;
+  padding: 30px;
 }
 
 .flip-card {
