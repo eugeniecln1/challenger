@@ -64,20 +64,56 @@
   opacity: 0.8;
 }
 
+// .bg-curiosity {
+//   background-color: $curiosity;
+//   background:
+//     radial-gradient(circle farthest-side at 0% 50%,#fb1 23.5%,rgba(255, 182, 104, 0) 0)21px 30px,
+//     radial-gradient(circle farthest-side at 0% 50%,$background 24%,rgba(255, 182, 104, 0) 0)19px 30px,
+//     linear-gradient(#fb1 14%,rgba(255, 182, 104, 0) 0, rgba(255, 182, 104, 0) 85%,#fb1 0)0 0,
+//     linear-gradient(150deg,#fb1 24%,$background 0,$background 26%,rgba(255, 182, 104, 0) 0,rgba(255, 182, 104, 0) 74%,$background 0,$background 76%,#fb1 0)0 0,
+//     linear-gradient(30deg,#fb1 24%,$background 0,$background 26%,rgba(255, 182, 104, 0) 0,rgba(255, 182, 104, 0) 74%,$background 0,$background 76%,#fb1 0)0 0,
+//     linear-gradient(90deg,$background 2%,#fb1 0,#fb1 98%,$background 0%)0 0 #fb1;
+//   background-size: 40px 60px;
+// }
+
 .bg-curiosity {
   background-color: $curiosity;
+  background-image: linear-gradient(30deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445),
+  linear-gradient(150deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445),
+  linear-gradient(30deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445),
+  linear-gradient(150deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445),
+  linear-gradient(60deg, $navbar 25%, transparent 25.5%, transparent 75%, $navbar 75%, $navbar),
+  linear-gradient(60deg, $navbar 25%, transparent 25.5%, transparent 75%, $navbar 75%, $navbar);
+  background-size:80px 140px;
+  background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
 }
 
 .bg-dailyactivities {
   background-color: $daily-activities;
+  background-image:
+  radial-gradient($navbar 9px, transparent 10px),
+  repeating-radial-gradient($navbar 0, $navbar 4px, transparent 5px, transparent 20px, $navbar 21px, $navbar 25px, transparent 26px, transparent 50px);
+  background-size: 30px 30px, 90px 90px;
+  background-position: 0 0;
 }
 
 .bg-futureme {
   background-color: $future-me;
+  background-image: radial-gradient(closest-side, transparent 98%, rgba(255, 255, 255, 0.3) 99%),
+  radial-gradient(closest-side, transparent 98%, rgba(255, 255, 255, 0.3) 99%);
+  background-size:80px 80px;
+  background-position:0 0, 40px 40px;
 }
 
 .bg-interactions {
   background-color: $interactions;
+  background-image:
+    radial-gradient(circle at 100% 150%, $interactions 24%, $navbar 25%, $navbar 28%, $interactions 29%, $interactions 36%, $navbar 36%, $navbar 40%, transparent 40%, transparent),
+    radial-gradient(circle at 0    150%, $interactions 24%, $navbar 25%, $navbar 28%, $interactions 29%, $interactions 36%, $navbar 36%, $navbar 40%, transparent 40%, transparent),
+    radial-gradient(circle at 50%  100%, $navbar 10%, $interactions 11%, $interactions 23%, $navbar 24%, $navbar 30%, $interactions 31%, $interactions 43%, $navbar 44%, $navbar 50%, $interactions 51%, $interactions 63%, $navbar 64%, $navbar 71%, transparent 71%, transparent),
+    radial-gradient(circle at 100% 50%, $navbar 5%, $interactions 6%, $interactions 15%, $navbar 16%, $navbar 20%, $interactions 21%, $interactions 30%, $navbar 31%, $navbar 35%, $interactions 36%, $interactions 45%, $navbar 46%, $navbar 49%, transparent 50%, transparent),
+    radial-gradient(circle at 0    50%, $navbar 5%, $interactions 6%, $interactions 15%, $navbar 16%, $navbar 20%, $interactions 21%, $interactions 30%, $navbar 31%, $navbar 35%, $interactions 36%, $interactions 45%, $navbar 46%, $navbar 49%, transparent 50%, transparent);
+  background-size: 100px 50px;
 }
 
 .padd {
