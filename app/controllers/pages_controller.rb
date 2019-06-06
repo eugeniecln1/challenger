@@ -13,9 +13,9 @@ class PagesController < ApplicationController
       curiosity: 0
     }
     @participations.where.not(difficulty: nil, appreciation: nil, feedback: nil).map { |participation| participation.challenge.category }.each do |variable|
-      if variable == "Daily Activities"
+      if variable == "Daily activities"
         @counter[:dailyactivities] += 1
-      elsif variable == "Future Me"
+      elsif variable == "Future me"
         @counter[:futureme] += 1
       elsif variable == "Interactions"
         @counter[:interactions] += 1
