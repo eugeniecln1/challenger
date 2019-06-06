@@ -38,12 +38,12 @@ const initPolar = () => {
       labels: ["Daily Activities", "Future Me", "Interactions", "Curiosity"],
       datasets: [{
         data: [200, 150, 90, 120],
-        backgroundColor: ["rgba(219, 0, 0, 0.6)", "rgba(0, 165, 2, 0.6)", "rgba(255, 195, 15, 0.6)",
-          "rgba(55, 59, 66, 0.6)"
+        backgroundColor: ["rgba(247, 221, 74, 0.7)", "rgba(250, 123, 119, 0.7)", "rgba(244, 159, 187, 0.7)",
+          "rgba(255, 182, 104, 0.7)"
         ],
-        hoverBackgroundColor: ["rgba(219, 0, 0, 0.9)", "rgba(0, 165, 2, 0.9)",
-          "rgba(255, 195, 15, 0.9)", "rgba(55, 59, 66, 0.9)"
-        ]
+        hoverBackgroundColor: ["#F7DD4A", "#FA7B77", "#F49FBB",
+          "#FFB668"
+        ],
       }]
     },
     options: {
