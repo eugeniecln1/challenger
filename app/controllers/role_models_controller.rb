@@ -1,5 +1,6 @@
 class RoleModelsController < ApplicationController
   def index
+    @role_models_search = RoleModel.pluck(:first_name, :last_name, :sector).flatten
     if params[:query].present?
       sql_query = " \
         first_name ILIKE :query \
