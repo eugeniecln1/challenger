@@ -5,6 +5,7 @@ const buttonBack = () => {
   if (buttonBack) {
     $(".btn-3d").click(function(event){
       event.preventDefault();
+      window.location = buttonBack.getAttribute("href")
     });
   }
 }
