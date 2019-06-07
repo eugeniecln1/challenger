@@ -34,3 +34,12 @@
   background-color: $navbar;
 }
 
+.btn-wiki {
+  color: $scrollbar;
+  font-weight: bolder;
+}
+
+.btn-wiki:hover {
+  color: lightgrey;
+    transform: translate3d(1rem, 0, 0);
+}
