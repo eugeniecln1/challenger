@@ -165,21 +165,33 @@ hr {
 .card-inside-color-curiosity {
   background-color: $curiosity;
   padding: 10px;
+  position: relative;
+  height: 100%;
+  width: 100%;
 }
 
 .card-inside-color-interactions {
   background-color: $interactions;
   padding: 10px;
+  position: relative;
+  height: 100%;
+  width: 100%;
 }
 
 .card-inside-color-futureme {
   background-color: $future-me;
   padding: 10px;
+  position: relative;
+  height: 100%;
+  width: 100%;
 }
 
 .card-inside-color-dailyactivities {
   background-color: $daily-activities;
   padding: 10px;
+  position: relative;
+  height: 100%;
+  width: 100%;
 }
 
 /* This container is needed to position the front and back side */
