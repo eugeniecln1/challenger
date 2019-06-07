@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,700");
+
 .btn-3d {
     position: relative;
     display: inline-block;
@@ -43,3 +45,48 @@
   color: lightgrey;
     transform: translate3d(1rem, 0, 0);
 }
+
+.btn-challenge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  svg {
+    height: 55px;
+    width: 150px;
+    fill: none;
+    stroke-width: 5;
+
+    .o1 {
+      stroke: rgba(#A098AB, 0.7);
+      fill: $navbar;
+      transition: all 1s ease-in-out;
+    }
+
+    .o2 {
+      stroke: white;
+      stroke-dasharray: 20 420;
+      stroke-dashoffset: 20;
+      transition: all 1s ease-in-out;
+    }
+  }
+
+  a {
+  position: absolute;
+  text-transform: uppercase;
+  color: white;
+  }
+
+  &:hover {
+    .o1{
+      background-color: #CC8110;
+
+    }
+
+    .o2 {
+      stroke-dashoffset: -420;
+    }
+  }
+}
+
