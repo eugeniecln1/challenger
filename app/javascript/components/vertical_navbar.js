@@ -17,7 +17,6 @@ const closeNav = () => {
   document.body.style.backgroundColor = "white";
   document.querySelector(".logo").style.visibility = "hidden";
   document.querySelector("p").style.visibility = "hidden";
-  document.querySelector(".element-navbar").style.visibility = "hidden";
 }
 
 const openNav = () => {
@@ -25,7 +24,6 @@ const openNav = () => {
   document.getElementById("main").style.marginLeft = "250px";
   document.querySelector(".logo").style.visibility = "visible";
   document.querySelector("p").style.visibility = "visible";
-  document.querySelector(".element-navbar").style.visibility = "visible";
 }
 
 const toggleNav = () => {
@@ -36,11 +34,6 @@ const toggleNav = () => {
     } else {
       openNav();
     }
-  });
-
-  const button2 = document.getElementById("myBtn-2");
-  button2.addEventListener("click", (e) => {
-
   });
 }
 
