@@ -26,13 +26,15 @@ const openNav = () => {
 
 const toggleNav = () => {
   const button = document.getElementById("myBtn");
-  button.addEventListener("click", (e) => {
-    if (document.getElementById("mySidenav").style.width === "250px") {
-      closeNav();
-    } else {
-      openNav();
-    }
-  });
+  if (button) {
+    button.addEventListener("click", (e) => {
+      if (document.getElementById("mySidenav").style.width === "250px") {
+        closeNav();
+      } else {
+        openNav();
+      }
+    });
+  }
 }
 
 export { toggleNav };
