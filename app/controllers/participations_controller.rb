@@ -19,7 +19,7 @@ class ParticipationsController < ApplicationController
     @participation = Participation.find(params[:id])
     @participation.assign_attributes(participation_params)
     @participation.save
-    flash[:notice] = "Well done for completing this challenge ! 🥳"
+    flash[:notice] = "Well done for completing this challenge ! 🥳 Go check your journal to see your feedback"
     redirect_to dashboard_path
   end
 
