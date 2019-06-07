@@ -127,8 +127,14 @@ a.navlink.bottom {
   margin-left: 50px;
 }
 
+#myBtn {
+  color: white;
+  background-color: $navbar;
+}
+
 #myBtn:hover {
-  background-color: #444;
+  background-color: $navbar;
+  opacity: 0.7;
 }
 
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
@@ -142,4 +148,8 @@ a.navlink.bottom {
 @media screen and (max-height: 450px) {
   .nav {padding-top: 15px;}
   .nav a {font-size: 18px;}
+}
+
+.element-navbar {
+
 }
