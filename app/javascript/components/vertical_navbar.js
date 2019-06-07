@@ -15,15 +15,13 @@ const closeNav = () => {
   document.getElementById("mySidenav").style.width = "70px";
   document.getElementById("main").style.marginLeft = "0";
   document.body.style.backgroundColor = "white";
-  document.querySelector(".logo").style.visibility = "hidden";
-  document.querySelector("p").style.visibility = "hidden";
+  document.getElementById("navbar-all").style.visibility = "hidden";
 }
 
 const openNav = () => {
   document.getElementById("mySidenav").style.width = "250px";
   document.getElementById("main").style.marginLeft = "250px";
-  document.querySelector(".logo").style.visibility = "visible";
-  document.querySelector("p").style.visibility = "visible";
+  document.getElementById("navbar-all").style.visibility = "visible";
 }
 
 const toggleNav = () => {

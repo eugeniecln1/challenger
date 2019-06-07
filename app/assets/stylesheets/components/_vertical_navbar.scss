@@ -140,7 +140,7 @@ a.navlink.bottom {
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
 #main {
   transition: margin-left .5s; /* If you want a transition effect */
-  padding: 20px;
+  padding: 0;
   margin-left: 250px;
 }
 
@@ -148,8 +148,4 @@ a.navlink.bottom {
 @media screen and (max-height: 450px) {
   .nav {padding-top: 15px;}
   .nav a {font-size: 18px;}
-}
-
-.element-navbar {
-
 }
