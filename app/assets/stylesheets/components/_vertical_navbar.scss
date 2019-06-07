@@ -129,11 +129,12 @@ a.navlink.bottom {
 
 #myBtn {
   color: white;
+  background-color: $navbar;
 }
 
 #myBtn:hover {
   background-color: $navbar;
-  color: black;
+  opacity: 0.7;
 }
 
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
