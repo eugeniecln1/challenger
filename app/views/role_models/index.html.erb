@@ -3,6 +3,9 @@
 <!-- # search bar
 # profile cards -->
 <div class="container">
+
+  <h1>Your library of role models ...</h1>
+
 <%= form_tag role_models_path, method: :get do %>
   <div  id= "search-data" class="search-form-control form-group  search-data" data-role_models_search="<%= @role_models_search.to_json %>">
     <%= text_field_tag :query, params[:query], id:"search-bar",

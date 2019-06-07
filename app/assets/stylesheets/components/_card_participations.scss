@@ -7,7 +7,41 @@
   justify-content: space-between;
   align-items: flex-end;
   position: relative;
+  border-left: 7px solid
 }
+
+.border-dailyactivities {
+  border-color: $daily-activities;
+}
+
+.border-futureme {
+  border-color: $future-me;
+}
+
+.border-curiosity {
+  border-color: $curiosity;
+}
+
+.border-interactions {
+  border-color: $interactions;
+}
+
+.color-dailyactivities {
+  color: $daily-activities;
+}
+
+.color-futureme {
+  color: $future-me;
+}
+
+.color-curiosity {
+  color: $curiosity;
+}
+
+.color-interactions {
+  color: $interactions;
+}
+
 
 .card-trip h2 {
   font-size: 16px;

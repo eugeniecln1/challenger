@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: 'pages#home'
+  root to: 'pages#dashboard'
   resources :role_models, only: [:index, :show]
   get 'challenges/home', to: 'challenges#home', as: :challenges_home
   get 'challenges/daily-activities', to: 'challenges#daily_activities', as: :challenges_daily_activities

@@ -12,10 +12,10 @@
 // export { initVerticalNavbar }
 
 const closeNav = () => {
+  document.getElementById("navbar-all").style.visibility = "hidden";
   document.getElementById("mySidenav").style.width = "70px";
   document.getElementById("main").style.marginLeft = "0";
   document.body.style.backgroundColor = "white";
-  document.getElementById("navbar-all").style.visibility = "hidden";
 }
 
 const openNav = () => {
