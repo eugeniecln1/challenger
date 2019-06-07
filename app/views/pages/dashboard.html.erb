@@ -51,7 +51,7 @@
   <div class="scrollbar scrollbar-primary box">
     <div class="force-overflow rewards">
       <% @counter.each do |key, value| %>
-        <% if value == 1 %>
+        <% if value >= 1 %>
           <div class="reward">
             <i class=" <%= key %> fas fa-medal fa-lg"></i>
             <div class="reward-content">
