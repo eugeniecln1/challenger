@@ -9,7 +9,7 @@
         <% @challenges.each_with_index do |challenge, index| %>
           <% active = index == 0 ? "active" : "" %>
           <div class="carousel-item <%= active%>">
-            <div class="card bg-<%= challenge.category.gsub(/\s+/, "").downcase %>" style="height: 400px">
+            <div class="card bg-<%= challenge.category.gsub(/\s+/, "").downcase %>" style="height: 453px">
               <% if challenge.participations.where(user_id: current_user.id).present? %>
                 <div class="card-body padd">
                   <div class="card-inside-color-<%= challenge.category.gsub(/\s+/, "").downcase %>">
@@ -27,7 +27,13 @@
                     <%= image_tag challenge.show_category_logo, size: "100" %>
                     <h6 class="card-text"><%= challenge.description %></p>
                     <br>
-                    <button type="button" class="btn btn-dark"><%= link_to "Challenge accepted!", challenge_participations_path(challenge), method: :post %></button>
+                    <div class="btn-challenge">
+                      <%= link_to "Let's go!", challenge_participations_path(challenge),  method: :post %>
+                      <svg>
+                        <polyline class="o1" points="0 0, 150 0, 150 55, 0 55, 0 0"></polyline>
+                        <polyline class="o2" points="0 0, 150 0, 150 55, 0 55, 0 0"></polyline>
+                      </svg>
+                    </div>
                   </div>
                 </div>
               <% end %>
