@@ -50,34 +50,30 @@
   </div>
   <div class="scrollbar scrollbar-primary box">
     <div class="force-overflow rewards">
-      <div class="reward">
-        <i class="futureme fas fa-medal fa-lg"></i>
-        <div class="reward-content">
-          <p><strong>Future Me</strong></p>
-          <p>Congratulations ! You completed 5 challenges</p>
-        </div>
-      </div>
-      <div class="reward">
-        <i class="dailyactivities fas fa-medal fa-lg"></i>
-        <div class="reward-content">
-          <p><strong>Daily Activities</strong></p>
-          <p>Congratulations ! You completed 10 challenges</p>
-        </div>
-      </div>
-      <div class="reward">
-        <i class="interactions fas fa-medal fa-lg"></i>
-        <div class="reward-content">
-          <p><strong>Interactions</strong></p>
-          <p>Congratulations ! You completed 5 challenges</p>
-        </div>
-      </div>
-      <div class="reward">
-        <i class="curiosity fas fa-medal fa-lg"></i>
-        <div class="reward-content">
-          <p><strong>Curiosity</strong></p>
-          <p>Congratulations ! You completed 5 challenges</p>
-        </div>
-      </div>
+      <% @counter.each do |key, value| %>
+        <% if value == 1 %>
+          <div class="reward">
+            <i class=" <%= key %> fas fa-medal fa-lg"></i>
+            <div class="reward-content">
+              <% if key == :futureme %>
+                <% cat = "Future me" %>
+                <p><strong><%= cat %></strong></p>
+                <p>Congratulations ! You completed 1 challenges</p>
+              <% elsif key == :dailyactivities %>
+                <% cat = "Daily activities" %>
+                <p><strong><%= cat %></strong></p>
+                <p>Congratulations ! You completed 1 challenges</p>
+              <% elsif key == :interactions %>
+                <p><strong><%= key.capitalize %></strong></p>
+                <p>Congratulations ! You completed 1 challenges</p>
+              <% elsif key == :curiosity %>
+                <p><strong><%= key.capitalize %></strong></p>
+                <p>Congratulations ! You completed 1 challenges</p>
+              <% end %>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
     </div>
   </div>
 </div>

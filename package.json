@@ -9,6 +9,7 @@
     "chartjs": "^0.3.24",
     "jquery": "^3.4.1",
     "jquery-bar-rating": "^1.2.2",
+    "js-autocomplete": "^1.0.4",
     "mdbootstrap": "^4.8.2",
     "popper.js": "^1.15.0"
   },

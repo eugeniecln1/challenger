@@ -7,10 +7,10 @@
   <h1>Your library of role models ...</h1>
 
 <%= form_tag role_models_path, method: :get do %>
-  <div class="search-form-control form-group">
-    <%= text_field_tag :query, params[:query],
-      class: "form-control string required", type: "text",
-      placeholder: "Find an inspiring model 🤗"
+  <div  id= "search-data" class="search-form-control form-group  search-data" data-role_models_search="<%= @role_models_search.to_json %>">
+    <%= text_field_tag :query, params[:query], id:"search-bar",
+      class: "form-control string required search-input", type: "text",
+      placeholder: "Find an inspiring model 🤗", autocomplete: :on
     %>
     <%= button_tag "", name:"button", type:"submit", class:" btn btn-flat fa fa-search" %>
   </div>
