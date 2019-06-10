@@ -16,6 +16,6 @@ class BookmarkedsController < ApplicationController
     @bookmarked = Bookmarked.find(params[:id])
     @bookmarked.destroy
     flash[:notice] = "This role model has been unbookmarked"
-    redirect_to role_models_path
+    redirect_to request.referer
   end
 end
