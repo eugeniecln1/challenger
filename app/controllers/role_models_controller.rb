@@ -17,8 +17,7 @@ class RoleModelsController < ApplicationController
 
   def show
     @role_model = RoleModel.find(params[:id])
-    @challenge = Challenge.new
-    @bookmarked = Bookmarked.new
+    @bookmarked = Bookmarked.where(role_model: params[:role_model_id])
   end
 
   private

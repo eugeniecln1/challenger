@@ -3,7 +3,7 @@
 <div class="container">
   <h1>My Journal</h1>
   <div class="row justify-content-center">
-    <div class="col-sm-8">
+    <div class="col-sm-9">
     <p><em>Here you'll find all your completed challenges. See how far you have gone !</em> 🤩</p>
       <!-- card_participations = Challenge.title + Feedback + Ratings -->
       <% @participations.each do |participation| %>
@@ -42,19 +42,27 @@
 
     </div>
 
-    <div class="col-sm-4">
-    <p><em>Your favorite role models</em> ⭐️</p>
+    <div class="col-sm-3">
+    <% if @bookmarkeds.empty? %>
+    <div style="text-align: center">
+      <p><em>You haven't bookmarked any role models yet</em></p>
+      <%= link_to "Find a role model", role_models_path, title:"Find a role model", class: "btn-3d" %>
+    </div>
+    <% else %>
+      <p>Your favorite role models ⭐️</p>
       <div class="row">
-        <% @role_model.each do |role_model| %>
-        <div class="card mb-3 model_profile_card p-3">
-          <div class="card-body">
-            <h5 class="card-title"><%= role_model.first_name %> <strong><%= role_model.last_name %></strong></h5>
-            <p class="card-subtitle mb-2 text-muted"><%= role_model.sector %></p>
+        <% @bookmarkeds.each do |bookmarked| %>
+          <%= link_to role_model_path(bookmarked.role_model) do %>
+          <div class="card mb-3 model_profile_card p-3">
+            <div class="card-body">
+              <h5 class="card-title" style="color: black"><%= bookmarked.role_model.first_name %> <strong><%= bookmarked.role_model.last_name %></strong></h5>
+              <p class="card-subtitle mb-2 text-muted"><%= bookmarked.role_model.sector %></p>
+            </div>
           </div>
-        </div>
+          <% end %>
         <% end %>
       </div>
-
+     <% end %>
 
     </div>
   </div>

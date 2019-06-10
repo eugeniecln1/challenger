@@ -3,17 +3,16 @@
 
 <div class="container">
   <div class="model_card">
-    <div class="border">
-
-      <% if @bookmarked.role_model.nil? %>
+    <div class="border" %>
+      <% if @role_model.bookmarkeds.where(user_id: current_user).empty? %>
         <div class="notification-actions">
-          <%= link_to role_model_bookmarkeds_path(@role_model), method: :post, class: "bookmark_icon" do %>
+          <%= link_to role_model_path(@role_model), method: :post, class: "bookmark_icon" do %>
             <i class="far fa-bookmark"></i>
           <% end %>
         </div>
         <% else %>
         <div class="notification-actions">
-          <%= link_to role_model__bookmarkeds_path(@role_model), method: :post, class: "bookmark_icon" do %>
+          <%= link_to role_model_path(@role_model), method: :delete, class: "bookmark_icon" do %>
             <i class="fas fa-bookmark"></i>
           <% end %>
         </div>

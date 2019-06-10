@@ -24,16 +24,16 @@
 <!-- <div class="col-sm-8 col-sm-offset-2"> -->
     <% @role_models.each do |role_model| %>
       <div class="model_profile_card card p-3" title='<%= role_model.first_name %> <%= role_model.last_name %>'>
-        <% if role_model.bookmarkeds.nil? %>
+        <% if role_model.bookmarkeds.where(user_id: current_user).empty? %>
           <div class="notification-actions">
             <%= link_to role_models_path, method: :post, class: "bookmark_icon_small" do %>
-              <i class="fas fa-bookmark"></i>
+              <i class="far fa-bookmark"></i>
             <% end %>
           </div>
           <% else %>
           <div class="notification-actions">
-            <%= link_to role_models_path, method: :post, class: "bookmark_icon_small" do %>
-              <i class="far fa-bookmark"></i>
+            <%= link_to role_models_path, method: :delete, class: "bookmark_icon_small" do %>
+              <i class="fas fa-bookmark"></i>
             <% end %>
           </div>
         <% end %>

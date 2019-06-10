@@ -8,6 +8,7 @@
 puts "Start"
 
 Challenge.destroy_all
+Bookmarked.destroy_all
 RoleModel.destroy_all
 Participation.destroy_all
 User.destroy_all
