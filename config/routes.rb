@@ -3,8 +3,8 @@ Rails.application.routes.draw do
   root to: 'pages#dashboard'
   resources :role_models, only: [:index, :show] do
     post '/', to: 'bookmarkeds#create'
-    delete '/', to: 'bookmarkeds#destroy'
   end
+  resources :bookmarkeds, only: [:destroy]
   get 'challenges/home', to: 'challenges#home', as: :challenges_home
   get 'challenges/daily-activities', to: 'challenges#daily_activities', as: :challenges_daily_activities
   get 'challenges/future-me', to: 'challenges#future_me', as: :challenges_future_me

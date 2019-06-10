@@ -54,6 +54,20 @@
         <% @bookmarkeds.each do |bookmarked| %>
           <%= link_to role_model_path(bookmarked.role_model) do %>
           <div class="card mb-1 model_profile_card p-1">
+            <% if bookmarked.user_id == current_user %>
+              <div class="notification-actions">
+                <%= link_to participations_path, method: :post, class: "bookmark_icon_small" do %>
+                  <i class="far fa-bookmark"></i>
+                <% end %>
+              </div>
+              <% else %>
+              <div class="notification-actions">
+                <%= link_to bookmarked_path(bookmarked.id), method: :delete, class: "bookmark_icon_small" do %>
+                  <i class="fas fa-bookmark"></i>
+                <% end %>
+              </div>
+            <% end %>
+
             <div class="card-body">
               <h5 class="card-title" style="color: black"><%= bookmarked.role_model.first_name %> <strong><%= bookmarked.role_model.last_name %></strong></h5>
               <p class="card-subtitle mb-2 text-muted"><%= bookmarked.role_model.sector %></p>
