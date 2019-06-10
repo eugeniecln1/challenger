@@ -1,54 +1,69 @@
 <%= content_for(:page, "dashboard") %>
 
+<div class="container">
+  <div class="bottom-dash d-flex justify-content-around">
+    <div class="row">
 
-<div class="bottom-dash d-flex justify-content-between mx-2">
-  <div>
-    <canvas id="polarChart" data-daily="<%= @counter[:dailyactivities] %>" data-future="<%= @counter[:futureme] %>" data-interactions="<%= @counter[:interactions] %>" data-curiosity="<%= @counter[:curiosity] %>"></canvas>
-  </div>
-  <div class="scrollbar scrollbar-primary box">
-    <div class="force-overflow rewards">
-      <% @counter.each do |key, value| %>
-        <% if value >= 1 %>
-          <div class="reward">
-            <i class=" <%= key %> fas fa-medal fa-lg"></i>
-            <div class="reward-content">
-              <% if key == :futureme %>
-                <% cat = "Future me" %>
-                <p><strong><%= cat %></strong></p>
-                <p>Congratulations ! You completed 1 challenges</p>
-              <% elsif key == :dailyactivities %>
-                <% cat = "Daily activities" %>
-                <p><strong><%= cat %></strong></p>
-                <p>Congratulations ! You completed 1 challenges</p>
-              <% elsif key == :interactions %>
-                <p><strong><%= key.capitalize %></strong></p>
-                <p>Congratulations ! You completed 1 challenges</p>
-              <% elsif key == :curiosity %>
-                <p><strong><%= key.capitalize %></strong></p>
-                <p>Congratulations ! You completed 1 challenges</p>
+      <div class="col-sm-6">
+        <canvas id="polarChart" data-daily="<%= @counter[:dailyactivities] %>" data-future="<%= @counter[:futureme] %>" data-interactions="<%= @counter[:interactions] %>" data-curiosity="<%= @counter[:curiosity] %>"></canvas>
+      </div>
+
+      <div class="col-sm-6">
+        <div class="scrollbar scrollbar-primary box">
+          <div class="force-overflow rewards">
+            <% @counter.each do |key, value| %>
+              <% if value >= 1 %>
+                <div class="reward">
+                  <i class=" <%= key %> fas fa-medal fa-lg"></i>
+                  <div class="reward-content">
+                    <% if key == :futureme %>
+                      <% cat = "Future me" %>
+                      <p><strong><%= cat %></strong></p>
+                      <p>Congratulations ! You completed 1 challenges</p>
+                    <% elsif key == :dailyactivities %>
+                      <% cat = "Daily activities" %>
+                      <p><strong><%= cat %></strong></p>
+                      <p>Congratulations ! You completed 1 challenges</p>
+                    <% elsif key == :interactions %>
+                      <p><strong><%= key.capitalize %></strong></p>
+                      <p>Congratulations ! You completed 1 challenges</p>
+                    <% elsif key == :curiosity %>
+                      <p><strong><%= key.capitalize %></strong></p>
+                      <p>Congratulations ! You completed 1 challenges</p>
+                    <% end %>
+                  </div>
+                </div>
               <% end %>
-            </div>
+            <% end %>
           </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="container d-flex flex-column">
+
+    <!-- <div class="scrollbar scrollbar-primary"> -->
+      <div class="force-overflow dashboard-element">
+        <% @participations.each do |participation| %>
+          <% if participation.validated? %>
+            <%= render 'done_card', participation: participation %>
+          <% else %>
+            <%= render 'non_done_card', participation: participation %>
+          <% end %>
         <% end %>
-      <% end %>
+   <!--    </div> -->
     </div>
   </div>
+
+
 </div>
 
-<div class="container d-flex flex-column">
 
-  <!-- <div class="scrollbar scrollbar-primary"> -->
-    <div class="force-overflow">
-      <% @participations.each do |participation| %>
-        <% if participation.validated? %>
-          <%= render 'done_card', participation: participation %>
-        <% else %>
-          <%= render 'non_done_card', participation: participation %>
-        <% end %>
-      <% end %>
- <!--    </div> -->
-  </div>
-</div>
+
+
 
 <!-- cards d'instances de Participation qui montre le détail du challenge -->
 <!-- <div class="container">
