@@ -1,3 +1,4 @@
+import $ from "jquery";
 import "bootstrap";
 import initPolar from "../components/dashboard";
 import { toggleNav } from "../components/vertical_navbar"

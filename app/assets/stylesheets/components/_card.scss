@@ -74,10 +74,14 @@ hr {
   }
 }
 
+// End of cards for role model
+//
+// Start of cards for challenges and categories of challenges
+
 .border {
   border-radius: 3px;
   background-color: white;
-  padding: 40px;
+  padding: 15px 40px 40px 40px;
 }
 
 .flip-card {
@@ -208,6 +212,7 @@ hr {
   height: 100%;
   backface-visibility: hidden;
   padding: 70px;
+  text-shadow: $navbar 1px 0 10px;
 }
 
 
@@ -215,4 +220,8 @@ hr {
   transform: rotateY(180deg);
   background-color: white;
   color: black;
+}
+
+.card-challenge {
+  max-width: 700px;
 }

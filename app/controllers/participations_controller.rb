@@ -1,6 +1,7 @@
 class ParticipationsController < ApplicationController
   def index
     @participations = current_user.participations
+    @bookmarkeds = current_user.bookmarkeds
   end
 
   def create
@@ -18,9 +19,13 @@ class ParticipationsController < ApplicationController
   def update
     @participation = Participation.find(params[:id])
     @participation.assign_attributes(participation_params)
-    @participation.save
-    flash[:notice] = "Well done for completing this challenge ! 🥳 Go check your journal to see your feedback"
-    redirect_to dashboard_path
+    if @participation.save
+      flash[:notice] = "Well done for completing this challenge ! 🥳 Go check your journal to see your feedback"
+      respond_to do |format|
+        format.html { redirect_to dashboard_path }
+        format.js
+      end
+    end
   end
 
   private
