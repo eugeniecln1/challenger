@@ -22,10 +22,10 @@
             <div class="card-trip-pricing">
                   Difficulty :
                     <% participation.difficulty.times do %>
-                      <i class="fas fa-dragon"></i>
+                      <i class="fas fa-dragon color-<%= participation.challenge.category.gsub(/\s+/, "").downcase %>"></i>
                     <% end %>
                     <% (5 - participation.difficulty).times  do %>
-                      <%= image_tag("dragon_vide.png", size: "19") %>
+                      <%= image_tag(participation.challenge.show_category_color_on_difficulty_icon, size: "21") %>
                     <% end %>
                     <br>
                   Appreciation :

@@ -17,15 +17,15 @@ class Challenge < ApplicationRecord
     end
   end
 
-  # def show_category_color
-  #   if category == "Daily activities"
-  #     @color = "$daily-activities"
-  #   elsif category == "Future me"
-  #     @color = "$future-me"
-  #   elsif category == "Interactions"
-  #     @color = "$interactions"
-  #   elsif category == "Curiosity"
-  #     @color = "$curiosity"
-  #   end
-  # end
+  def show_category_color_on_difficulty_icon
+    if category == "Daily activities"
+      @difficulty_logo = "dragon_daily_activities.png"
+    elsif category == "Future me"
+      @difficulty_logo = "dragon_future_me.png"
+    elsif category == "Interactions"
+      @difficulty_logo = "dragon_interactions.png"
+    elsif category == "Curiosity"
+      @difficulty_logo = "dragon_curiosity.png"
+    end
+  end
 end
