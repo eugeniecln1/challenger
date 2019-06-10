@@ -6,29 +6,27 @@
 
     <div id="carouselExampleControls" class="carousel slide"  data-interval="false" data-ride="carousel">
       <div class="carousel-inner">
-        <% @challenges.each_with_index do |challenge, index| %>
-          <% active = index == 0 ? "active" : "" %>
-          <% if !challenge.participations.where(user_id: current_user.id).present? %>
-            <div class="carousel-item <%= active%>">
-              <div class="card bg-<%= challenge.category.gsub(/\s+/, "").downcase %>" style="height: 453px">
-                <div class="card-body padd">
-                  <div class="card-inside-color-<%= challenge.category.gsub(/\s+/, "").downcase %>">
-                    <h2 class="card-title"><em><%= challenge.title %></em></h2>
-                    <%= image_tag challenge.show_category_logo, size: "100" %>
-                    <h6 class="card-text"><%= challenge.description %></p>
-                    <br>
-                    <div class="btn-challenge">
-                      <%= link_to "Let's go!", challenge_participations_path(challenge),  method: :post %>
-                      <svg>
-                        <polyline class="o1" points="0 0, 150 0, 150 55, 0 55, 0 0"></polyline>
-                        <polyline class="o2" points="0 0, 150 0, 150 55, 0 55, 0 0"></polyline>
-                      </svg>
+        <% @undone_challenges.each_with_index do |challenge, index| %>
+        <% active = index == 0 ? "active" : "" %>
+              <div class="carousel-item <%= active%>">
+                <div class="card bg-<%= challenge.category.gsub(/\s+/, "").downcase %>" style="height: 453px">
+                  <div class="card-body padd">
+                    <div class="card-inside-color-<%= challenge.category.gsub(/\s+/, "").downcase %>">
+                      <h2 class="card-title"><em><%= challenge.title %></em></h2>
+                      <%= image_tag challenge.show_category_logo, size: "100" %>
+                      <h6 class="card-text"><%= challenge.description %></p>
+                      <br>
+                      <div class="btn-challenge">
+                        <%= link_to "Let's go!", challenge_participations_path(challenge),  method: :post %>
+                        <svg>
+                          <polyline class="o1" points="0 0, 150 0, 150 55, 0 55, 0 0"></polyline>
+                          <polyline class="o2" points="0 0, 150 0, 150 55, 0 55, 0 0"></polyline>
+                        </svg>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-          <% end %>
         <% end %>
 
         <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -46,12 +44,12 @@
   </div>
 
   <div class="col-4">
-    <% if !@challenges.sample.nil? %>
+    <% if !@undone_challenges.sample.nil? %>
       <h5>A role model to inspire you ...</h5>
       <div class="card mb-3 model_profile_card p-3">
         <div class="card-body">
-          <h5 class="card-title"><%= @challenges.first.role_model.first_name %> <strong><%= @challenges.first.role_model.last_name %></strong></h5>
-          <p class="card-subtitle mb-2 text-muted"><%= @challenges.first.role_model.sector %></p>
+          <h5 class="card-title"><%= @undone_challenges.first.role_model.first_name %> <strong><%= @undone_challenges.first.role_model.last_name %></strong></h5>
+          <p class="card-subtitle mb-2 text-muted"><%= @undone_challenges.first.role_model.sector %></p>
         </div>
       </div>
     <% end %>
