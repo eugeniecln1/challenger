@@ -1,46 +1,5 @@
 <%= content_for(:page, "dashboard") %>
 
-<div class="container d-flex flex-column">
-
-  <div class="scrollbar scrollbar-primary">
-    <div class="force-overflow">
-
-      <% @participations.each do |participation| %>
-        <% if participation.validated? %>
-          <div class="follow done">
-            <div class="notification">
-              <div class="notification-content">
-                <p><strong><%= participation.challenge.category %></strong></p>
-                <p><%= participation.challenge.title %> | <small><%= link_to "#{participation.challenge.role_model.first_name} #{participation.challenge.role_model.last_name}", role_model_path(participation.challenge.role_model) %></small></p>
-              </div>
-              <div class="notification-actions">
-                <p><em>Validated !</em></p>
-              </div>
-            </div>
-            <div class="progress">
-              <div class="progress-bar progress-bar-striped done-back" role="progressbar" style="width: 100%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-          </div>
-        <% else %>
-          <div class="follow">
-            <div class="notification">
-              <div class="notification-content">
-                <p><strong><%= participation.challenge.category %></strong></p>
-                <p><%= participation.challenge.title %> | <small><%= link_to "#{participation.challenge.role_model.first_name} #{participation.challenge.role_model.last_name}", role_model_path(participation.challenge.role_model) %></small></p>
-              </div>
-              <div class="notification-actions">
-                <a href="#" id="check" data-toggle="modal" data-target="#exampleModal<%= participation.id %>"><i class="far fa-check-circle fa-lg"></i></a>
-              </div>
-            </div>
-            <div class="progress">
-              <div class="progress-bar progress-bar-striped <%= participation.challenge.category.gsub(/\s+/, "").downcase %>" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-          </div>
-        <% end %>
-      <% end %>
-    </div>
-  </div>
-</div>
 
 <div class="bottom-dash d-flex justify-content-between mx-4">
   <div>
@@ -73,6 +32,48 @@
         <% end %>
       <% end %>
     </div>
+  </div>
+</div>
+
+<div class="container d-flex flex-column">
+
+  <!-- <div class="scrollbar scrollbar-primary"> -->
+    <div class="force-overflow">
+
+      <% @participations.each do |participation| %>
+        <% if participation.validated? %>
+          <div class="follow">
+            <div class="notification">
+              <div class="notification-content">
+                <p><strong><%= participation.challenge.category %></strong></p>
+                <p><%= participation.challenge.title %> | <small><%= link_to "#{participation.challenge.role_model.first_name} #{participation.challenge.role_model.last_name}", role_model_path(participation.challenge.role_model) %></small></p>
+              </div>
+              <div class="notification-actions">
+                <a href="#" id="check" data-toggle="modal" data-target="#exampleModal<%= participation.id %>"><i class="far fa-check-circle fa-lg"></i></a>
+              </div>
+            </div>
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped <%= participation.challenge.category.gsub(/\s+/, "").downcase %>" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+        <% else %>
+          <div class="follow done">
+            <div class="notification">
+              <div class="notification-content">
+                <p><strong><%= participation.challenge.category %></strong></p>
+                <p><%= participation.challenge.title %> | <small><%= link_to "#{participation.challenge.role_model.first_name} #{participation.challenge.role_model.last_name}", role_model_path(participation.challenge.role_model) %></small></p>
+              </div>
+              <div class="notification-actions">
+                <p><em>Validated !</em></p>
+              </div>
+            </div>
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped done-back" role="progressbar" style="width: 100%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+ <!--    </div> -->
   </div>
 </div>
 
