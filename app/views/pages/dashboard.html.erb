@@ -48,12 +48,12 @@
 
   <!-- <div class="scrollbar scrollbar-primary"> -->
     <div class="force-overflow">
-      <% @undone_participations.each do |participation| %>
-        <%= render 'non_done_card', participation: participation %>
-      <% end %> <!--    </div> -->
-  </div>
-
-
+      <div class="force-overflow dashboard-element">
+        <% @undone_participations.each do |participation| %>
+          <%= render 'non_done_card', participation: participation %>
+        <% end %>
+      </div>
+    </div>
 </div>
 
 
