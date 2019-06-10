@@ -77,17 +77,14 @@ background-color: $scrollbar;
 }
 
 #polarChart {
-  margin: 30px 30px 30px 30px;
-  padding: 10px 20px;
-  height: 400px;
-  max-width: 80%;
-  box-shadow: 2px 4px 6px #999999;
+  margin: 30px;
+  padding-bottom: 15px;
   background-color: white;
   border-radius: 4px;
 }
 
 .scrollbar.box {
-  width: 420px;
+  width: 100%;
   max-height: 200px;
   margin: 30px 10px 30px 0px;
 }

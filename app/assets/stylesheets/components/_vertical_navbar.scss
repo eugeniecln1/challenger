@@ -2,13 +2,16 @@
   position: relative;
   position: fixed;
   width: 250px;
-  height: 100%;
+  height: 100vh;
   background-color: $navbar;
   transition: 0.5s;
   z-index: 1;
   top: 0;
   left: 0;
+}
 
+#navbar-all {
+  width: 100%;
 }
 
 .menu {
@@ -76,6 +79,7 @@ a.navlink.new {
   padding-bottom: 2px;
   border-radius: 4px;
   opacity: 0.8;
+  width: 80%;
   // animation-play-state: paused;
 }
 
@@ -114,7 +118,7 @@ a.navlink.active {
 }
 
 a.navlink.bottom {
-  margin-top: 180px;
+  margin-top: 20vh;
   padding-bottom: 5px;
 }
 
