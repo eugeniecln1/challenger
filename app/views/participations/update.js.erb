@@ -1,0 +1,8 @@
+$("#exampleModal<%=@participation.id%>").modal('toggle');
+
+document.querySelector("[data-participation-id='<%=@participation.id%>']").remove();
+$('.force-overflow').append("<%= j render partial: '/pages/done_card', locals: { participation: @participation } %>");
+
+// setTimeout(function(){
+//   document.querySelector("[data-participation-id='<%=@participation.id%>']").remove();
+// }, 50000)
