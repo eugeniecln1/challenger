@@ -1,6 +1,7 @@
 class ParticipationsController < ApplicationController
   def index
     @participations = current_user.participations
+    @bookmarkeds = current_user.bookmarkeds
   end
 
   def create

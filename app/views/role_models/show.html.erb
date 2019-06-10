@@ -3,22 +3,37 @@
 
 <div class="container">
   <div class="model_card">
-  <div class="border">
-    <div class="card_image">
-      <%= image_tag(@role_model.picture, alt:'', title:(@role_model.first_name + " " + @role_model.last_name) )if @role_model.picture %>
-    </div>
-      <h4 class="card-title"><%= @role_model.first_name %> <%= @role_model.last_name %></h4>
-      <p class="card-subtitle mb-2 text-muted "><%= @role_model.sector %></p>
-      <hr>
-      <p class="card-text"><%= @role_model.description %></p>
-      <% if @role_model.first_name && @role_model.last_name %>
-      <div class="link-wiki">
-
-      <a href="https://en.wikipedia.org/wiki/ <%= @role_model.first_name + ' ' + @role_model.last_name%>" target="_blank" class="btn-wiki">Read more <i class="fas fa-angle-double-right"></i></a>
-      </div>
+    <div class="border" %>
+      <% if @role_model.bookmarkeds.where(user_id: current_user).empty? %>
+        <div class="notification-actions">
+          <%= link_to role_model_path(@role_model), method: :post, class: "bookmark_icon" do %>
+            <i class="far fa-bookmark"></i>
+          <% end %>
+        </div>
+        <% else %>
+        <div class="notification-actions">
+          <%= link_to role_model_path(@role_model), method: :delete, class: "bookmark_icon" do %>
+            <i class="fas fa-bookmark"></i>
+          <% end %>
+        </div>
       <% end %>
+
+      <div class="card_image">
+        <%= image_tag(@role_model.picture, alt:'', title:(@role_model.first_name + " " + @role_model.last_name) )if @role_model.picture %>
+      </div>
+        <h4 class="card-title"><%= @role_model.first_name %> <%= @role_model.last_name %></h4>
+        <p class="card-subtitle mb-2 text-muted "><%= @role_model.sector %></p>
+        <hr>
+        <p class="card-text"><%= @role_model.description %></p>
+        <% if @role_model.first_name && @role_model.last_name %>
+        <div class="link-wiki">
+
+        <a href="https://en.wikipedia.org/wiki/ <%= @role_model.first_name + ' ' + @role_model.last_name%>" target="_blank" class="btn-wiki">Read more <i class="fas fa-angle-double-right"></i></a>
+        </div>
+        <% end %>
+    </div>
   </div>
  <%= link_to "Back to search", role_models_path, title:"Back to search", class: "btn-3d" %>
 </div>
 
-  </div>
+
