@@ -99,18 +99,6 @@ hr {
 
 }
 
-// .bg-curiosity {
-//   background-color: $curiosity;
-//   background:
-//     radial-gradient(circle farthest-side at 0% 50%,#fb1 23.5%,rgba(255, 182, 104, 0) 0)21px 30px,
-//     radial-gradient(circle farthest-side at 0% 50%,$background 24%,rgba(255, 182, 104, 0) 0)19px 30px,
-//     linear-gradient(#fb1 14%,rgba(255, 182, 104, 0) 0, rgba(255, 182, 104, 0) 85%,#fb1 0)0 0,
-//     linear-gradient(150deg,#fb1 24%,$background 0,$background 26%,rgba(255, 182, 104, 0) 0,rgba(255, 182, 104, 0) 74%,$background 0,$background 76%,#fb1 0)0 0,
-//     linear-gradient(30deg,#fb1 24%,$background 0,$background 26%,rgba(255, 182, 104, 0) 0,rgba(255, 182, 104, 0) 74%,$background 0,$background 76%,#fb1 0)0 0,
-//     linear-gradient(90deg,$background 2%,#fb1 0,#fb1 98%,$background 0%)0 0 #fb1;
-//   background-size: 40px 60px;
-// }
-
 .bg-curiosity {
   background-color: $curiosity;
   background-image: linear-gradient(30deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445),
