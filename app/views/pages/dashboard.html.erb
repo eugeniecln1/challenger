@@ -39,14 +39,9 @@
 
   <!-- <div class="scrollbar scrollbar-primary"> -->
     <div class="force-overflow">
-      <% @participations.each do |participation| %>
-        <% if participation.validated? %>
-          <%= render 'done_card', participation: participation %>
-        <% else %>
-          <%= render 'non_done_card', participation: participation %>
-        <% end %>
-      <% end %>
- <!--    </div> -->
+      <% @undone_participations.each do |participation| %>
+        <%= render 'non_done_card', participation: participation %>
+      <% end %> <!--    </div> -->
   </div>
 </div>
 
