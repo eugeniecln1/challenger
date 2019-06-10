@@ -34,3 +34,11 @@
   color: white;
   background: $scrollbar;
 }
+
+.sign-container {
+  padding: 25px;
+  border-radius: 2px;
+  border: 20px solid $navbar;
+  margin: 50px auto;
+  width: 50%;
+}
