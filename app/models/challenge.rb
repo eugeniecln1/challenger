@@ -17,15 +17,15 @@ class Challenge < ApplicationRecord
     end
   end
 
-  def show_category_color
-    if category == "Daily activities"
-      @color = "$daily-activities"
-    elsif category == "Future me"
-      @color = "$future-me"
-    elsif category == "Interactions"
-      @color = "$interactions"
-    elsif category == "Curiosity"
-      @color = "$curiosity"
-    end
-  end
+  # def show_category_color
+  #   if category == "Daily activities"
+  #     @color = "$daily-activities"
+  #   elsif category == "Future me"
+  #     @color = "$future-me"
+  #   elsif category == "Interactions"
+  #     @color = "$interactions"
+  #   elsif category == "Curiosity"
+  #     @color = "$curiosity"
+  #   end
+  # end
 end

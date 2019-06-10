@@ -205,6 +205,14 @@ hr {
   transform: rotateY(180deg);
 }
 
+.flip-card-front {
+  text-shadow: $navbar 1px 0 10px;
+  h3.m-0 {
+    font-weight: 700;
+    letter-spacing: .1rem;
+  }
+}
+
 /* Position the front and back side */
 .flip-card-front, .flip-card-back {
   position: absolute;
@@ -212,14 +220,30 @@ hr {
   height: 100%;
   backface-visibility: hidden;
   padding: 70px;
-  text-shadow: $navbar 1px 0 10px;
 }
-
 
 .flip-card-back {
   transform: rotateY(180deg);
   background-color: white;
   color: black;
+  font-size: 16px;
+  align-items: center;
+}
+
+.color-daily-acitivities {
+  background-color: $daily-activities;
+}
+
+.color-future-me {
+  background-color: $future-me
+}
+
+.color-interactions {
+  background-color: $interactions;
+}
+
+.color-curiosity {
+  background-color: $curiosity;
 }
 
 .card-challenge {
