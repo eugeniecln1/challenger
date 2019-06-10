@@ -1,8 +1,10 @@
-$("#exampleModal<%=@participation.id%>").modal('toggle');
+document.querySelector("#exampleModal<%=@participation.id%> .close").click()
 
 document.querySelector("[data-participation-id='<%=@participation.id%>']").remove();
-$('.force-overflow').append("<%= j render partial: '/pages/done_card', locals: { participation: @participation } %>");
 
-// setTimeout(function(){
-//   document.querySelector("[data-participation-id='<%=@participation.id%>']").remove();
-// }, 50000)
+// // $('.force-overflow').append("<%= j render partial: '/pages/done_card', locals: { participation: @participation } %>");
+
+// // setTimeout(() => {
+//   // document.querySelector(".follow.done[data-participation-id='<%=@participation.id%>']").remove()
+// // }, 2000);
+

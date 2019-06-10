@@ -45,17 +45,12 @@
 
   <div class="container d-flex flex-column">
 
-    <!-- <div class="scrollbar scrollbar-primary"> -->
-      <div class="force-overflow dashboard-element">
-        <% @participations.each do |participation| %>
-          <% if participation.validated? %>
-            <%= render 'done_card', participation: participation %>
-          <% else %>
-            <%= render 'non_done_card', participation: participation %>
-          <% end %>
-        <% end %>
-   <!--    </div> -->
-    </div>
+
+  <!-- <div class="scrollbar scrollbar-primary"> -->
+    <div class="force-overflow">
+      <% @undone_participations.each do |participation| %>
+        <%= render 'non_done_card', participation: participation %>
+      <% end %> <!--    </div> -->
   </div>
 
 
