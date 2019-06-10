@@ -4,7 +4,6 @@ class ChallengesController < ApplicationController
 
   def daily_activities
     @challenges = Challenge.where(category: "Daily activities")
-
     @undone_challenges = @challenges.reject do |challenge|
       challenge.participations.where(user: current_user)[0]
     end
