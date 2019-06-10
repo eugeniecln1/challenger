@@ -1,12 +1,10 @@
 <%= content_for(:page, "journal") %>
 
 <div class="container">
+  <h1>My Journal</h1>
   <div class="row justify-content-center">
-    <div class="col-sm">
-      <h1>My Journal</h1>
-      <p><em>Here you'll find all your completed challenges. Feel free to come here to see how far you have gone !</em> 🤩</p>
-      <br>
-
+    <div class="col-sm-8">
+    <p><em>Here you'll find all your completed challenges. See how far you have gone !</em> 🤩</p>
       <!-- card_participations = Challenge.title + Feedback + Ratings -->
       <% @participations.each do |participation| %>
         <!-- Si participation.validated? (si les ratings + feedback sont complétés = true sinon false), on n'affiche pas la participation -->
@@ -40,6 +38,22 @@
           </div>
         <% end %>
       <% end %>
+
+
+    </div>
+
+    <div class="col-sm-4">
+    <p><em>Your favorite role models</em> ⭐️</p>
+      <div class="row">
+        <% @role_model.each do |role_model| %>
+        <div class="card mb-3 model_profile_card p-3">
+          <div class="card-body">
+            <h5 class="card-title"><%= role_model.first_name %> <strong><%= role_model.last_name %></strong></h5>
+            <p class="card-subtitle mb-2 text-muted"><%= role_model.sector %></p>
+          </div>
+        </div>
+        <% end %>
+      </div>
 
 
     </div>

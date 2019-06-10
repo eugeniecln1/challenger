@@ -10,10 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_03_162719) do
+ActiveRecord::Schema.define(version: 2019_06_10_100807) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "bookmarkeds", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "role_model_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["role_model_id"], name: "index_bookmarkeds_on_role_model_id"
+    t.index ["user_id"], name: "index_bookmarkeds_on_user_id"
+  end
 
   create_table "challenges", force: :cascade do |t|
     t.string "title"
@@ -61,6 +70,8 @@ ActiveRecord::Schema.define(version: 2019_06_03_162719) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "bookmarkeds", "role_models"
+  add_foreign_key "bookmarkeds", "users"
   add_foreign_key "challenges", "role_models"
   add_foreign_key "participations", "challenges"
   add_foreign_key "participations", "users"

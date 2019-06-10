@@ -1,6 +1,7 @@
 class ParticipationsController < ApplicationController
   def index
     @participations = current_user.participations
+    @role_model
   end
 
   def create
