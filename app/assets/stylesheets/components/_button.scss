@@ -53,14 +53,14 @@
   cursor: pointer;
 
   svg {
-    height: 50px;
-    width: 100px;
+    height: 55px;
+    width: 150px;
     fill: none;
     stroke-width: 5;
     border-radius: 3px;
 
     .o1 {
-      stroke: rgba(black,.7);
+      stroke: rgba(black, .7);
       fill: black;
       transition: all 1s ease-in-out;
     }
@@ -75,6 +75,7 @@
 
   a {
   position: absolute;
+  margin: auto 0;
   text-transform: uppercase;
   color: white;
   }
