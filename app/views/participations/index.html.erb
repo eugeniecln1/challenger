@@ -2,6 +2,7 @@
 
 <div class="container">
   <h1>My Journal</h1>
+  <br>
   <div class="row justify-content-center">
     <div class="col-sm-9">
     <p><em>Here you'll find all your completed challenges. See how far you have gone !</em> 🤩</p>
@@ -13,7 +14,7 @@
           <div class="card-trip border-<%= participation.challenge.category.gsub(/\s+/, "").downcase %>">
             <div class="card-trip-infos">
               <div>
-                <h2><%= image_tag participation.challenge.show_category_logo, size: "20" %> <%= participation.challenge.title %></h2>
+                <h5><%= image_tag participation.challenge.show_category_logo, size: "20" %> <%= participation.challenge.title %></h5>
                 <p>Your feedback : <%= participation.feedback %>
                 </p>
               </div>
@@ -45,7 +46,7 @@
     <div class="col-sm-3">
     <% if @bookmarkeds.empty? %>
     <div style="text-align: center">
-      <p ><em>You haven't bookmarked any role models yet</em></p>
+      <p><em>You haven't bookmarked any role models yet</em></p>
       <%= link_to "Find a role model", role_models_path, title:"Find a role model", class: "btn-3d" %>
     </div>
     <% else %>
@@ -53,7 +54,7 @@
       <div class="row">
         <% @bookmarkeds.each do |bookmarked| %>
           <%= link_to role_model_path(bookmarked.role_model) do %>
-          <div class="card mb-1 model_profile_card p-1">
+          <div class="card mb-1 model_profile_card p-1 mt-0 mb-3" style="margin: auto; width: 100%">
             <% if bookmarked.user_id == current_user %>
               <div class="notification-actions">
                 <%= link_to participations_path, method: :post, class: "bookmark_icon_small" do %>

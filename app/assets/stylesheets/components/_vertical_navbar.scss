@@ -8,7 +8,10 @@
   z-index: 1;
   top: 0;
   left: 0;
+}
 
+#navbar-all {
+  width: 100%;
 }
 
 .menu {
@@ -76,6 +79,7 @@ a.navlink.new {
   padding-bottom: 2px;
   border-radius: 4px;
   opacity: 0.8;
+  width: 80%;
   // animation-play-state: paused;
 }
 
@@ -115,7 +119,7 @@ a.navlink.active {
 
 a.navlink.bottom {
   margin-top: 20vh;
-  padding-bottom: 5vh;
+  padding-bottom: 5px;
 }
 
 /* Position and style the close button (top right corner) */
