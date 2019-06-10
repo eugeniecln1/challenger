@@ -7,11 +7,8 @@ const initConfetti = () => {
     const id = modal.dataset.participation
     const confettiButton = document.getElementById(`btn-confetti${id}`)
       if (confettiButton) {
-        console.log("hello");
-        console.log(confettiButton);
         confettiButton.addEventListener('click', (event) => {
           event.preventDefault();
-          console.log(event);
           confetti({
               particleCount: 150,
               spread: 75,
