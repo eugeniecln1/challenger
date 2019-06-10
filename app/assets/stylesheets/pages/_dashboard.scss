@@ -51,7 +51,7 @@
 }
 
 .scrollbar {
-margin: 50px 20px 25px 20px;
+margin: 50px 20px 25px 18px;
 float: left;
 height: 250px;
 background: #fff;
@@ -67,7 +67,8 @@ margin-left: 20px;
 
 .scrollbar-primary::-webkit-scrollbar {
 width: 12px;
-background-color: #F5F5F5; }
+background-color: #F5F5F5;
+}
 
 .scrollbar-primary::-webkit-scrollbar-thumb {
 border-radius: 10px;
@@ -76,7 +77,7 @@ background-color: $scrollbar;
 }
 
 #polarChart {
-  margin: 30px 30px 30px 55px;
+  margin: 30px 30px 30px 30px;
   padding: 10px 20px;
   height: 400px;
   max-width: 80%;

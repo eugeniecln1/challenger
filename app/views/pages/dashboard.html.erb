@@ -42,7 +42,7 @@
   </div>
 </div>
 
-<div class="bottom-dash d-flex">
+<div class="bottom-dash d-flex justify-content-between mx-4">
   <div>
     <canvas id="polarChart" data-daily="<%= @counter[:dailyactivities] %>" data-future="<%= @counter[:futureme] %>" data-interactions="<%= @counter[:interactiions] %>" data-curiosity="<%= @counter[:curiosity] %>"></canvas>
   </div>
@@ -126,7 +126,7 @@
             <%= f.input :feedback, as: :text, label: 'Go on and describe your experience !', error: 'Be able to look back and analyse your experience is a huge part of building self confidence. Put a feedback !', placeholder: 'I was not sure I could it, I waited a lot, then I pulled myself out there and I felt great afterward, because I could push my self.' %>
             <%= f.input :appreciation, collection: (1..5).to_a, label: 'How much did you appreciate this challenge ?', input_html: {class: "modal-rating"} %>
             <%= f.input :difficulty, collection: (1..5).to_a, label: 'How much did you find it difficult ?', input_html: {class: "modal-rating"} %>
-            <%= f.button :submit, "Validate", class: "btn-3d" %>
+            <%= f.button :submit, "Validate", class: "btn-3d"%>
           <% end %>
         </div>
       </div>
