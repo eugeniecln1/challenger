@@ -1,31 +1,70 @@
 // Specific CSS for your home-page
-a:hover {
-  text-decoration: none;
+
+// Display logo
+.landing-logo {
+  animation-delay: 10s;
+  max-width: 40%;
+  width: 220px;
+  height: auto;
 }
 
-.landing-img {
-  max-width: 30%;
-  width: 30%;
+.landing-logo:hover {
+  animation-delay: 0s;
+  animation-play-state: running;
+  animation-iteration-count: infinite;
 }
 
-// .home {
-//   border-top: solid 2px $navbar;
-// }
+// Display columns
+.flexbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
 
 .banner {
-  background: linear-gradient(to right, #c31432, #240b36);
+  // background-image: linear-gradient(to right top, #240b36, #76204e, #c04b4f, #ef8e43, #f7dd4a);
   // background-size: cover;
-  height: 60vh;
-  opacity: 0.9;
+  padding:  0px!important;
+}
+
+.center {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.main-container {
+  background: #F8D165;
+  text-align: left;
+  margin: auto;
+  float: left;
+  width: 55%;
+  height: 100vh;
+}
+
+.logo-container {
+  background: #EB3352;
+  float: right;
+  width: 45%;
+  height: 100vh;
   text-align: center;
+}
+
+// Display text
+.text {
+  padding-left: 25%;
   h1 {
-    color: white;
+    color: black;
+    // font-weight: bolder;
+    font-size: 65px;
   }
   h4 {
-    color: white;
+    color: black;
+    font-size: 35px;
   }
-  p {
+  .landing-btn {
+    margin: 45px;
     color: white;
+    font-weight: bolder;
   }
-
 }

@@ -12,13 +12,7 @@
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
   </head>
   <body>
-    <div class="d-flex">
-      <%= render 'shared/vertical_navbar' unless yield(:page) == 'landing' || yield(:page) == 'sign' %>
-      <div class="<%= 'container mt-3' if params['action'] != 'home' %>">
-        <%= yield %>
-      </div>
-    </div>
-
+    <%= yield %>
     <%= render 'shared/flashes' %>
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
