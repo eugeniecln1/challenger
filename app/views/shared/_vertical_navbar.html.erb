@@ -27,7 +27,7 @@
 
       <%= link_to challenges_home_path, class: "navlink #{'active' if yield(:page) == 'challenges' || yield(:page) == 'challenge' }" do %>
         <i class="logo-c fas fa-dragon"></i>Challenges
-      <% end %>
+        <% end %>
 
       <%= link_to participations_path, class: "navlink #{'active' if yield(:page) == 'journal'}" do %>
         <i class="logo-j far fa-newspaper"></i>Journal
