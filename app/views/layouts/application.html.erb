@@ -14,9 +14,7 @@
   <body>
     <div class="d-flex">
       <%= render 'shared/vertical_navbar' if yield(:page) == 'dashboard' || yield(:page) == 'inspiration' || yield(:page) == 'journal'%>
-      <div class="container mt-3">
         <%= yield %>
-      </div>
     </div>
     <%= render 'shared/flashes' %>
     <%= javascript_include_tag 'application' %>
