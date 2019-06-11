@@ -77,10 +77,11 @@
         <% @undone_participations.each do |participation| %>
           <%= render 'non_done_card', participation: participation %>
         <% end %>
+        <br>
+        <%= link_to "See more", participations_path, class: "btn-dashboard" %>
       </div>
     </div>
 </div>
-
 
 
 
@@ -132,7 +133,7 @@
         </div>
         <div class="modal-body">
           <%= simple_form_for participation, remote: false do |f| %>
-            <%= f.input :feedback, as: :text, label: 'Go on and describe your experience !', error: 'Be able to look back and analyse your experience is a huge part of building self confidence. Put a feedback !', placeholder: 'I was not sure I could it, I waited a lot, then I pulled myself out there and I felt great afterward, because I could push my self.' %>
+            <%= f.input :feedback, as: :text, label: 'Go on and describe your experience !', error: 'Be able to look back and analyse your experience is a huge part of building self confidence. Put a feedback !', placeholder: 'I was not sure I could it, I waited a lot, then I pulled myself out there and I felt great afterward, because I could push myself.' %>
             <%= f.input :appreciation, collection: (1..5).to_a, label: 'How much did you appreciate this challenge ?', input_html: {class: "modal-rating"} %>
             <%= f.input :difficulty, collection: (1..5).to_a, label: 'How much did you find it difficult ?', input_html: {class: "modal-rating"} %>
             <%= f.submit "Validate", id:"btn-confetti#{participation.id}", class: "btn-3d"%>

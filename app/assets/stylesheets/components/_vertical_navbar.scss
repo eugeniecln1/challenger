@@ -1,13 +1,14 @@
 .nav {
-  position: relative;
+  overflow: hidden;
   position: fixed;
   width: 250px;
   height: 100vh;
   background-color: $navbar;
   transition: 0.5s;
-  z-index: 1;
+  z-index: 99;
   top: 0;
   left: 0;
+  overflow-y: scroll!important;
 }
 
 #navbar-all {
@@ -72,7 +73,7 @@
   margin: 20px 80px;
 }
 
-a.navlink.new {
+a.navlinknew {
   color: $navbar;
   background-color: white;
   margin: 20px 20px;
@@ -93,6 +94,7 @@ a.navlink {
   color: $dashboard;
   width: 100%;
   transition: 0.3s;
+  border-left: 7px solid $navbar;
 }
 
 
@@ -100,11 +102,13 @@ a.navlink:hover {
   color: $navbar;
   font-style: bold;
   background-color: $dashboard;
+  border-left: 7px solid white;
   text-decoration: none;
 }
 
 a.navlink.active {
   border-left: 7px solid $dashboard;
+  // margin-left: -7px;
   // color: white;
   // font-style: bold;
   // background-color: $dashboard;
@@ -149,7 +153,13 @@ a.navlink.bottom {
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-  .nav {padding-top: 15px;}
-  .nav a {font-size: 18px;}
+@media screen and (max-width: 600px) {
+  .nav {
+    padding-top: 15px;
+  }
+  .nav a {
+    float: none;
+    width: 100%;
+  }
 }
+

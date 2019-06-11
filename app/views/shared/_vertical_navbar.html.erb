@@ -17,7 +17,7 @@
 
     <div class="menu d-flex flex-column">
 
-      <%= link_to challenges_home_path, class: "navlink new" do %>
+      <%= link_to challenges_home_path, class: "navlinknew" do %>
       <i class="logo-n fas fa-plus"></i>Challenge
       <% end unless yield(:page) == "challenges" || yield(:page) == 'challenge'%>
 
@@ -26,7 +26,7 @@
       <% end %>
 
       <%= link_to challenges_home_path, class: "navlink #{'active' if yield(:page) == 'challenges' || yield(:page) == 'challenge' }" do %>
-        <i class="logo-c fab fa-cuttlefish"></i>Challenges
+        <i class="logo-c fas fa-dragon"></i>Challenges
       <% end %>
 
       <%= link_to participations_path, class: "navlink #{'active' if yield(:page) == 'journal'}" do %>
