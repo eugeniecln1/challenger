@@ -1,16 +1,18 @@
-<%= content_for(:page, "home") %>
-  <div class="background-color">
+<%= content_for(:page, "landing") %>
     <div class="banner">
-      <div class="container">
-        <img class="landing-img" src="/assets/dragon_blanc.png">
-        <h1>Challenger</h1>
-        <h4>Become who you are</h4>
-          <div class="btn btn-3d ml-0">
-            <%= link_to "Challenge yourself !", dashboard_path %>
+      <div class="main-container">
+        <div class="center">
+          <div class="text">
+            <h1>Challenger</h1>
+            <h4>Become who you are</h4>
+              <%= link_to "Challenge yourself !", challenges_home_path, class:"landing-btn btn ml-0" %>
           </div>
+        </div>
       </div>
-      <div class="container">
-
+      <div class="logo-container">
+        <div class="center">
+          <%= image_tag "dragon_blanc.png", class: "landing-logo animated flip" %>
+        </div>
       </div>
     </div>
   </div>

@@ -12,8 +12,8 @@ const initPolar = () => {
         labels: ["Daily Activities", "Future Me", "Interactions", "Curiosity"],
         datasets: [{
           data: [canvas.dataset.daily, canvas.dataset.future, canvas.dataset.interactions, canvas.dataset.curiosity],
-          backgroundColor: ["rgba(247, 221, 74, 0.7)", "rgba(250, 123, 119, 0.7)", "rgba(244, 159, 187, 0.7)",
-            "rgba(255, 182, 104, 0.7)"
+          backgroundColor: ["rgba(50, 16, 80, 0.7)", "rgba(161, 160, 220, 0.7)", "rgba(254, 194, 222, 0.7)",
+            "rgba(255, 44, 83, 0.7)"
           ],
           hoverBackgroundColor: ["#F7DD4A", "#FA7B77", "#F49FBB",
             "#FFB668"
@@ -33,3 +33,4 @@ const initPolar = () => {
 
 
 export default initPolar
+

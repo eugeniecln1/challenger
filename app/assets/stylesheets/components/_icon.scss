@@ -11,6 +11,9 @@
 .bookmark_icon_small {
   font-size: 20px;
   color: $navbar;
+  position: absolute;
+  right: 10px;
+  top: 5px;
 }
 
 .bookmark_icon_small:hover {
