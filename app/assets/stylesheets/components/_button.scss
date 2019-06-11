@@ -1,14 +1,13 @@
 .btn-3d {
-
-    position: relative;
-    display: inline-block;
-    font-size: 16px;
-    padding: 10px 20px;
-    color: white;
-    margin: 20px 0px;
-    border-radius: 5px;
-    text-align: center;
-    background-color: $navbar;
+  position: relative;
+  display: inline-block;
+  font-size: 16px;
+  padding: 10px 20px;
+  color: white;
+  margin: 20px 0px;
+  border-radius: 5px;
+  text-align: center;
+  background-color: $navbar;
 }
 
 .btn-3d:hover {
@@ -16,6 +15,23 @@
   color: white;
 }
 
+.btn-remove-bookmark {
+  position: relative;
+  display: inline-block;
+  font-size: 16px;
+  padding: 10px 20px;
+  color: white;
+  margin: 20px 0px;
+  border-radius: 5px;
+  text-align: center;
+  background-color: lightgrey;
+  opacity: 0.6;
+}
+
+.btn-remove-bookmark:hover {
+  opacity: 0.8;
+  color: white;
+}
 
 .bg-navbar {
   background-color: $navbar;
