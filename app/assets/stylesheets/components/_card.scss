@@ -9,7 +9,7 @@
 
 .model_profile_card {
   border-radius: 4px;
-  text-shadow: 0px 0px 2px rgba(0,0,0,0.2);
+  // text-shadow: 0px 0px 2px rgba(0,0,0,0.2);
   // box-shadow: 0 10px 30px rgba(0,0,0,.1);
   margin: 20px 0;
   border-style: none;
@@ -56,7 +56,7 @@ hr {
   margin: 55px auto;
   border-radius: 4px;
   // box-shadow: 0 0 8px rgba(0,0,0,0.2);
-  text-shadow: 0px 0px 1px rgba(0,0,0,0.2);
+  // text-shadow: 0px 0px 1px rgba(0,0,0,0.2);
   .card_image img {
     width: 200px;
     height: 200px;
@@ -163,6 +163,7 @@ hr {
   position: relative;
   height: 100%;
   width: 100%;
+  color: white;
 }
 
 .card-inside-color-interactions {
@@ -171,6 +172,7 @@ hr {
   position: relative;
   height: 100%;
   width: 100%;
+  color: white;
 }
 
 .card-inside-color-futureme {
@@ -179,6 +181,7 @@ hr {
   position: relative;
   height: 100%;
   width: 100%;
+  color: white;
 }
 
 .card-inside-color-dailyactivities {
@@ -187,6 +190,7 @@ hr {
   position: relative;
   height: 100%;
   width: 100%;
+  color: white;
 }
 
 /* This container is needed to position the front and back side */
@@ -197,7 +201,7 @@ hr {
   color: white;
   font-size: 24px;
   font-weight: bold;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  // text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   text-align: center;
   transition: transform 0.8s;
   transform-style: preserve-3d;
@@ -228,7 +232,7 @@ hr {
 .flip-card-back {
   transform: rotateY(180deg);
   background-color: white;
-  color: black;
+  color: white;
   font-size: 16px;
   align-items: center;
 }
