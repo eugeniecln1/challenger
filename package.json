@@ -12,7 +12,8 @@
     "jquery-bar-rating": "^1.2.2",
     "js-autocomplete": "^1.0.4",
     "mdbootstrap": "^4.8.2",
-    "popper.js": "^1.15.0"
+    "popper.js": "^1.15.0",
+    "rails-ujs": "^5.2.3"
   },
   "devDependencies": {
     "webpack-dev-server": "^3.5.1"
