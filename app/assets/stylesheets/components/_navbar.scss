@@ -1,6 +1,7 @@
 .navbar-challenger {
   justify-content: space-between;
-  background: white;
+  background-color: transparent;
+  background: transparent;
 }
 
 .navbar-challenger .navbar-collapse {
@@ -8,30 +9,30 @@
 }
 
 .navbar-challenger .navbar-brand img {
-  width: 40px;
+  // width: 40px;
 }
 
-.dropdown-item {
-  opacity: 0.7;
-}
+// .dropdown-item {
+//   opacity: 0.7;
+// }
 
-.dropdown-item:hover {
-  opacity: 1;
-}
+// .dropdown-item:hover {
+//   opacity: 1;
+// }
 
-.dropdown-toggle {
-  border: none;
-  background-color: transparent;
-}
+// .dropdown-toggle {
+//   border: none;
+//   background-color: transparent;
+// }
 
-.dropdown-toggle::after {
-  display:none;
-}
+// .dropdown-toggle::after {
+//   display:none;
+// }
 
-.dropdown-toggle:hover {
-  border: none;
-  background-color: transparent;
-}
+// .dropdown-toggle:hover {
+//   border: none;
+//   background-color: transparent;
+// }
 
 // .wrapper {
 //   display: flex;

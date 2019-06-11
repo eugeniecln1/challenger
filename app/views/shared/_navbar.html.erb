@@ -1,28 +1,36 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-challenger">
-  <%= link_to "#", class: "navbar-brand" do %>
-    <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
-    <% end %>
+  <div class="logo">
+    <%= link_to "/", class: "navbar-brand" do %>
+      <%= image_tag "dragon_blanc.png",  size: "80", class: "logo"%>
+      <% end %>
+  </div>
 
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<!--   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
-  </button>
-
+  </button> -->
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
+      <%= link_to dashboard_path, class: "navlink-top #{'active' if yield(:page) == 'dashboard'}" do %>
+        Dashboard
+      <% end %>
+
+      <%= link_to challenges_home_path, class: "navlink-top #{'active' if yield(:page) == 'challenges' || yield(:page) == 'challenge' }" do %>
+        Challenges
+        <% end %>
+
+      <%= link_to participations_path, class: "navlink-top #{'active' if yield(:page) == 'journal'}" do %>
+        Journal
+      <% end %>
+
+      <%= link_to role_models_path, class: "navlink-top #{'active' if yield(:page) == 'inspiration'}" do %>
+        Inspirations
+      <% end %>
+
       <% if user_signed_in? %>
-        <li id="nav-item dropdown">
-          <button class="dropdown-toggle" id="navbarDropdown" type="button" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <%= link_to "Sign out", destroy_user_session_path, class: "dropdown-item", method: :delete %>
-          </div>
-      </li>
+        <%= link_to "Sign out", destroy_user_session_path, class: "navlinki", method: :delete, data: { confirm: 'Are you sure?' } %>
       <% else %>
-        <li class="nav-item">
-          <%= link_to "Sign in", new_user_session_path, class: "nav-link" %>
-        </li>
+        <%= link_to "Sign in", new_user_session_path, class: "nav-link" %>
       <% end %>
     </ul>
   </div>
