@@ -12,7 +12,7 @@
         <div class="online-badge"></div>
         <p style="color: white"><%= current_user.username %></p>
       </div>
-    <% else %>
+    <% else %><%= link_to "Sign out", destroy_user_session_path, class: "dropdown-item", method: :delete %>
     <% end %>
 
     <div class="menu d-flex flex-column">
