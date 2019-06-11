@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: 'pages#dashboard'
+    root to: 'pages#home'
   resources :role_models, only: [:index, :show] do
     post '/', to: 'bookmarkeds#create'
   end
