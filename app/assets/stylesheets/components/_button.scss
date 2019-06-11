@@ -1,14 +1,14 @@
-//
 .btn-3d {
-  position: relative;
-  display: inline-block;
-  font-size: 16px;
-  padding: 10px 20px;
-  color: white;
-  margin: 20px 0px;
-  border-radius: 6px;
-  text-align: center;
-  background-color: $navbar;
+
+    position: relative;
+    display: inline-block;
+    font-size: 16px;
+    padding: 10px 20px;
+    color: white;
+    margin: 20px 0px;
+    border-radius: 5px;
+    text-align: center;
+    background-color: $navbar;
 }
 
 .btn-3d:hover {
@@ -43,7 +43,7 @@
     width: 150px;
     fill: none;
     stroke-width: 5;
-    border-radius: 6px;
+    border-radius: 5px;
 
     .o1 {
       stroke: rgba(black, .7);

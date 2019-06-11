@@ -1,0 +1,81 @@
+.card-columns {
+  @include media-breakpoint-only(lg) {
+    column-count: 4;
+  }
+  @include media-breakpoint-only(xl) {
+    column-count: 5;
+  }
+}
+
+.model_profile_card {
+  border-radius: 5px;
+  // text-shadow: 0px 0px 2px rgba(0,0,0,0.2);
+  // box-shadow: 0 10px 30px rgba(0,0,0,.1);
+  margin: 20px 0;
+  border-style: none;
+  text-align: center;
+  border-top: solid 15px;
+  border-color: $scrollbar;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  .card_image {
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+}
+
+// .model_profile_card .card_image {
+//   width: inherit;
+//   height: inherit;
+//   border-radius: 30px;
+// }
+.model_profile_card:hover {
+  // box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  // transform: translateZ(5px);
+  transform: scale(1.08, 1.08);
+}
+.link-wiki {
+  display: flex;
+  justify-content: flex-end;
+}
+
+hr {
+  width: 30%;
+  color: $scrollbar;
+  border: solid 1.5px;
+}
+
+
+.model_card {
+  background: #FFFF;
+  // border: solid 25px;
+  // border-color: $scrollbar;
+  background-color: $scrollbar;
+  text-align: center;
+  width: 90%;
+  padding: 20px;
+  margin: 55px auto;
+  border-radius: 5px;
+  // box-shadow: 0 0 8px rgba(0,0,0,0.2);
+  // text-shadow: 0px 0px 1px rgba(0,0,0,0.2);
+  .card_image img {
+    width: 200px;
+    height: 200px;
+    border-radius: 6px;
+    object-fit: cover;
+    display: inline-block;
+    margin-bottom: 40px;
+  }
+  .card-text {
+    text-align: justify;
+    width: 90%;
+    margin: 40px auto;
+  }
+  .btn-3d {
+    margin: 10px 10px -10px !important;
+  }
+}
+
+.border {
+  background-color: white;
+  padding: 15px 40px 40px 40px;
+}
