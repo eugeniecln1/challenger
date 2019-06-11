@@ -5,28 +5,14 @@
     font-size: 16px;
     padding: 10px 20px;
     color: white;
-    margin: 20px 10px 10px;
+    margin: 20px 0px;
     border-radius: 6px;
     text-align: center;
-    transition: top .01s linear;
-    text-shadow: 0 1px 0 rgba(0,0,0,0.15);
     background-color: $navbar;
-    box-shadow: 0 0 0 1px $navbar inset,
-        0 0 0 2px $navbar inset,
-        0 8px 0 0 #5A5362,
-        0 8px 0 1px rgba(0,0,0,0.4),
-                0 8px 8px 1px rgba(0,0,0,0.5);
-}
-
-.btn-3d:active {
-  box-shadow: 0 0 0 1px $navbar inset,
-              0 0 0 2px $navbar inset,
-              0 0 0 1px rgba(0,0,0,0.4);
-  top: 9px;
-  color: white;
 }
 
 .btn-3d:hover {
+  opacity: 0.9;
   color: white;
 }
 
@@ -99,3 +85,7 @@
   color: black;
 }
 
+.size-chevron {
+  width: 40px;
+  height: 40px;
+}

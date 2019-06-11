@@ -163,6 +163,7 @@ hr {
   position: relative;
   height: 100%;
   width: 100%;
+  color: white;
 }
 
 .card-inside-color-interactions {
@@ -171,6 +172,7 @@ hr {
   position: relative;
   height: 100%;
   width: 100%;
+  color: white;
 }
 
 .card-inside-color-futureme {
@@ -179,6 +181,7 @@ hr {
   position: relative;
   height: 100%;
   width: 100%;
+  color: white;
 }
 
 .card-inside-color-dailyactivities {
@@ -187,6 +190,7 @@ hr {
   position: relative;
   height: 100%;
   width: 100%;
+  color: white;
 }
 
 /* This container is needed to position the front and back side */
@@ -228,7 +232,7 @@ hr {
 .flip-card-back {
   transform: rotateY(180deg);
   background-color: white;
-  color: black;
+  color: white;
   font-size: 16px;
   align-items: center;
 }
