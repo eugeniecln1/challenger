@@ -7,13 +7,13 @@ class Challenge < ApplicationRecord
 
   def show_category_logo
     if category == "Daily activities"
-      @logo = "dragon_mauve.png"
+      @logo = "illustrations/bermuda-done.png"
     elsif category == "Future me"
-      @logo = "rocket_mauve.png"
+      @logo = "illustrations/bermuda-success.png"
     elsif category == "Interactions"
-      @logo = "coffee_mauve.png"
+      @logo = "illustrations/bermuda-logged-out.png"
     elsif category == "Curiosity"
-      @logo = "logo_world.png"
+      @logo = "illustrations/bermuda-searching.png"
     end
   end
 
