@@ -105,11 +105,11 @@ hr {
 }
 
 .bg-curiosity {
-  background-color: $curiosity;
-  background-image: linear-gradient(30deg, #815234 12%, transparent 12.5%, transparent 87%, #815234 87.5%, #815234),
-  linear-gradient(150deg, #815234 12%, transparent 12.5%, transparent 87%, #815234 87.5%, #815234),
-  linear-gradient(30deg, #815234 12%, transparent 12.5%, transparent 87%, #815234 87.5%, #815234),
-  linear-gradient(150deg, #815234 12%, transparent 12.5%, transparent 87%, #815234 87.5%, #815234),
+  background-color: #B77700;
+  background-image: linear-gradient(30deg, $curiosity 12%, transparent 12.5%, transparent 87%, $curiosity 87.5%, $curiosity),
+  linear-gradient(150deg, $curiosity 12%, transparent 12.5%, transparent 87%, $curiosity 87.5%, $curiosity),
+  linear-gradient(30deg, $curiosity 12%, transparent 12.5%, transparent 87%, $curiosity 87.5%, $curiosity),
+  linear-gradient(150deg, $curiosity 12%, transparent 12.5%, transparent 87%, $curiosity 87.5%, $curiosity),
   linear-gradient(60deg, $navbar 25%, transparent 25.5%, transparent 75%, $navbar 75%, $navbar),
   linear-gradient(60deg, $navbar 25%, transparent 25.5%, transparent 75%, $navbar 75%, $navbar);
   background-size:80px 140px;
