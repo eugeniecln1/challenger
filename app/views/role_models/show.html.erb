@@ -4,19 +4,6 @@
 <div class="container">
   <div class="model_card">
     <div class="border" %>
-      <% if @role_model.bookmarkeds.where(user_id: current_user).empty? %>
-        <div class="notification-actions">
-          <%= link_to role_model_path(@role_model), method: :post, class: "bookmark_icon" do %>
-            <i class="far fa-bookmark"></i>
-          <% end %>
-        </div>
-        <% else %>
-        <div class="notification-actions">
-          <%= link_to bookmarked_path(current_user.bookmarkeds.where(role_model_id: @role_model.id).first), method: :delete, class: "bookmark_icon" do %>
-            <i class="fas fa-bookmark"></i>
-          <% end %>
-        </div>
-      <% end %>
 
       <div class="card_image">
         <%= image_tag(@role_model.picture, alt:'', title:(@role_model.first_name + " " + @role_model.last_name) )if @role_model.picture %>
@@ -24,6 +11,17 @@
         <h4 class="card-title"><%= @role_model.first_name %> <%= @role_model.last_name %></h4>
         <p class="card-subtitle mb-2 text-muted "><%= @role_model.sector %></p>
         <hr>
+        <% if @role_model.bookmarkeds.where(user_id: current_user).empty? %>
+          <div class="notification-actions">
+            <%= link_to role_model_path(@role_model), method: :post, class: "btn-3d" do %>I am inspired!
+            <% end %>
+          </div>
+          <% else %>
+          <div class="notification-actions">
+            <%= link_to bookmarked_path(current_user.bookmarkeds.where(role_model_id: @role_model.id).first), method: :delete, class: "btn-remove-bookmark" do %> I lost interest
+            <% end %>
+          </div>
+        <% end %>
         <p class="card-text"><%= @role_model.description %></p>
         <% if @role_model.first_name && @role_model.last_name %>
         <div class="link-wiki">
