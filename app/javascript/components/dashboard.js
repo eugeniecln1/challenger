@@ -6,7 +6,6 @@ const initPolar = () => {
   if (canvas) {
     var ctxPA = canvas.getContext('2d');
 
-    console.log(canvas.dataset.daily)
     var myPolarChart = new Chart(ctxPA, {
       type: 'polarArea',
       data: {
@@ -22,10 +21,15 @@ const initPolar = () => {
         }]
       },
       options: {
-        responsive: true
+        legend: {
+          labels: {
+            fontFamily: 'Comfortaa'
+          }
+        }
       }
     });
   }
 };
+
 
 export default initPolar
