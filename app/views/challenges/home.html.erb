@@ -1,43 +1,36 @@
-<%= content_for(:page, "challenges") %>
+¶<%= content_for(:page, "challenges") %>
 
 <div class="container">
   <h1 class="mt-5" style="text-align: center">Challenge yourself today!</h1>
 
   <div class="d-flex">
-    <div class="row justify-content-around" style="margin-right: 30px; margin-left: 30px;">
+    <div class="row justify-content-center">
 
 <!-- Daily actovities category -->
-      <div class="card-category-col col-ml-6">
-        <div class="flip-card">
-          <div class="flip-card-inner">
+      <div class="col-ml-6">
+        <div class="">
+          <div class="">
             <%= link_to challenges_daily_activities_path do %>
-                <div class="flip-card-front bg-dailyactivities">
-                  <div class="d-flex justify-content-around align-items-center" style="color: white;">
-                    <i class="fas fa-dragon" style="margin-right: 10px"></i>
-                    <h3 class="m-0">Daily activities</h3>
+                <div class="bg-dailyactivities">
+                  <div class="d-flex justify-content-around align-items-center">
+                    <%= image_tag "illustrations/bermuda-done.png", size: "300" %>
                   </div>
                 </div>
-                <div class="flip-card-back back-color-daily-acitivities d-flex justify-content-around align-items-center">
-                  <p>You want to go beyond your comfort zone ? Come developp assertiveness 😎</p>
-                </div>
+
             <% end %>
           </div>
         </div>
       </div>
 
 <!-- Future Me category -->
-      <div class="card-category-col col-ml-6">
-        <div class="flip-card">
-          <div class="flip-card-inner">
+      <div class="col-ml-6">
+        <div class="">
+          <div class="">
             <%= link_to challenges_future_me_path do %>
-                <div class="flip-card-front bg-futureme">
-                  <div class="d-flex justify-content-around align-items-center" style="color: white;">
-                    <i class="fas fa-rocket" style="margin-right: 10px"></i>
-                    <h3 class="m-0">Future me</h3>
+                <div class="">
+                  <div class="d-flex justify-content-around align-items-center">
+                    <%= image_tag "illustrations/bermuda-success.png", size: "300" %>
                   </div>
-                </div>
-                <div class="flip-card-back back-color-future-me d-flex justify-content-around align-items-center">
-                  <p>You do not know what career path to take ? You need inspiration ? Let's grow some ambition 🎓</p>
                 </div>
             <% end %>
           </div>
@@ -45,18 +38,14 @@
       </div>
 
 <!-- Interactions category -->
-      <div class="card-category-col col-ml-6">
-        <div class="flip-card">
-          <div class="flip-card-inner">
+      <div class="col-ml-6">
+        <div class="">
+          <div class="">
             <%= link_to challenges_interactions_path do %>
-                <div class="flip-card-front bg-interactions">
-                  <div class="d-flex justify-content-around align-items-center" style="color: white;">
-                    <i class="fas fa-mug-hot" style="margin-right: 10px"></i>
-                    <h3 class="m-0">Interactions</h3>
+                <div class="">
+                  <div class="d-flex justify-content-around align-items-center">
+                    <%= image_tag "illustrations/bermuda-logged-out.png", size: "300" %>
                   </div>
-                </div>
-                <div class="flip-card-back back-color-interactions d-flex justify-content-around align-items-center">
-                  <p>People's judgment is negatively affecting you ? Gain some self-confidence 💃</p>
                 </div>
             <% end %>
           </div>
@@ -64,18 +53,14 @@
       </div>
 
 <!-- Curiosity category -->
-      <div class="card-category-col col-ml-6">
-        <div class="flip-card">
-          <div class="flip-card-inner">
+      <div class="col-ml-6">
+        <div class="">
+          <div class="">
             <%= link_to challenges_curiosity_path do %>
-                <div class="flip-card-front bg-curiosity">
-                  <div class="d-flex justify-content-around align-items-center" style="color: white;">
-                    <i class="fas fa-globe-americas" style="margin-right: 10px"></i>
-                    <h3 class="m-0">Curiosity</h3>
+                <div class="">
+                  <div class="d-flex justify-content-around align-items-center">
+                    <%= image_tag "illustrations/bermuda-searching.png", size: "300" %>
                   </div>
-                </div>
-                <div class="flip-card-back back-color-curiosity d-flex justify-content-around align-items-center">
-                  <p>You are curious about the world around you and want to get out of your little bubble ? Come experiment 🌍</p>
                 </div>
             <% end %>
           </div>
