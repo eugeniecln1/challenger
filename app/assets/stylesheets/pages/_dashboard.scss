@@ -85,7 +85,7 @@ background-color: $scrollbar;
 
 .scrollbar.box {
   width: 100%;
-  max-height: 200px;
+  max-height: 225px;
   margin: 30px 10px 30px 0px;
 }
 
@@ -169,3 +169,26 @@ background-color: $scrollbar;
   opacity: 1;
 }
 
+.bronze {
+  color: $bronze;
+}
+
+.silver {
+ color: $silver;
+}
+
+.gold {
+  color: $gold;
+}
+
+strong.bronze {
+  color: $bronze;
+}
+
+strong.silver {
+  color: $silver;
+}
+
+strong.gold {
+  color: $gold;
+}
