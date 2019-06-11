@@ -13,8 +13,8 @@
   </head>
   <body>
     <div class="d-flex">
-      <%= render 'shared/vertical_navbar' unless yield(:page) == 'landing' || yield(:page) == 'sign' %>
-      <div class="<%= 'container mt-3' if params['action'] != 'home' %>">
+      <%= render 'shared/vertical_navbar' if yield(:page) == 'dashboard' || yield(:page) == 'inspiration' || yield(:page) == 'journal'%>
+      <div class="container mt-3">
         <%= yield %>
       </div>
     </div>

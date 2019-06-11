@@ -1,7 +1,7 @@
 const animateChallengeButton = () => {
-  const challengeButton = document.querySelector(".navlink.new")
+  const challengeButton = document.getElementById("newchallenge")
   if (challengeButton) {
-    challengeButton.addEventListener('submit', event => {
+    challengeButton.addEventListener('click', event => {
       event.preventDefault()
       challengeButton.classList.add("animated", "jello")
       setTimeout(() => window.location = challengeButton.getAttribute("href"), 500)

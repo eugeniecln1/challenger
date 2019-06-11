@@ -1,88 +1,6 @@
-.card-columns {
-  @include media-breakpoint-only(lg) {
-    column-count: 4;
-  }
-  @include media-breakpoint-only(xl) {
-    column-count: 5;
-  }
-}
-
-.model_profile_card {
-  border-radius: 4px;
-  text-shadow: 0px 0px 2px rgba(0,0,0,0.2);
-  // box-shadow: 0 10px 30px rgba(0,0,0,.1);
-  margin: 20px 0;
-  border-style: none;
-  text-align: center;
-  border-top: solid 15px;
-  border-color: $scrollbar;
+.card-challenge {
+  max-width: 700px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  .card_image {
-    display: inline-block;
-    margin-bottom: 10px;
-  }
-}
-
-// .model_profile_card .card_image {
-//   width: inherit;
-//   height: inherit;
-//   border-radius: 30px;
-// }
-.model_profile_card:hover {
-  // box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  // transform: translateZ(5px);
-  transform: scale(1.08, 1.08);
-}
-.link-wiki {
-  display: flex;
-  justify-content: flex-end;
-}
-
-hr {
-  width: 30%;
-  color: $scrollbar;
-  border: solid 1.5px;
-}
-
-
-.model_card {
-  background: #FFFF;
-  // border: solid 25px;
-  // border-color: $scrollbar;
-  background-color: $scrollbar;
-  text-align: center;
-  width: 90%;
-  padding: 20px;
-  margin: 55px auto;
-  border-radius: 4px;
-  // box-shadow: 0 0 8px rgba(0,0,0,0.2);
-  text-shadow: 0px 0px 1px rgba(0,0,0,0.2);
-  .card_image img {
-    width: 200px;
-    height: 200px;
-    border-radius: 6px;
-    object-fit: cover;
-    display: inline-block;
-    margin-bottom: 40px;
-  }
-  .card-text {
-    text-align: justify;
-    width: 90%;
-    margin: 40px auto;
-  }
-  .btn-3d {
-    margin: 10px 10px -10px !important;
-  }
-}
-
-// End of cards for role model
-//
-// Start of cards for challenges and categories of challenges
-
-.border {
-  border-radius: 3px;
-  background-color: white;
-  padding: 15px 40px 40px 40px;
 }
 
 .flip-card {
@@ -91,7 +9,6 @@ hr {
   width: 400px;
   border: 1px solid #f1f1f1;
   perspective: 1000px;
-
 }
 
 .card-category-col {
@@ -101,22 +18,19 @@ hr {
 
 .card-category:hover {
   opacity: 0.8;
-
 }
 
 .bg-curiosity {
-  background-color: $curiosity;
-  background-image: linear-gradient(30deg, #815234 12%, transparent 12.5%, transparent 87%, #815234 87.5%, #815234),
-  linear-gradient(150deg, #815234 12%, transparent 12.5%, transparent 87%, #815234 87.5%, #815234),
-  linear-gradient(30deg, #815234 12%, transparent 12.5%, transparent 87%, #815234 87.5%, #815234),
-  linear-gradient(150deg, #815234 12%, transparent 12.5%, transparent 87%, #815234 87.5%, #815234),
+  background-color: #B77700;
+  background-image: linear-gradient(30deg, $curiosity 12%, transparent 12.5%, transparent 87%, $curiosity 87.5%, $curiosity),
+  linear-gradient(150deg, $curiosity 12%, transparent 12.5%, transparent 87%, $curiosity 87.5%, $curiosity),
+  linear-gradient(30deg, $curiosity 12%, transparent 12.5%, transparent 87%, $curiosity 87.5%, $curiosity),
+  linear-gradient(150deg, $curiosity 12%, transparent 12.5%, transparent 87%, $curiosity 87.5%, $curiosity),
   linear-gradient(60deg, $navbar 25%, transparent 25.5%, transparent 75%, $navbar 75%, $navbar),
   linear-gradient(60deg, $navbar 25%, transparent 25.5%, transparent 75%, $navbar 75%, $navbar);
   background-size:80px 140px;
   background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
 }
-
-// #815234
 
 .bg-dailyactivities {
   background-color: $daily-activities;
@@ -163,6 +77,7 @@ hr {
   position: relative;
   height: 100%;
   width: 100%;
+  color: white;
 }
 
 .card-inside-color-interactions {
@@ -171,6 +86,7 @@ hr {
   position: relative;
   height: 100%;
   width: 100%;
+  color: white;
 }
 
 .card-inside-color-futureme {
@@ -179,6 +95,7 @@ hr {
   position: relative;
   height: 100%;
   width: 100%;
+  color: white;
 }
 
 .card-inside-color-dailyactivities {
@@ -187,6 +104,7 @@ hr {
   position: relative;
   height: 100%;
   width: 100%;
+  color: white;
 }
 
 /* This container is needed to position the front and back side */
@@ -197,7 +115,7 @@ hr {
   color: white;
   font-size: 24px;
   font-weight: bold;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  // text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   text-align: center;
   transition: transform 0.8s;
   transform-style: preserve-3d;
@@ -228,28 +146,23 @@ hr {
 .flip-card-back {
   transform: rotateY(180deg);
   background-color: white;
-  color: black;
+  color: white;
   font-size: 16px;
   align-items: center;
 }
 
-.color-daily-acitivities {
+.back-color-daily-acitivities{
   background-color: $daily-activities;
 }
 
-.color-future-me {
-  background-color: $future-me
+.back-color-future-me {
+  background-color: $future-me;
 }
 
-.color-interactions {
+.back-color-interactions {
   background-color: $interactions;
 }
 
-.color-curiosity {
+.back-color-curiosity {
   background-color: $curiosity;
-}
-
-.card-challenge {
-  max-width: 700px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }

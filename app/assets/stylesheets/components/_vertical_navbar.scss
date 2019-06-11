@@ -1,13 +1,14 @@
 .nav {
-  position: relative;
+  overflow: hidden;
   position: fixed;
   width: 250px;
   height: 100vh;
   background-color: $navbar;
   transition: 0.5s;
-  z-index: 1;
+  z-index: 99;
   top: 0;
   left: 0;
+  overflow-y: scroll!important;
 }
 
 #navbar-all {
@@ -42,7 +43,7 @@
   width: 10px;
   border-radius: 50%;
   background-color: #39E500;
-  margin: 8px 10px 0px 50px;
+  margin: 8px 43px 10px 30px;
 }
 
 .logo-d,
@@ -51,16 +52,16 @@
 }
 
 .logo-c, {
-  margin: 15px 43px 10px 19px;
+  margin: 15px 38px 10px 19px;
 }
 
 
 .logo-n {
-  margin: 15px 26px 10px 19px;
+  margin: 15px 40px 10px 19px;
 }
 
 .logo-i {
-  margin: 15px 43px 10px 22px;
+  margin: 15px 43px 10px 23px;
 }
 
 .logo-s {
@@ -72,18 +73,18 @@
   margin: 20px 80px;
 }
 
-a.navlink.new {
+a#newchallenge {
   color: $navbar;
   background-color: white;
-  margin: 20px 20px;
+  margin: 10px 10px;
   padding-bottom: 2px;
-  border-radius: 4px;
+  border-radius: 5px;
   opacity: 0.8;
   width: 80%;
   // animation-play-state: paused;
 }
 
-a.navlink.new:hover {
+a#newchallenge:hover {
   // border: 0.5px solid $dashboard;
   opacity: 1;
   // animation-play-state: play;
@@ -93,6 +94,7 @@ a.navlink {
   color: $dashboard;
   width: 100%;
   transition: 0.3s;
+  border-left: 7px solid $navbar;
 }
 
 
@@ -100,11 +102,13 @@ a.navlink:hover {
   color: $navbar;
   font-style: bold;
   background-color: $dashboard;
+  border-left: 7px solid white;
   text-decoration: none;
 }
 
 a.navlink.active {
   border-left: 7px solid $dashboard;
+  // margin-left: -7px;
   // color: white;
   // font-style: bold;
   // background-color: $dashboard;
@@ -149,7 +153,13 @@ a.navlink.bottom {
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-  .nav {padding-top: 15px;}
-  .nav a {font-size: 18px;}
+@media screen and (max-width: 600px) {
+  .nav {
+    padding-top: 15px;
+  }
+  .nav a {
+    float: none;
+    width: 100%;
+  }
 }
+
