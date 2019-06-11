@@ -2,43 +2,47 @@
 
 <!-- # search bar
 # profile cards -->
-<div class="container">
+<div class="container mt-3">
+  <div>
 
   <h1>Your library of role models ...</h1>
 
-<%= form_tag role_models_path, method: :get do %>
-  <div  id= "search-data" class="search-form-control form-group  search-data" data-role_models_search="<%= @role_models_search.to_json %>">
-    <%= text_field_tag :query, params[:query], id:"search-bar",
-      class: "form-control string required search-input", type: "text",
-      placeholder: "Find an inspiring model 🤗", autocomplete: :on
-    %>
-    <%= button_tag "", name:"button", type:"submit", class:" btn btn-flat fa fa-search" %>
+  <%= form_tag role_models_path, method: :get do %>
+    <div  id= "search-data" class="search-form-control form-group  search-data" data-role_models_search="<%= @role_models_search.to_json %>">
+      <%= text_field_tag :query, params[:query], id:"search-bar",
+        class: "form-control string required search-input", type: "text",
+        placeholder: "Find an inspiring model 🤗", autocomplete: :on
+      %>
+      <%= button_tag "", name:"button", type:"submit", class:" btn btn-flat fa fa-search" %>
+    </div>
+  <% end %>
   </div>
-<% end %>
+
+  <!-- search bar -->
+  <div>
+    <div class="card-columns">
+    <!-- list role models -->
+  <!-- <div class="col-sm-8 col-sm-offset-2"> -->
+      <% @role_models.each do |role_model| %>
+        <div class="model_profile_card card p-3" title='<%= role_model.first_name %> <%= role_model.last_name %>'>
+          <% if !role_model.bookmarkeds.where(user_id: current_user).empty? %>
+            <div class="notification-actions">
+               <i class="fas fa-star bookmark_icon_small"></i>
+            </div>
+          <% end %>
+          <blockquote class="card-body mb-0">
+              <%= link_to '', role_model_path(role_model), class: "stretched-link" %>
+              <%= image_tag(role_model.picture, class:"avatar-large card_image", alt: "avatar-large" ) if role_model.picture %>
+              <h5 class="card-title"><%= role_model.first_name %> <%= role_model.last_name %></h5>
+              <p class="card-subtitle mb-2 text-muted "><%= role_model.sector %></p>
+          </blockquote>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
 </div>
 
-<!-- search bar -->
-<div class="container">
-  <div class="card-columns">
-  <!-- list role models -->
-<!-- <div class="col-sm-8 col-sm-offset-2"> -->
-    <% @role_models.each do |role_model| %>
-      <div class="model_profile_card card p-3" title='<%= role_model.first_name %> <%= role_model.last_name %>'>
-        <% if !role_model.bookmarkeds.where(user_id: current_user).empty? %>
-          <div class="notification-actions">
-             <i class="fas fa-star bookmark_icon_small"></i>
-          </div>
-        <% end %>
-        <blockquote class="card-body mb-0">
-            <%= link_to '', role_model_path(role_model), class: "stretched-link" %>
-            <%= image_tag(role_model.picture, class:"avatar-large card_image", alt: "avatar-large" ) if role_model.picture %>
-            <h5 class="card-title"><%= role_model.first_name %> <%= role_model.last_name %></h5>
-            <p class="card-subtitle mb-2 text-muted "><%= role_model.sector %></p>
-        </blockquote>
-      </div>
-    <% end %>
-  </div>
-</div>
 
 <script>
   function resetForm(){
