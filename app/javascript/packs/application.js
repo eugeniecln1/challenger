@@ -16,4 +16,7 @@ if (document.getElementById('search-data')) {
   autocompleteSearch();
 }
 
-animateChallengeButton();
+if (document.getElementById('newchallenge')) {
+  animateChallengeButton();
+}
+
