@@ -106,15 +106,17 @@ hr {
 
 .bg-curiosity {
   background-color: $curiosity;
-  background-image: linear-gradient(30deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445),
-  linear-gradient(150deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445),
-  linear-gradient(30deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445),
-  linear-gradient(150deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445),
+  background-image: linear-gradient(30deg, #815234 12%, transparent 12.5%, transparent 87%, #815234 87.5%, #815234),
+  linear-gradient(150deg, #815234 12%, transparent 12.5%, transparent 87%, #815234 87.5%, #815234),
+  linear-gradient(30deg, #815234 12%, transparent 12.5%, transparent 87%, #815234 87.5%, #815234),
+  linear-gradient(150deg, #815234 12%, transparent 12.5%, transparent 87%, #815234 87.5%, #815234),
   linear-gradient(60deg, $navbar 25%, transparent 25.5%, transparent 75%, $navbar 75%, $navbar),
   linear-gradient(60deg, $navbar 25%, transparent 25.5%, transparent 75%, $navbar 75%, $navbar);
   background-size:80px 140px;
   background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
 }
+
+// #815234
 
 .bg-dailyactivities {
   background-color: $daily-activities;
