@@ -1,18 +1,18 @@
 <%= content_for(:page, "challenges") %>
 
-<div class="card-challenge">
+<div class="">
 <!-- carroussel présentant les différents challenges de la catégorie qui sont acceissbles (qui n'ont pas encore étét faits) -->
   <div id="carouselExampleControls" class="carousel slide"  data-interval="false" data-ride="carousel">
     <div class="carousel-inner">
       <% @undone_challenges.each_with_index do |challenge, index| %>
             <% active = index == 0 ? "active" : "" %>
             <div class="carousel-item <%= active%>">
-              <div class="card bg-<%= challenge.category.gsub(/\s+/, "").downcase %>" style="height: 453px">
-                <div class="card-body padd">
-                  <div class="card-inside-color-<%= challenge.category.gsub(/\s+/, "").downcase %>">
-                    <h2 class="card-title"><em><%= challenge.title %></em></h2>
-                    <%= image_tag challenge.show_category_logo, size: "100" %>
-                    <h6 class="card-text"><%= challenge.description %></p>
+              <div class="">
+                <div class="">
+                  <div class="">
+                    <h2 class=""><em><%= challenge.title %></em></h2>
+                    <%= image_tag challenge.show_category_logo, size: "300" %>
+                    <h6 class=""><%= challenge.description %></p>
                     <br>
                     <div class="btn-challenge">
                       <%= link_to "Let's go!", "#", data: {toggle: "modal", target: "#modal#{challenge.id}"} %>
