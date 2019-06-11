@@ -73,7 +73,7 @@
   margin: 20px 80px;
 }
 
-a.navlinknew {
+a#newchallenge {
   color: $navbar;
   background-color: white;
   margin: 10px 10px;
@@ -84,7 +84,7 @@ a.navlinknew {
   // animation-play-state: paused;
 }
 
-a.navlink.new:hover {
+a#newchallenge:hover {
   // border: 0.5px solid $dashboard;
   opacity: 1;
   // animation-play-state: play;
