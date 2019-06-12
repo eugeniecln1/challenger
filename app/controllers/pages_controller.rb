@@ -5,7 +5,7 @@ class PagesController < ApplicationController
   end
 
   def dashboard
-    @undone_participations = Participation.is_not_validated?.where(user: current_user)
+    @undone_participations = Participation.is_not_validated?.where(user: current_user).order(created_at: :desc)
     @participations = current_user.participations
     @counter = {
       dailyactivities: 0,
