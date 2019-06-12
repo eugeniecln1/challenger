@@ -30,8 +30,7 @@
 
   </head>
   <body>
-
-    <%= render 'shared/vertical_navbar' if yield(:page) == 'dashboard' || yield(:page) == 'inspiration' || yield(:page) == 'journal'%>
+    <%= render 'shared/navbar' if yield(:page) == 'dashboard' || yield(:page) == 'inspiration' || yield(:page) == 'journal'%>
     <%= yield %>
 
     <%= render 'shared/flashes' %>
