@@ -63,6 +63,7 @@
               </div>
             <% end %>
             <div class="card-body">
+            <%= image_tag(bookmarked.role_model.picture, class:"avatar-large card_image", alt: "avatar-large" ) if bookmarked.role_model.picture %>
             <%= link_to role_model_path(bookmarked.role_model) do %>
               <h5 class="card-title" style="color: black"><%= bookmarked.role_model.first_name %> <strong><%= bookmarked.role_model.last_name %></strong></h5>
               <p class="card-subtitle mb-2 text-muted"><%= bookmarked.role_model.sector %></p>

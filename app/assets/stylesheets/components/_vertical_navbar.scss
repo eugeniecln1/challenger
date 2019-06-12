@@ -73,22 +73,6 @@
   margin: 20px 80px;
 }
 
-a#newchallenge {
-  color: $navbar;
-  background-color: white;
-  margin: 10px 10px;
-  padding-bottom: 2px;
-  border-radius: 5px;
-  opacity: 0.8;
-  width: 80%;
-  // animation-play-state: paused;
-}
-
-a#newchallenge:hover {
-  // border: 0.5px solid $dashboard;
-  opacity: 1;
-  // animation-play-state: play;
-}
 
 a.navlink {
   color: $dashboard;
