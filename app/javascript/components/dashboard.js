@@ -12,11 +12,11 @@ const initPolar = () => {
         labels: ["Daily Activities", "Future Me", "Interactions", "Curiosity"],
         datasets: [{
           data: [canvas.dataset.daily, canvas.dataset.future, canvas.dataset.interactions, canvas.dataset.curiosity],
-          backgroundColor: ["rgba(242, 161, 71, 0.7)", "rgba(131, 67, 234, 0.7)", "rgba(110, 229, 176, 0.7)",
-            "rgba(237, 104, 97, 0.7)"
+          backgroundColor: ["rgba(242, 161, 71, 1)", "rgba(131, 67, 234, 1)", "rgba(110, 229, 176, 1)",
+            "rgba(237, 104, 97, 1)"
           ],
-          hoverBackgroundColor: ["#F7DD4A", "#FA7B77", "#F49FBB",
-            "#FFB668"
+          hoverBackgroundColor: ["rgba(242, 161, 71, 0.7)", "rgba(131, 67, 234, 0.7)", "rgba(110, 229, 176, 0.7)",
+            "rgba(237, 104, 97, 0.7)"
           ],
         }]
       },
