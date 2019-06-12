@@ -1,6 +1,6 @@
 class ParticipationsController < ApplicationController
   def index
-    @participations = current_user.participations
+    @participations = current_user.participations.order(updated_at: :desc)
     @bookmarkeds = current_user.bookmarkeds
   end
 

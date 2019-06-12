@@ -13,7 +13,6 @@
       <% @participations.each do |participation| %>
         <!-- Si participation.validated? (si les ratings + feedback sont complétés = true sinon false), on n'affiche pas la participation -->
         <% if participation.validated? %>
-
           <div class="card-trip border-<%= participation.challenge.category.gsub(/\s+/, "").downcase %>">
             <div class="card-trip-infos">
               <div>
@@ -23,62 +22,55 @@
               </div>
             </div>
             <div class="card-trip-pricing">
-                  Difficulty :
-                    <% participation.difficulty.times do %>
-                      <i class="fas fa-dragon color-<%= participation.challenge.category.gsub(/\s+/, "").downcase %>"></i>
-                    <% end %>
-                    <% (5 - participation.difficulty).times  do %>
-                      <%= image_tag(participation.challenge.show_category_color_on_difficulty_icon, size: "21") %>
-                    <% end %>
-                    <br>
-                  Appreciation :
-                  <% participation.appreciation.times do %>
-                    <i class="fas fa-heart color-<%= participation.challenge.category.gsub(/\s+/, "").downcase %>"></i>
-                  <% end %>
-                  <% (5 - participation.appreciation).times do %>
-                    <i class="far fa-heart color-<%= participation.challenge.category.gsub(/\s+/, "").downcase %>"></i>
-                  <% end %>
+              <% participation.difficulty.times do %>
+                <i class="fas fa-dragon color-<%= participation.challenge.category.gsub(/\s+/, "").downcase %>"></i>
+              <% end %>
+              <% (5 - participation.difficulty).times  do %>
+                <%= image_tag(participation.challenge.show_category_color_on_difficulty_icon, size: "21") %>
+              <% end %>
+                <br>
+              <% participation.appreciation.times do %>
+                <i class="fas fa-heart color-<%= participation.challenge.category.gsub(/\s+/, "").downcase %>"></i>
+              <% end %>
+              <% (5 - participation.appreciation).times do %>
+                <i class="far fa-heart color-<%= participation.challenge.category.gsub(/\s+/, "").downcase %>"></i>
+              <% end %>
             </div>
           </div>
         <% end %>
       <% end %>
-
-
     </div>
 
     <div class="col-sm-3">
-    <% if @bookmarkeds.empty? %>
-    <div style="text-align: center">
-      <p><em>You haven't bookmarked any role models yet</em></p>
-      <%= link_to "Find a role model", role_models_path, title:"Find a role model", class: "btn-3d" %>
-    </div>
-    <% else %>
-      <p>Your favorite role models ⭐️</p>
-      <div class="row">
-        <% @bookmarkeds.each do |bookmarked| %>
+      <% if @bookmarkeds.empty? %>
+        <div style="text-align: center">
+          <p><em>You haven't bookmarked any role models yet</em></p>
+          <%= link_to "Find a role model", role_models_path, title:"Find a role model", class: "btn-3d" %>
+        </div>
+      <% else %>
+        <p>Your favorite role models ⭐️</p>
+        <div class="row">
+          <% @bookmarkeds.each do |bookmarked| %>
 
-          <div class="card mb-1 model_profile_card p-1 mt-0 mb-3" style="margin: auto; width: 100%">
-            <% if bookmarked.user_id == current_user.id %>
-              <div class="notification-actions">
-                <%= link_to bookmarked_path(bookmarked.id), method: :delete, class: "bookmark_icon_small" do %>
-                  <i class="fas fa-times bookmark_icon_small"></i>
+            <div class="card mb-1 model_profile_card p-1 mt-0 mb-3" style="margin: auto; width: 100%">
+              <% if bookmarked.user_id == current_user.id %>
+                <div class="notification-actions">
+                  <%= link_to bookmarked_path(bookmarked.id), method: :delete, class: "bookmark_icon_small" do %>
+                    <i class="fas fa-times bookmark_icon_small"></i>
+                  <% end %>
+                </div>
+              <% end %>
+              <div class="card-body">
+                <%= image_tag(bookmarked.role_model.picture, class:"avatar-large card_image", alt: "avatar-large" ) if bookmarked.role_model.picture %>
+                <%= link_to role_model_path(bookmarked.role_model) do %>
+                  <h5 class="card-title" style="color: black"><%= bookmarked.role_model.first_name %> <strong><%= bookmarked.role_model.last_name %></strong></h5>
+                  <p class="card-subtitle mb-2 text-muted"><%= bookmarked.role_model.sector %></p>
                 <% end %>
               </div>
-            <% end %>
-            <div class="card-body">
-            <%= image_tag(bookmarked.role_model.picture, class:"avatar-large card_image", alt: "avatar-large" ) if bookmarked.role_model.picture %>
-            <%= link_to role_model_path(bookmarked.role_model) do %>
-              <h5 class="card-title" style="color: black"><%= bookmarked.role_model.first_name %> <strong><%= bookmarked.role_model.last_name %></strong></h5>
-              <p class="card-subtitle mb-2 text-muted"><%= bookmarked.role_model.sector %></p>
-            <% end %>
             </div>
-
-          </div>
-
+          <% end %>
         <% end %>
       </div>
-     <% end %>
-
     </div>
   </div>
 </div>
