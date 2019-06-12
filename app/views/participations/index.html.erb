@@ -3,7 +3,12 @@
 <div class="container" style="margin-top: 100px";>
   <div class="row justify-content-center">
     <div class="col-sm-9">
-    <p><em>Here you'll find all your completed challenges. See how far you have gone !</em> 🤩</p>
+      <div class="d-flex justify-content-left align-items-center">
+        <%= image_tag "emoji/027-cool.png", size: 50, style: "transform: rotatey(180deg)" %>
+        <p style="margin-left: 15px;"><em>Here you'll find all your completed challenges. See how far you have gone !</em></p>
+      </div>
+
+
       <!-- card_participations = Challenge.title + Feedback + Ratings -->
       <% @participations.each do |participation| %>
         <!-- Si participation.validated? (si les ratings + feedback sont complétés = true sinon false), on n'affiche pas la participation -->
