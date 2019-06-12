@@ -1,6 +1,12 @@
 <%= content_for(:page, "category") %>
 
-<div class="container">
-  <%= image_tag "illustrations/flamenco-page-under-construction.png", size: "300" %>
-  <%= render 'challenges', challenges: @undone_challenges %>
+<div class="wrapper-future-me">
+  <div class="container">
+    <div class="d-flex justify-content-center align-items-center" style="height: 100vh;">
+      <div class="one-challenge future-me">
+        <%= image_tag "illustrations/flamenco-page-under-construction.png" %>
+        <%= render 'challenges', challenges: @undone_challenges %>
+      </div>
+    </div>
+  </div>
 </div>

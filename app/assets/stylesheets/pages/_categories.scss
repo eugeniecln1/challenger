@@ -1,0 +1,52 @@
+// .main-wrapper {
+//   background-color: blue;
+// }
+
+.categories-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 40px;
+  padding: 30px;
+  // background-color: white;
+}
+
+.category-challenge {
+  background-size: cover;
+  width: 200px;
+  height: 200px;
+}
+
+.category {
+  display: flex;
+  justify-content: center;
+}
+
+.category:hover {
+  transform: scale(1.08, 1.08);
+  cursor: pointer;
+}
+
+.category-padding {
+  padding: 30px;
+}
+
+.daily-activities .category-padding{
+  border: 8px solid $daily-activities;
+  border-radius: 8px;
+}
+
+.future-me .category-padding{
+  border: 8px solid $future-me;
+  border-radius: 8px;
+}
+
+.interactions .category-padding{
+  border: 8px solid $interactions;
+  border-radius: 8px;
+}
+
+.curiosity .category-padding{
+  border: 8px solid $curiosity;
+  border-radius: 8px;
+}
+
