@@ -13,7 +13,7 @@
   </head>
   <body>
     <div class="d-flex">
-      <%= render 'shared/vertical_navbar' if yield(:page) == 'dashboard' || yield(:page) == 'inspiration' || yield(:page) == 'journal'%>
+      <%= render 'shared/navbar' if yield(:page) == 'dashboard' || yield(:page) == 'inspiration' || yield(:page) == 'journal'%>
       <div class="container mt-3">
         <%= yield %>
       </div>

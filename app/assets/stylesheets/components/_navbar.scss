@@ -2,7 +2,21 @@
   justify-content: space-between;
   background-color: transparent;
   background: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 }
+
+.navbar-home {
+  justify-content: space-between;
+  background-color: transparent;
+  background: transparent;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
 
 .navbar-challenger .navbar-collapse {
   flex-grow: 0;
@@ -12,6 +26,15 @@
   // width: 40px;
 }
 
+a.navlink-top {
+  color: black;
+  text-decoration: none;
+  padding: 20px;
+}
+
+.logo {
+
+}
 // .dropdown-item {
 //   opacity: 0.7;
 // }
