@@ -1,4 +1,35 @@
-.challenge img{
-  width: 80%;
-  margin-top: 30px;
+.wrapper-curiosity {
+  background-color: $curiosity;
+}
+
+.wrapper-daily-activities {
+  background-color: $daily-activities;
+}
+
+.wrapper-interactions {
+  background-color: $interactions;
+}
+
+.wrapper-future-me {
+  background-color: $future-me;
+}
+
+.one-challenge img{
+  object-fit: contain;
+  width: 300px;
+  padding: 30px;
+  background-color: white;
+  border-radius: 8px;
+}
+
+.one-challenge {
+  text-align: center;
+  width: 400px;
+  // padding-left: 300px;
+  // padding-right: 300px;
+}
+
+.size-chevron {
+  width: 40px;
+  height: 40px;
 }
