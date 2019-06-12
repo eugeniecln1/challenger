@@ -12,7 +12,7 @@
             <p><%= challenge.description %></p>
             <br>
             <div class="btn-challenge">
-              <%= link_to "Let's go!", dashboard_path %>
+              <%= link_to "Let's go!", challenge_participations_path(challenge), method: :post %>
               <svg>
                 <polyline class="o1" points="0 0, 150 0, 150 55, 0 55, 0 0"></polyline>
                 <polyline class="o2" points="0 0, 150 0, 150 55, 0 55, 0 0"></polyline>
