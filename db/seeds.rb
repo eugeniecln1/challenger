@@ -15,6 +15,8 @@ User.destroy_all
 
 user = User.create(email:"a@a.com", password: "challenge", username: "aha")
 user2 = User.create(email:"yo@yo.com", password: "challenge", username: "yoyo")
+user3 = User.create(email:'leprince.antoine7@gmail.com', password: "123456", username: "antoinelp")
+user4 = User.create(email:'demo@gmail.com', password: "challenge", username: "eugenie")
 
 
 
@@ -82,5 +84,13 @@ Participation.create(user_id: user.id, challenge_id: challenge.id, feedback: "I 
 Participation.create(user_id: user.id, challenge_id: challenge2.id, feedback: "It sucked", appreciation: 1, difficulty: 4)
 Participation.create(user_id: user2.id, challenge_id: challenge.id, feedback: "Cool, i want more !", appreciation: 4, difficulty: 3)
 Participation.create(user_id: user2.id, challenge_id: challenge2.id, feedback: "I thought it was amusing", appreciation: 3, difficulty: 1)
+
+Participation.create(user_id: user4.id, challenge_id: challenge.id, feedback: "I loved it", appreciation: 5, difficulty: 2)
+Participation.create(user_id: user4.id, challenge_id: challenge2.id, feedback: "It sucked", appreciation: 1, difficulty: 4)
+Participation.create(user_id: user4.id, challenge_id: challenge3.id, feedback: "Cool, I want more !", appreciation: 4, difficulty: 3)
+Participation.create(user_id: user4.id, challenge_id: challenge6.id, feedback: "I thought it was amusing", appreciation: 3, difficulty: 1)
+Participation.create(user_id: user4.id, challenge_id: challenge8.id, feedback: "I really enjoyed it", appreciation: 3, difficulty: 1)
+Participation.create(user_id: user4.id, challenge_id: challenge7.id)
+
 
 puts "End"
