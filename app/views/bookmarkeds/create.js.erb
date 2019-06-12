@@ -1,0 +1,6 @@
+function refreshBookmarkLink(innerHTML) {
+  const bookmarkLinkContainer = document.getElementById('bookmark-link');
+  bookmarkLinkContainer.innerHTML = innerHTML;
+}
+
+refreshBookmarkLink('<%= j render "role_models/bookmark_link", role_model: @role_model %>');

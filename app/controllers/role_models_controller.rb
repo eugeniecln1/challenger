@@ -17,7 +17,8 @@ class RoleModelsController < ApplicationController
 
   def show
     @role_model = RoleModel.find(params[:id])
-    @bookmarked = Bookmarked.where(role_model: params[:role_model_id])
+    # @bookmarked = Bookmarked.where(role_model: params[:role_model_id])
+    @bookmarkeds = @role_model.bookmarkeds.where(user: current_user)
   end
 
   private
