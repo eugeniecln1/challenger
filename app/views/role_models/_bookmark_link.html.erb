@@ -1,0 +1,13 @@
+<% if @role_model.bookmarkeds.where(user_id: current_user).empty? %>
+  <div class="notification-actions">
+    <%= link_to role_model_path(@role_model), method: :post, remote: true, class: "bookmark_icon" do %>
+    <i class="far fa-star"></i>
+    <% end %>
+  </div>
+  <% else %>
+  <div class="notification-actions">
+    <%= link_to bookmarked_path(current_user.bookmarkeds.where(role_model_id: @role_model.id).first), method: :delete, remote: true, class: "bookmark_icon" do %>
+    <i class="fas fa-star"></i>
+    <% end %>
+  </div>
+<% end %>
