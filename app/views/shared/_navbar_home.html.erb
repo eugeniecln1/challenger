@@ -24,7 +24,10 @@
         Inspirations
       <% end %>
 
-        <%= link_to "Sign out", destroy_user_session_path, class: "navlink-top", method: :delete, data: { confirm: 'Are you sure?' } %>
+      <%= link_to destroy_user_session_path, class: "navlink-top", method: :delete, title:"Sign out", data: { confirm: 'Are you sure?' } do %>
+        <i class="logo-s fas fa-sign-out-alt"></i>
+        <% end %>
+
       <% else %>
         <%= link_to "Sign in", new_user_session_path, class: "navlink-top" %>
       <% end %>
