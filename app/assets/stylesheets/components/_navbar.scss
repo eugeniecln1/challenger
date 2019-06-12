@@ -12,7 +12,7 @@
     display: none;
   }
   a.navlink-top:hover {
-    color: #EB3352;
+    color: $navbar;
   }
 }
 
@@ -39,7 +39,7 @@
     color: black;
   }
   a.navlink-top:hover {
-    color: #EB3352;
+    color: $navbar;
   }
   .logo-black {
     display: block;
