@@ -68,11 +68,10 @@
     </div>
   </div>
 
-  <div class="d-flex justify-content-center">
+  <div class="d-flex justify-content-center align-items-center">
     <%= link_to "Challenge me", challenges_home_path, id:"newchallenge" %>
+    <%= image_tag "emoji/026-grinning.png", size: 50 %>
   </div>
-
-  <br>
 
   <div class="container d-flex flex-column">
   <!-- <div class="scrollbar scrollbar-primary"> -->
@@ -84,7 +83,6 @@
           <%= render 'non_done_card', participation: participation %>
         <% end %>
         <br>
-        <%= link_to "See more", participations_path, class: "btn-dashboard" %>
       </div>
     </div>
   </div>
