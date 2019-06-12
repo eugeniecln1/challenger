@@ -1,9 +1,6 @@
 <%= content_for(:page, "category") %>
 
-<div class="container mt-3">
-  <br>
-  <h1 style="text-align: center;">Let's grow <strong>ambition</strong> today!</h1>
-  <br>
-
+<div class="container">
+  <%= image_tag "illustrations/flamenco-page-under-construction.png", size: "300" %>
   <%= render 'challenges', challenges: @undone_challenges %>
 </div>

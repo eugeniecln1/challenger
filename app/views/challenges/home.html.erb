@@ -1,73 +1,45 @@
 ¶<%= content_for(:page, "challenges") %>
 
 <div class="container">
-  <h1 class="mt-5" style="text-align: center">Challenge yourself today!</h1>
-
-  <div class="d-flex">
-    <div class="row justify-content-center">
+  <h1 class="mt-4 mb-4" style="text-align: center">Challenge yourself today!</h1>
+  <div class="d-flex justify-content-center align-items-center">
 
 <!-- Daily actovities category -->
-      <div class="col-ml-6">
-        <div class="">
-          <div class="">
-            <%= link_to challenges_daily_activities_path do %>
-                <div class="bg-dailyactivities">
-                  <div class="d-flex justify-content-around align-items-center">
-                    <%= image_tag "illustrations/bermuda-done.png", size: "300" %>
-                  </div>
-                </div>
-
-            <% end %>
-          </div>
+    <div class="">
+      <%= link_to challenges_daily_activities_path do %>
+        <div class="challenge">
+          <%= image_tag "illustrations/flamenco-uploading-1.png" %>
         </div>
-      </div>
+      <% end %>
+    </div>
 
 <!-- Future Me category -->
-      <div class="col-ml-6">
-        <div class="">
-          <div class="">
-            <%= link_to challenges_future_me_path do %>
-                <div class="">
-                  <div class="d-flex justify-content-around align-items-center">
-                    <%= image_tag "illustrations/bermuda-success.png", size: "300" %>
-                  </div>
-                </div>
-            <% end %>
-          </div>
+    <div class="">
+      <%= link_to challenges_future_me_path do %>
+        <div class="challenge">
+          <%= image_tag "illustrations/flamenco-page-under-construction.png" %>
         </div>
-      </div>
+      <% end %>
+    </div>
 
 <!-- Interactions category -->
-      <div class="col-ml-6">
-        <div class="">
-          <div class="">
-            <%= link_to challenges_interactions_path do %>
-                <div class="">
-                  <div class="d-flex justify-content-around align-items-center">
-                    <%= image_tag "illustrations/bermuda-logged-out.png", size: "300" %>
-                  </div>
-                </div>
-            <% end %>
-          </div>
+    <div class="">
+      <%= link_to challenges_interactions_path do %>
+        <div class="challenge">
+          <%= image_tag "illustrations/flamenco-welcome.png" %>
         </div>
-      </div>
+      <% end %>
+    </div>
 
 <!-- Curiosity category -->
-      <div class="col-ml-6">
-        <div class="">
-          <div class="">
-            <%= link_to challenges_curiosity_path do %>
-                <div class="">
-                  <div class="d-flex justify-content-around align-items-center">
-                    <%= image_tag "illustrations/bermuda-searching.png", size: "300" %>
-                  </div>
-                </div>
-            <% end %>
-          </div>
+    <div class="">
+      <%= link_to challenges_curiosity_path do %>
+        <div class="challenge">
+          <%= image_tag "illustrations/flamenco-logged-out.png" %>
         </div>
-      </div>
-
+      <% end %>
     </div>
+
   </div>
 </div>
 
