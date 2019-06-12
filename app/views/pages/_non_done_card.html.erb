@@ -1,8 +1,11 @@
 <div class="follow" data-participation-id="<%= participation.id %>">
   <div class="notification">
     <div class="notification-content">
-      <p><strong><%= participation.challenge.category %></strong></p>
-      <p><%= participation.challenge.title %> | <small><%= link_to "#{participation.challenge.role_model.first_name} #{participation.challenge.role_model.last_name}", role_model_path(participation.challenge.role_model) %></small></p>
+      <p style="margin-bottom: 5px"><strong><%= participation.challenge.title %></strong></p>
+      <div class="d-flex align-items-center">
+        <%= image_tag(participation.challenge.role_model.picture, class:"avatar-small", alt: "avatar-small" ) %>
+        <p style="margin-left: 10px;"><em>Inspired by </em><%= link_to "#{participation.challenge.role_model.first_name} #{participation.challenge.role_model.last_name}", role_model_path(participation.challenge.role_model) %></p>
+      </div>
     </div>
     <div class="notification-actions">
       <a href="#" id="check" data-toggle="modal" data-target="#exampleModal<%= participation.id %>"><i class="far fa-check-circle fa-lg"></i></a>
