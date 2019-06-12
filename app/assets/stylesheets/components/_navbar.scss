@@ -11,6 +11,9 @@
   .logo-black {
     display: none;
   }
+  a.navlink-top:hover {
+    color: #EB3352;
+  }
 }
 
 .navbar-home {
@@ -23,6 +26,9 @@
   a.navlink-top {
     color: black;
   }
+  a.navlink-top:hover {
+    color: white;
+  }
 }
 
 .navbar-challenger-white {
@@ -31,6 +37,9 @@
   box-shadow: 0px 0px 10px 4px #0000001c;
   a.navlink-top {
     color: black;
+  }
+  a.navlink-top:hover {
+    color: #EB3352;
   }
   .logo-black {
     display: block;
