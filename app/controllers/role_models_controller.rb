@@ -12,6 +12,7 @@ class RoleModelsController < ApplicationController
       params[:query] = nil
     else
       @role_models = RoleModel.all
+      @bookmarkeds = Bookmarked.where(user: current_user)
     end
   end
 
