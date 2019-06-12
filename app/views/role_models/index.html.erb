@@ -16,24 +16,25 @@
     <% end %>
   </div>
 
-  <h3><em>Favorite role models</em> (<%= @bookmarkeds.length %>)</h3>
-  <div class="d-flex align-items-center justify-content-left">
-    <% if @bookmarkeds.empty? %>
-      <div style="text-align: center">
-        <p><em>You haven't bookmarked any role models yet</em></p>
-      </div>
-    <% else %>
-      <div class="card-columns">
-        <% @bookmarkeds.each do |bookmarked| %>
+  <div>
+    <h3><em>Favorite role models</em> (<%= @bookmarkeds.length %>)</h3>
+      <div class="d-flex align-items-center justify-content-left">
+        <% if @bookmarkeds.empty? %>
+          <div style="text-align: center">
+            <p><em>You haven't bookmarked any role models yet</em></p>
+          </div>
+        <% else %>
+          <div class="card-columns">
+            <% @bookmarkeds.each do |bookmarked| %>
 
-          <div class="model_profile_card card p-3" style="margin-right: 20px;">
-            <% if bookmarked.user_id == current_user.id %>
-              <div class="notification-actions">
-                <%= link_to bookmarked_path(bookmarked.id), method: :delete, class: "bookmark_icon_small" do %>
-                  <i class="fas fa-times bookmark_icon_small"></i>
+              <div class="model_profile_card card p-3" style="margin-right: 20px;">
+                <% if bookmarked.user_id == current_user.id %>
+                  <div class="notification-actions">
+                    <%= link_to bookmarked_path(bookmarked.id), method: :delete, class: "bookmark_icon_small" do %>
+                      <i class="fas fa-times bookmark_icon_small"></i>
+                    <% end %>
+                  </div>
                 <% end %>
-              </div>
-            <% end %>
 
             <blockquote class="card-body mb-0">
               <%= image_tag(bookmarked.role_model.picture, class:"avatar-large card_image", alt: "avatar-large" ) if bookmarked.role_model.picture %>
@@ -47,6 +48,7 @@
       </div>
 
     <% end %>
+  </div>
   </div>
   <br>
   <!-- search bar -->
