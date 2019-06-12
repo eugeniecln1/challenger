@@ -10,7 +10,6 @@ import autocomplete from 'js-autocomplete';
 const autocompleteSearch = function() {
   const role_models = JSON.parse(document.getElementById('search-data').dataset.role_models_search)
   const searchInput = document.getElementById('search-bar');
-  console.log(role_models)
 
   if (role_models && searchInput) {
     new autocomplete({
