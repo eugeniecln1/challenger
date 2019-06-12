@@ -12,8 +12,8 @@
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
   </head>
   <body>
-    <div class="d-flex">
-      <%= render 'shared/navbar' if yield(:page) == 'dashboard' || yield(:page) == 'inspiration' || yield(:page) == 'journal'%>
+    <%= render 'shared/navbar' if yield(:page) == 'dashboard' || yield(:page) == 'inspiration' || yield(:page) == 'journal'%>
+    <div class="d-flex" style="margin-top: 86px;">
       <div class="container mt-3">
         <%= yield %>
       </div>

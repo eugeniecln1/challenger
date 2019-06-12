@@ -6,6 +6,11 @@
   top: 0;
   left: 0;
   right: 0;
+  transition: 0.4s background-color ease;
+
+  .logo-black {
+    display: none;
+  }
 }
 
 .navbar-home {
@@ -15,8 +20,25 @@
   position: fixed;
   top: 0;
   right: 0;
+  a.navlink-top {
+    color: black;
+  }
 }
 
+.navbar-challenger-white {
+  background: white;
+  z-index: 1000000;
+  box-shadow: 0px 0px 10px 4px #0000001c;
+  a.navlink-top {
+    color: black;
+  }
+  .logo-black {
+    display: block;
+  }
+  .logo-white {
+    display: none;
+  }
+}
 
 .navbar-challenger .navbar-collapse {
   flex-grow: 0;
@@ -27,14 +49,11 @@
 }
 
 a.navlink-top {
-  color: black;
+  color: white;
   text-decoration: none;
-  padding: 20px;
+  padding: 18px;
 }
 
-.logo {
-
-}
 // .dropdown-item {
 //   opacity: 0.7;
 // }
