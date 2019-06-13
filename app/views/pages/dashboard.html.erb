@@ -13,16 +13,12 @@
             <div class="reward-content">
               <% if key == :futureme %>
                 <i class=" <%= key %> fas fa-medal fa-lg"></i>
-                <p>Congratulations ! You completed 3 challenges</p>
               <% elsif key == :dailyactivities %>
                 <i class=" <%= key %> fas fa-medal fa-lg"></i>
-                <p>Congratulations ! You completed 3 challenges</p>
               <% elsif key == :interactions %>
                 <i class=" <%= key %> fas fa-medal fa-lg"></i>
-                <p>Congratulations ! You completed 3 challenges</p>
               <% elsif key == :curiosity %>
                 <i class=" <%= key %> fas fa-medal fa-lg"></i>
-                <p>Congratulations ! You completed 3 challenges</p>
               <% end %>
             </div>
           </div>
@@ -32,28 +28,16 @@
         <% if @counter[:dailyactivities] >= 1 %>
           <div class="reward">
             <i class="bronze fas fa-trophy fa-lg"></i>
-            <div class="reward-content">
-              <p><strong class="bronze">Bronze Award</strong></p>
-              <p>Congratulations ! You completed 1 challenge of each category</p>
-            </div>
           </div>
         <% end %>
         <% if @counter[:dailyactivities] >= 2 %>
           <div class="reward">
             <i class="silver fas fa-trophy fa-lg"></i>
-            <div class="reward-content">
-              <p><strong class="silver">Silver Award</strong></p>
-              <p>Congratulations ! You completed 2 challenges of each category</p>
-            </div>
           </div>
         <% end %>
         <% if @counter[:dailyactivities] >= 3 %>
           <div class="reward">
             <i class="gold fas fa-trophy fa-lg"></i>
-            <div class="reward-content">
-              <p><strong class="gold">Gold Award</strong></p>
-              <p>Congratulations ! You completed 3 challenges of each category</p>
-            </div>
           </div>
         <% end %>
       <% end %>
@@ -62,9 +46,8 @@
 </div>
 
 <div class="container">
-  <!-- <div class="scrollbar scrollbar-primary"> -->
-  <div class="force-overflow">
-    <div class="force-overflow dashboard-element">
+  <div>
+    <div class="dashboard-element">
       <h3><em>Ongoing challenges</em> (<%= @undone_participations.length %>)</h3>
       <br>
       <% if @undone_participations.empty? %>

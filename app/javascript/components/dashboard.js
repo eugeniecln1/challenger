@@ -22,8 +22,9 @@ const initPolar = () => {
       },
       options: {
         legend: {
+          position: 'left',
           labels: {
-            fontFamily: 'Comfortaa'
+            fontFamily: 'Comfortaa',
           }
         }
       }
@@ -32,5 +33,5 @@ const initPolar = () => {
 };
 
 
-export default initPolar
+export default initPolar;
 
