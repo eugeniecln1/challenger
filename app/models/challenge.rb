@@ -7,13 +7,13 @@ class Challenge < ApplicationRecord
 
   def show_category_logo
     if category == "Daily activities"
-      @logo = "illustrations/flamenco-uploading-1.png"
+      @logo = "illustrations/flamenco-logged-out.png"
     elsif category == "Future me"
-      @logo = "illustrations/flamenco-page-under-construction.png"
+      @logo = "illustrations/flamenco-uploading-1.png"
     elsif category == "Interactions"
       @logo = "illustrations/flamenco-welcome.png"
     elsif category == "Curiosity"
-      @logo = "illustrations/flamenco-logged-out.png"
+      @logo = "illustrations/flamenco-searching-1.png"
     end
   end
 

@@ -46,6 +46,7 @@
 </div>
 
 <div class="container">
+
   <div>
     <div class="dashboard-element">
       <h3><em>Ongoing challenges</em> (<%= @undone_participations.length %>)</h3>
@@ -54,12 +55,27 @@
         <div class="d-flex justify-content-center align-items-center">
           <%= link_to "Challenge me", challenges_home_path, id:"newchallenge" %>
           <%= image_tag "emoji/026-grinning.png", size: 50 %>
+
+  <!-- <div class="scrollbar scrollbar-primary"> -->
+
+    <div class="force-overflow">
+      <div class="force-overflow dashboard-element">
+        <div class="titles">
+          <h5><em>Ongoing challenges</em> (<%= @undone_participations.length %>)</h5>
+          <h5 id="right"><em>Inspired by</em></h5>
         </div>
-      <% else %>
-        <% @undone_participations.each do |participation| %>
-          <%= render 'non_done_card', participation: participation %>
+        <br>
+        <% if @undone_participations.empty? %>
+          <div class="d-flex justify-content-center align-items-center">
+            <%= link_to "Challenge me", challenges_home_path, id:"newchallenge" %>
+            <%= image_tag "emoji/026-grinning.png", size: 50 %>
+          </div>
+        <% else %>
+          <% @undone_participations.each do |participation| %>
+            <%= render 'non_done_card', participation: participation %>
+          <% end %>
         <% end %>
-      <% end %>
+
       <br>
     </div>
   </div>
