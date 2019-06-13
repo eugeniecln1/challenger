@@ -31,7 +31,11 @@
   </div>
   <% if params[:query].nil? %>
     <div>
-      <h4><em>Favorite role models</em> (<%= @bookmarkeds.length %>)</h4>
+      <% if @bookmarkeds.length >= 2 %>
+        <h4><em>Favorite role models</em> (<%= @bookmarkeds.length %>)</h4>
+      <% else %>
+        <h4><em>Favorite role model</em> (<%= @bookmarkeds.length %>)</h4>
+      <% end %>
       <div class="d-flex align-items-center justify-content-left">
         <% if @bookmarkeds.empty? %>
           <div style="text-align: center">
