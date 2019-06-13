@@ -1,3 +1,4 @@
+
 #validatechallenge {
   color: white;
   background-color: $navbar;
@@ -13,7 +14,7 @@
   transform: scale(1.2);
 }
 
-#newchallenge {
+.newchallenge {
   color: white;
   background-color: $navbar;
   margin: 10px 10px;
@@ -23,7 +24,7 @@
   // animation-play-state: paused;
 }
 
-#newchallenge:hover {
+.newchallenge:hover {
   // border: 0.5px solid $dashboard;
   opacity: 0.9;
   // animation-play-state: play;
