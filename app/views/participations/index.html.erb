@@ -20,7 +20,7 @@
       <% @participations.each do |participation| %>
         <!-- Si participation.validated? (si les ratings + feedback sont complétés = true sinon false), on n'affiche pas la participation -->
         <% if participation.validated? %>
-        <div class="row">
+        <div class="row align-items-center">
           <div class="col-10">
             <div class="card-participation border-<%= participation.challenge.category.gsub(/\s+/, "").downcase %>">
               <div class="card-content">
