@@ -6,9 +6,9 @@
 
 .search-form-control .btn {
   position: absolute;
-  top: 8px;
-  bottom: 8px;
-  right: 8px;
+  top: 1px;
+  bottom: 1px;
+  width: 60px;
 }
 
 .search-form-control .form-control {
@@ -26,14 +26,14 @@
 
 .btn-flat {
   border-radius: 4px;
-  background: none;
-  color: $scrollbar;
+  background: $scrollbar;
+  color: white;
   transition: background 0.3s ease;
 }
 
 .btn-flat:hover {
+  opacity: 0.8;
   color: white;
-  background: $scrollbar;
 }
 
 .sign-container {

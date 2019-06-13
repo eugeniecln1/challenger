@@ -7,8 +7,8 @@
       <% @undone_challenges.each_with_index do |challenge, index| %>
         <% active = index == 0 ? "active" : "" %>
         <div class="carousel-item <%= active%>">
-          <div class="">
-            <h2 class="mt-5" style="text-align: center"><em><%= challenge.title %></em></h2>
+          <div class="inner-content">
+            <h2 class="mt-5" style="text-align: center;"><em><%= challenge.title %></em></h2>
             <p><%= challenge.description %></p>
             <br>
             <div class="btn-challenge">

@@ -7,17 +7,28 @@
 
     <%= form_tag role_models_path, method: :get do %>
       <div  id= "search-data" class="search-form-control form-group  search-data" data-role_models_search="<%= @role_models_search.to_json %>">
-        <%= text_field_tag :query, params[:query], id:"search-bar",
-          class: "form-control string required search-input", type: "text",
-          placeholder: "Find an inspiring model 🤗", autocomplete: :on
-        %>
-        <%= button_tag "", name:"button", type:"submit", class:" btn btn-flat fa fa-search" %>
+        <div class="row d-flex text-align-center">
+          <div class="col-7 d-flex">
+            <%= text_field_tag :query, params[:query], id:"search-bar",
+            class: "form-control string required search-input", type: "text",
+            placeholder: "Find an inspiring model 🤗", autocomplete: :on %>
+          </div>
+          <div class="col-2">
+            <%= select_tag(:sector, options_for_select(RoleModel::SECTOR), prompt: 'Sector', class: "form-control")%>
+          </div>
+          <div class="col-2">
+            <%= select_tag(:gender, options_for_select(RoleModel::GENDER), prompt: 'Gender', class: "form-control")%>
+          </div>
+          <div class="col-1">
+            <%= button_tag "", name:"button", type:"submit", class:"btn btn-flat fa fa-search" %>
+          </div>
+        </div>
       </div>
     <% end %>
   </div>
-
-  <div>
-    <h3><em>Favorite role models</em> (<%= @bookmarkeds.length %>)</h3>
+  <% if params[:query].nil? %>
+    <div>
+      <h3><em>Favorite role models</em> (<%= @bookmarkeds.length %>)</h3>
       <div class="d-flex align-items-center justify-content-left">
         <% if @bookmarkeds.empty? %>
           <div style="text-align: center">
@@ -36,20 +47,21 @@
                   </div>
                 <% end %>
 
-            <blockquote class="card-body mb-0">
-              <%= image_tag(bookmarked.role_model.picture, class:"avatar-large card_image", alt: "avatar-large" ) if bookmarked.role_model.picture %>
-              <%= link_to role_model_path(bookmarked.role_model) do %>
-                <h5 class="card-title" style="color: black"><%= bookmarked.role_model.first_name %> <strong><%= bookmarked.role_model.last_name %></strong></h5>
-                <p class="card-subtitle mb-2 text-muted"><%= bookmarked.role_model.sector %></p>
-              <% end %>
-            </blockquote>
+                <blockquote class="card-body mb-0">
+                  <%= image_tag(bookmarked.role_model.picture, class:"avatar-large card_image", alt: "avatar-large" ) if bookmarked.role_model.picture %>
+                  <%= link_to role_model_path(bookmarked.role_model) do %>
+                    <h5 class="card-title" style="color: black"><%= bookmarked.role_model.first_name %> <strong><%= bookmarked.role_model.last_name %></strong></h5>
+                    <p class="card-subtitle mb-2 text-muted"><%= bookmarked.role_model.sector %></p>
+                  <% end %>
+                </blockquote>
+              </div>
+            <% end %>
           </div>
         <% end %>
       </div>
+    </div>
+  <% end %>
 
-    <% end %>
-  </div>
-  </div>
   <br>
   <!-- search bar -->
   <div>
