@@ -25,6 +25,8 @@ const initPolar = () => {
           position: 'left',
           labels: {
             fontFamily: 'Comfortaa',
+            fontSize: 16,
+            fontColor: 'black',
           }
         }
       }
