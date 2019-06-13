@@ -1,13 +1,100 @@
-.card-trip {
+.card-participation {
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   border-radius: 5px;
   margin: 10px 10px 10px 0;
+  border-left: 7px solid;
+}
+
+.card-image img{
+  height: 150px;
+}
+
+.card-content {
+  padding: 16px;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
-  position: relative;
-  border-left: 7px solid;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.caaard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  text-align: center;
+  max-width: 300px;
+}
+
+.card-title {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.card-rating {
+  min-width: 100px;
+  text-align: center;
+  font-size: 24px;
+}
+
+.card-rating img{
+  padding-bottom: 1px;
+  margin-left: -1px;
+}
+
+.card-feedback-text {
+  font-size: 14px;
+  opacity: .8;
+  margin: 0;
+}
+
+.card-role-model a{
+  font-size: 18px;
+  color: black;
+}
+
+#proposed-to-you{
+  font-size: 11px;
+  opacity: .8;
+  padding-bottom: 10px;
+}
+
+.card-inspiration {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 200px;
+  padding-right: 10px;
+  p {
+    margin: 0;
+  }
+}
+
+.card-inspiration:hover {
+  text-decoration: none;
+  transform: scale(1.08, 1.08);
+}
+
+.avatar-journal {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+center {
+  margin: 20px 0px;
+}
+
+.journal-title {
+  font-size: 18px;
+}
+
+.journal {
+  padding: 0px 40px;
 }
 
 .border-dailyactivities {
@@ -40,44 +127,4 @@
 
 .color-interactions {
   color: $interactions;
-}
-
-
-.card-trip h2 {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0, 0, 10px;
-}
-
-.card-trip p {
-  font-size: 14px;
-  opacity: .8;
-  margin: 0;
-}
-
-.card-trip .card-trip-infos {
-  padding: 16px;
-  max-width: 750px;
-}
-
-.card-trip-pricing {
-  padding: 20px;
-  min-width: 100px;
-}
-
-.card-trip-pricing img{
-  padding-bottom: 1px;
-  margin-left: -1px;
-}
-
-center {
-  margin: 20px 0px;
-}
-
-.journal-title {
-  font-size: 18px;
-}
-
-.journal {
-  padding: 0px 40px;
 }
