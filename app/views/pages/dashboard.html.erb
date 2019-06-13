@@ -77,7 +77,7 @@
         <br>
         <% if @undone_participations.empty? %>
           <div class="d-flex justify-content-center align-items-center">
-            <%= link_to "Challenge me", challenges_home_path, id:"newchallenge" %>
+            <%= link_to "Challenge me", challenges_home_path, class:"newchallenge" %>
             <%= image_tag "emoji/026-grinning.png", size: 50 %>
           </div>
         <% else %>
@@ -107,7 +107,11 @@
             <%= f.input :feedback, as: :text, label: 'Go on and describe your experience !', error: 'Be able to look back and analyse your experience is a huge part of building self confidence. Put a feedback !', placeholder: 'I was not sure I could it, I waited a lot, then I pulled myself out there and I felt great afterward, because I could push myself.' %>
             <%= f.input :appreciation, collection: (1..5).to_a, label: 'How much did you appreciate this challenge ?', input_html: {class: "modal-rating"} %>
             <%= f.input :difficulty, collection: (1..5).to_a, label: 'How much did you find it difficult ?', input_html: {class: "modal-rating"} %>
-            <%= f.submit "Validate", id:"btn-confetti#{participation.id}", class: "btn-3d"%>
+            <div class="d-flex justify-content-left. align-items-center">
+              <%= f.submit "Validate", id:"btn-confetti#{participation.id}", class: "newchallenge"%>
+              <%= image_tag "emoji/102-love.png", size: 50 %>
+            </div>
+
           <% end %>
         </div>
       </div>
