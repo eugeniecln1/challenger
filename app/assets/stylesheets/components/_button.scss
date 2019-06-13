@@ -26,7 +26,10 @@
 
 .newchallenge:hover {
   // border: 0.5px solid $dashboard;
+  color: white;
   opacity: 0.9;
+  transform: scale(1.1);
+  text-decoration: none;
   // animation-play-state: play;
 }
 // landing button
@@ -122,6 +125,7 @@
   margin: auto 0;
   text-transform: uppercase;
   color: white;
+  text-decoration: none;
   }
 
   &:hover {
