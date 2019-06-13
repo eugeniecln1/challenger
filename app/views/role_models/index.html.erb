@@ -31,7 +31,11 @@
   </div>
   <% if params[:query].nil? %>
     <div>
-      <h3><em>Favorite role models</em> (<%= @bookmarkeds.length %>)</h3>
+      <% if @bookmarkeds.length >= 2 %>
+        <h4><em>Favorite role models</em> (<%= @bookmarkeds.length %>)</h4>
+      <% else %>
+        <h4><em>Favorite role model</em> (<%= @bookmarkeds.length %>)</h4>
+      <% end %>
       <div class="d-flex align-items-center justify-content-left">
         <% if @bookmarkeds.empty? %>
           <div style="text-align: center">
@@ -68,7 +72,7 @@
   <br>
   <!-- search bar -->
   <div>
-    <h3><em>All role models</em> (<%= @role_models.length %>)</h3>
+    <h4><em>All role models</em> (<%= @role_models.length %>)</h4>
     <div class="card-columns">
     <!-- list role models -->
   <!-- <div class="col-sm-8 col-sm-offset-2"> -->
