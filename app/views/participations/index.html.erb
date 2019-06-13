@@ -4,16 +4,15 @@
   <div class="row justify-content-center">
     <div class="col-10 journal">
       <div class="titles d-flex justify-content-between align-items-center">
-        <div>
+        <div class="d-flex align-items-center">
           <% if @participations.length >= 2 %>
             <h4><em>Challenges completed</em> (<%= @participations.length %>)</h4>
           <% else %>
             <h4><em>Challenge completed</em> (<%= @participations.length %>)</h4>
           <% end %>
+          <%= image_tag "emoji/027-cool.png", size: 50, style: "margin-left: 20px;" %>
         </div>
-        <div>
-          <%= image_tag "emoji/027-cool.png", size: 50 %>
-        </div>
+        <h4><em>Inspired by</em></h4>
       </div>
       <br>
 
@@ -21,46 +20,53 @@
       <% @participations.each do |participation| %>
         <!-- Si participation.validated? (si les ratings + feedback sont complétés = true sinon false), on n'affiche pas la participation -->
         <% if participation.validated? %>
-          <div class="card-participation border-<%= participation.challenge.category.gsub(/\s+/, "").downcase %>">
-            <div class="card-content">
-              <div class="card-image">
-                <%= image_tag participation.challenge.show_category_logo %>
-              </div>
-              <div class="caaard">
-                <div class="card-title">
-                  <h5><%= participation.challenge.title %></h5>
+        <div class="row">
+          <div class="col-10">
+            <div class="card-participation border-<%= participation.challenge.category.gsub(/\s+/, "").downcase %>">
+              <div class="card-content">
+                <div class="card-image">
+                  <%= image_tag participation.challenge.show_category_logo %>
                 </div>
-                <div class="card-rating">
-                  <% participation.difficulty.times do %>
-                    <i class="fas fa-dragon color-<%= participation.challenge.category.gsub(/\s+/, "").downcase %>"></i>
-                  <% end %>
-                  <% (5 - participation.difficulty).times  do %>
-                    <%= image_tag(participation.challenge.show_category_color_on_difficulty_icon, size: "30") %>
-                  <% end %>
-                    <br>
-                  <% participation.appreciation.times do %>
-                    <i class="fas fa-heart color-<%= participation.challenge.category.gsub(/\s+/, "").downcase %>"></i>
-                  <% end %>
-                  <% (5 - participation.appreciation).times do %>
-                    <i class="far fa-heart color-<%= participation.challenge.category.gsub(/\s+/, "").downcase %>"></i>
-                  <% end %>
+                <div class="card-journal-inner">
+                  <div class="card-title">
+                    <h5><%= participation.challenge.title %></h5>
+                    <p>"<%= participation.feedback %>"</p>
+                  </div>
+                  <div class="card-rating">
+                    <div>
+                      <% participation.difficulty.times do %>
+                        <i class="fas fa-dragon color-<%= participation.challenge.category.gsub(/\s+/, "").downcase %>"></i>
+                      <% end %>
+                      <% (5 - participation.difficulty).times  do %>
+                        <%= image_tag(participation.challenge.show_category_color_on_difficulty_icon, size: "30") %>
+                      <% end %>
+                    </div>
+
+                    <div>
+                      <% participation.appreciation.times do %>
+                      <i class="fas fa-heart color-<%= participation.challenge.category.gsub(/\s+/, "").downcase %>"></i>
+                      <% end %>
+                      <% (5 - participation.appreciation).times do %>
+                        <i class="far fa-heart color-<%= participation.challenge.category.gsub(/\s+/, "").downcase %>"></i>
+                      <% end %>
+                    </div>
+
+                  </div>
                 </div>
-                <div class="card-feedback-text">
-                  <p><%= participation.feedback %></p>
-                </div>
-              </div>
-              <div class="card-role-model">
-                <div class="card-inspiration">
-                  <p id="proposed-to-you"><em>Proposed to you by</em></p>
-                <%= link_to role_model_path(participation.challenge.role_model) do %>
-                  <%= image_tag(participation.challenge.role_model.picture, class:"avatar-journal" ) %>
-                  <p><%= "#{participation.challenge.role_model.first_name} #{participation.challenge.role_model.last_name}" %></p>
-                  <% end %>
-              </div>
 
               </div>
             </div>
           </div>
+          <div class="col-2">
+            <%= link_to role_model_path(participation.challenge.role_model), class: "link-rm" do %>
+              <div class="card-participation-rm mb-0 d-flex">
+                <%= image_tag(participation.challenge.role_model.picture, class:"avatar-large card_image", alt: "avatar-large" ) if participation.challenge.role_model.picture %>
+                  <h6><%= participation.challenge.role_model.first_name %> <strong><%= participation.challenge.role_model.last_name %></strong></h6>
+              </div>
+            <% end %>
+          </div>
+        </div>
+
         <% end %>
       <% end %>
     </div>
