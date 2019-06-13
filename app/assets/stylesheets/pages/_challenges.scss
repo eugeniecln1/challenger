@@ -25,11 +25,22 @@
 .one-challenge {
   text-align: center;
   width: 400px;
-  // padding-left: 300px;
-  // padding-right: 300px;
+  padding-top: 40px;
+}
+
+.future-me .inner-content p{
+  color: white;
+}
+
+.future-me .inner-content h2{
+  color: white;
 }
 
 .size-chevron {
   width: 40px;
   height: 40px;
+}
+
+.carousel-inner {
+  height: 400px;
 }
