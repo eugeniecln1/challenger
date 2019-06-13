@@ -53,32 +53,30 @@
 </div>
 
 <div class="container">
-
   <div>
     <div class="dashboard-element">
-      <br>
+      <div class="titles">
+        <% if @undone_participations.length >= 2 %>
+          <h5><em>Ongoing challenges</em> (<%= @undone_participations.length %>)</h5>
+        <% else %>
+          <h5><em>Ongoing challenge</em> (<%= @undone_participations.length %>)</h5>
+        <% end %>
+      </div>
       <% if @undone_participations.empty? %>
         <div class="d-flex justify-content-center align-items-center">
           <%= link_to "Challenge me", challenges_home_path, class:"newchallenge" %>
           <%= image_tag "emoji/026-grinning.png", size: 50 %>
+        </div>  
       <% else %>
         <div class="force-overflow">
           <div class="force-overflow dashboard-element">
-            <div class="titles">
-              <% if @undone_participations.length >= 2 %>
-                <h5><em>Ongoing challenges</em> (<%= @undone_participations.length %>)</h5>
-              <% else %>
-                <h5><em>Ongoing challenge</em> (<%= @undone_participations.length %>)</h5>
-              <% end %>
-              <h5 id="right"><em>Inspired by</em></h5>
-            </div>
-            <br>
             <% @undone_participations.each do |participation| %>
               <%= render 'non_done_card', participation: participation %>
             <% end %>
-          <% end %>
-          <br>
-        </div>
+          </div>
+        </div>  
+       <% end %>
+    </div>
   </div>
 </div>
 
@@ -95,14 +93,16 @@
         </div>
         <div class="modal-body">
           <%= simple_form_for participation, remote: false do |f| %>
-            <%= f.input :feedback, as: :text, label: 'Go on and describe your experience !', error: 'Be able to look back and analyse your experience is a huge part of building self confidence. Put a feedback !', placeholder: 'I was not sure I could it, I waited a lot, then I pulled myself out there and I felt great afterward, because I could push myself.' %>
-            <%= f.input :appreciation, collection: (1..5).to_a, label: 'How much did you appreciate this challenge ?', input_html: {class: "modal-rating"} %>
-            <%= f.input :difficulty, collection: (1..5).to_a, label: 'How much did you find it difficult ?', input_html: {class: "modal-rating"} %>
+            <%= f.input :feedback, as: :text, label: 'Description', error: 'Put a feedback !', placeholder: 'Really great challenge...' %>
+            <div class="d-flex justify-content-around">
+              <%= f.input :appreciation, collection: (1..5).to_a, label: content_tag(:i, "" , class: "fas fa-heart") + "  LIKE", input_html: {class: "modal-rating"} %>
+              <%= f.input :difficulty, collection: (1..5).to_a, label: image_tag('dragon_logo.png', size: "20") + "  DIFFICULTY", input_html: {class: "modal-rating"} %>
+            </div>
+
             <div class="d-flex justify-content-left. align-items-center">
               <%= f.submit "Validate", id:"btn-confetti#{participation.id}", class: "newchallenge"%>
               <%= image_tag "emoji/102-love.png", size: 50 %>
             </div>
-
           <% end %>
         </div>
       </div>

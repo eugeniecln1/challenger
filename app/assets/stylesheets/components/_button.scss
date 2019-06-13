@@ -1,17 +1,38 @@
 
-#validatechallenge {
+.validatechallenge {
   color: white;
-  background-color: $navbar;
-  margin: 10px 10px;
   padding: 20px;
   border-radius: 5px;
   text-align: center;
-  font-size: 18px;
-  // animation-play-state: paused;
+  font-size: 50px;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 10px 16px;
+  // border: 2px solid $navbar;
+  border-radius: 5px;
+ // animation-play-state: paused;
 }
 
-#validatechallenge:hover {
-  transform: scale(1.2);
+.dailyactivities {
+  background-color: $daily-activities;
+}
+
+.futureme {
+  background-color: $future-me;
+}
+ .interactions {
+  background-color: $interactions;
+}
+.curiosity {
+  background-color: $curiosity;
+}
+
+.validatechallenge:hover {
+  transform: scale(1.1);
+  color:white;
 }
 
 .newchallenge {
