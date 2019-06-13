@@ -1,4 +1,4 @@
-.card-trip {
+.card-participation {
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   border-radius: 5px;
@@ -9,6 +9,54 @@
   position: relative;
   border-left: 7px solid;
 }
+
+.card-trip-content {
+  padding: 16px;
+  max-width: 750px;
+}
+
+.card-title {
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0, 0, 10px;
+}
+
+.card-image img{
+  width: 200px;
+  height: 200px;
+}
+
+.card-feedback {
+  padding: 20px;
+  min-width: 100px;
+  text-align: center;
+  font-size: 24px;
+}
+
+.card-rating img{
+  padding-bottom: 1px;
+  margin-left: -1px;
+}
+
+.card-feedback-text {
+  font-size: 14px;
+  opacity: .8;
+  margin: 0;
+}
+
+center {
+  margin: 20px 0px;
+}
+
+.journal-title {
+  font-size: 18px;
+}
+
+.journal {
+  padding: 0px 40px;
+}
+
 
 .border-dailyactivities {
   border-color: $daily-activities;
@@ -40,44 +88,4 @@
 
 .color-interactions {
   color: $interactions;
-}
-
-
-.card-trip h2 {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0, 0, 10px;
-}
-
-.card-trip p {
-  font-size: 14px;
-  opacity: .8;
-  margin: 0;
-}
-
-.card-trip .card-trip-infos {
-  padding: 16px;
-  max-width: 750px;
-}
-
-.card-trip-pricing {
-  padding: 20px;
-  min-width: 100px;
-}
-
-.card-trip-pricing img{
-  padding-bottom: 1px;
-  margin-left: -1px;
-}
-
-center {
-  margin: 20px 0px;
-}
-
-.journal-title {
-  font-size: 18px;
-}
-
-.journal {
-  padding: 0px 40px;
 }
