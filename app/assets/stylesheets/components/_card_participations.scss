@@ -2,12 +2,16 @@
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   border-radius: 5px;
-  margin: 10px 10px 10px 0;
-  border-left: 7px solid;
+  margin: 10px;
+  border-left: 15px solid;
 }
 
 .card-image img{
   height: 150px;
+}
+
+.card-image{
+  max-width: 150px;
 }
 
 .card-content {
@@ -51,7 +55,7 @@
 }
 
 .card-role-model a{
-  font-size: 18px;
+  font-size: 14px;
   color: black;
 }
 
