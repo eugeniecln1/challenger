@@ -1,5 +1,5 @@
 class RoleModel < ApplicationRecord
-  SECTOR = ["Tech", "Music", "Acting", "Film Directing", "Production", "Animation", "Fictional", "Writing", "Artist", "Programming", "Mathematics", "Environment", "Sports", "Business", "Entrepreneurship", "Entertainment"]
+  SECTOR = ["Physics", "Chemistry", "Law", "Politics" "Tech", "Music", "Acting", "Film Directing", "Production", "Animation", "Fictional", "Writing", "Artist", "Programming", "Mathematics", "Environment", "Sports", "Business", "Entrepreneurship", "Entertainment"]
   GENDER = ["Male", "Female", "Other"]
   has_many :challenges
   has_many :bookmarkeds, dependent: :destroy
