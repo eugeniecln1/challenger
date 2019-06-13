@@ -57,16 +57,17 @@
     <div class="dashboard-element">
       <div class="titles">
         <% if @undone_participations.length >= 2 %>
-          <h5><em>Ongoing challenges</em> (<%= @undone_participations.length %>)</h5>
+          <h4><em>Ongoing challenges</em> (<%= @undone_participations.length %>)</h4>
         <% else %>
-          <h5><em>Ongoing challenge</em> (<%= @undone_participations.length %>)</h5>
+          <h4><em>Ongoing challenge</em> (<%= @undone_participations.length %>)</h4>
         <% end %>
       </div>
+      <br>
       <% if @undone_participations.empty? %>
         <div class="d-flex justify-content-center align-items-center">
           <%= link_to "Challenge me", challenges_home_path, class:"newchallenge" %>
           <%= image_tag "emoji/026-grinning.png", size: 50 %>
-        </div>  
+        </div>
       <% else %>
         <div class="force-overflow">
           <div class="force-overflow dashboard-element">
@@ -74,7 +75,7 @@
               <%= render 'non_done_card', participation: participation %>
             <% end %>
           </div>
-        </div>  
+        </div>
        <% end %>
     </div>
   </div>
