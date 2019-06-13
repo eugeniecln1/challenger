@@ -12,13 +12,17 @@
           <div class="reward">
             <div class="reward-content">
               <% if key == :futureme %>
-                <i class=" <%= key %> fas fa-medal fa-lg"></i>
+                <%= image_tag('medal-test', size: "100") %>
+                <!-- <i class=" <%= key %> fas fa-medal fa-lg"></i> -->
               <% elsif key == :dailyactivities %>
-                <i class=" <%= key %> fas fa-medal fa-lg"></i>
+                <%= image_tag('medal-test', size: "100") %>
+                <!--  <i class=" <%= key %> fas fa-medal fa-lg"></i> -->
               <% elsif key == :interactions %>
-                <i class=" <%= key %> fas fa-medal fa-lg"></i>
+                <%= image_tag('medal-test', size: "100") %>
+                <!-- <i class=" <%= key %> fas fa-medal fa-lg"></i> -->
               <% elsif key == :curiosity %>
-                <i class=" <%= key %> fas fa-medal fa-lg"></i>
+                <%= image_tag('medal-test', size: "100") %>
+                <!-- <i class=" <%= key %> fas fa-medal fa-lg"></i> -->
               <% end %>
             </div>
           </div>
@@ -27,17 +31,20 @@
       <% if @counter[:dailyactivities] == @counter[:futureme] && @counter[:futureme] == @counter[:interactions] && @counter[:interactions] == @counter[:curiosity] %>
         <% if @counter[:dailyactivities] >= 1 %>
           <div class="reward">
-            <i class="bronze fas fa-trophy fa-lg"></i>
+            <%= image_tag('medal-test', size: "100") %>
+            <!-- <i class="bronze fas fa-trophy fa-lg"></i> -->
           </div>
         <% end %>
         <% if @counter[:dailyactivities] >= 2 %>
           <div class="reward">
-            <i class="silver fas fa-trophy fa-lg"></i>
+            <%= image_tag('medal-test', size: "100") %>
+            <!-- <i class="silver fas fa-trophy fa-lg"></i> -->
           </div>
         <% end %>
         <% if @counter[:dailyactivities] >= 3 %>
           <div class="reward">
-            <i class="gold fas fa-trophy fa-lg"></i>
+            <%= image_tag('medal-test', size: "100") %>
+            <!-- <i class="gold fas fa-trophy fa-lg"></i> -->
           </div>
         <% end %>
       <% end %>
@@ -58,7 +65,11 @@
         <div class="force-overflow">
           <div class="force-overflow dashboard-element">
             <div class="titles">
-              <h5><em>Ongoing challenges</em> (<%= @undone_participations.length %>)</h5>
+              <% if @undone_participations.length >= 2 %>
+                <h5><em>Ongoing challenges</em> (<%= @undone_participations.length %>)</h5>
+              <% else %>
+                <h5><em>Ongoing challenge</em> (<%= @undone_participations.length %>)</h5>
+              <% end %>
               <h5 id="right"><em>Inspired by</em></h5>
             </div>
             <br>
