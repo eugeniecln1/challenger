@@ -1,3 +1,13 @@
+.bottom-dash {
+  display: flex;
+}
+
+.chart-space,
+.rewards {
+  flex: 0 0 50%;
+  padding: 20px;
+}
+
 .follow {
   margin-bottom: 8px;
 }
@@ -68,12 +78,6 @@ overflow-y: scroll;
 background-color: $background;
 }
 
-.force-overflow {
-min-height: 250px;
-min-width: 700px;
-margin-left: 20px;
-}
-
 .scrollbar-primary::-webkit-scrollbar {
 width: 12px;
 background-color: $background;
@@ -86,8 +90,6 @@ background-color: $scrollbar;
 }
 
 #polarChart {
-  margin: 30px;
-  padding-bottom: 15px;
   background-color: white;
   border-radius: 4px;
 }
@@ -95,7 +97,7 @@ background-color: $scrollbar;
 .scrollbar.box {
   width: 100%;
   max-height: 225px;
-  margin: 30px 10px 30px 0px;
+  // margin: 30px 10px 30px 0px;
 }
 
 .force-overflow.rewards {
@@ -106,16 +108,10 @@ background-color: $scrollbar;
   display: flex;
   align-items: center;
   margin-bottom: 8px;
-  background: white;
-  padding: 8px 16px;
-  border-radius: 5px;
-  border: 1px solid rgb(235,235,235);
+  // padding: 8px 16px;
+  border-radius: 50px;
 }
 
-.reward .reward-content {
-  flex-grow: 1;
-  padding: 0 24px;
-}
 
 .reward p {
   color: #999999;
@@ -201,4 +197,8 @@ strong.silver {
 
 strong.gold {
   color: $gold;
+}
+
+.dashboard-element {
+  margin-left: 15px;
 }
