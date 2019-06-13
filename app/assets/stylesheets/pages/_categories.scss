@@ -1,7 +1,3 @@
-// .main-wrapper {
-//   background-color: blue;
-// }
-
 .categories-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -18,8 +14,6 @@
 .category {
   display: flex;
   justify-content: center;
-  background-color: white;
-  border-radius: 8px;
 }
 
 .category:hover {
@@ -51,3 +45,59 @@
   border-radius: 8px;
 }
 
+.flip-card {
+  perspective: 1000px;
+  background-color: white;
+  border-radius: 9px;
+}
+
+.flip-card-inner {
+  position: relative;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.flip-card-back {
+  background-color: white;
+  border-radius: 9px;
+  transform: rotateY(180deg);
+  height: 276px;
+  width: 276px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.daily-activities-back {
+  border: 8px solid $daily-activities;
+  border-radius: 8px;
+  color: $daily-activities;
+}
+
+.future-me-back {
+  border: 8px solid $future-me;
+  border-radius: 8px;
+  color: $future-me;
+}
+
+.interactions-back {
+  border: 8px solid $interactions;
+  border-radius: 8px;
+  color: $interactions;
+}
+
+.curiosity-back {
+  border: 8px solid $curiosity;
+  border-radius: 8px;
+  color: $curiosity;
+}

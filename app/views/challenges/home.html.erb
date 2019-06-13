@@ -1,4 +1,4 @@
-¶<%= content_for(:page, "challenges") %>
+<%= content_for(:page, "challenges") %>
 
 <div class="main-wrapper">
   <div class="container">
@@ -7,43 +7,64 @@
       <div class="categories-wrapper">
 
         <!-- Daily actovities category -->
-        <div class="category daily-activities">
-          <div class="category-padding">
-            <%= link_to challenges_daily_activities_path do %>
-              <div class="category-challenge" style="background-image: url(<%= image_path "illustrations/flamenco-logged-out.png" %>)"></div>
-            <% end %>
+        <div class="flip-card">
+          <div class="category daily-activities flip-card-inner">
+            <div class="category-padding flip-card-front">
+              <%= link_to challenges_daily_activities_path do %>
+                <div class="category-challenge" style="background-image: url(<%= image_path "illustrations/flamenco-logged-out.png" %>)"></div>
+              <% end %>
+            </div>
+            <div class="flip-card-back daily-activities-back">
+              <h3>Daily Activities</h3>
+            </div>
           </div>
         </div>
 
         <!-- Future Me category -->
-        <div class="category future-me">
-          <div class="category-padding">
-            <%= link_to challenges_future_me_path do %>
-              <div class="category-challenge" style="background-image: url(<%= image_path "illustrations/flamenco-uploading-1.png" %>)"></div>
-            <% end %>
+        <div class="flip-card">
+          <div class="category future-me flip-card-inner">
+            <div class="category-padding flip-card-front">
+              <%= link_to challenges_future_me_path do %>
+                <div class="category-challenge" style="background-image: url(<%= image_path "illustrations/flamenco-uploading-1.png" %>)"></div>
+              <% end %>
+            </div>
+            <div class="flip-card-back future-me-back">
+              <h3>Future Me</h3>
+            </div>
           </div>
         </div>
 
         <!-- Interactions category -->
-        <div class="category interactions">
-          <div class="category-padding">
-            <%= link_to challenges_interactions_path do %>
-              <div class="category-challenge" style="background-image: url(<%= image_path "illustrations/flamenco-welcome.png" %>)"></div>
-            <% end %>
+        <div class="flip-card">
+          <div class="category interactions flip-card-inner">
+            <div class="category-padding flip-card-front">
+              <%= link_to challenges_interactions_path do %>
+                <div class="category-challenge" style="background-image: url(<%= image_path "illustrations/flamenco-welcome.png" %>)"></div>
+              <% end %>
+            </div>
+            <div class="flip-card-back interactions-back">
+              <h3>Interactions</h3>
+            </div>
           </div>
         </div>
 
         <!-- Curiosity category -->
-        <div class="category curiosity">
-          <div class="category-padding">
-            <%= link_to challenges_curiosity_path do %>
-              <div class="category-challenge" style="background-image: url(<%= image_path "illustrations/flamenco-searching-1.png" %>)"></div>
-            <% end %>
-          /<div>
+        <div class="flip-card">
+          <div class="category curiosity flip-card-inner">
+            <div class="category-padding flip-card-front">
+              <%= link_to challenges_curiosity_path do %>
+                <div class="category-challenge" style="background-image: url(<%= image_path "illustrations/flamenco-searching-1.png" %>)"></div>
+              <% end %>
+            </div>
+            <div class="flip-card-back curiosity-back">
+              <h3>Curiosity</h3>
+            </div>
+          </div>
         </div>
+
       </div>
     </div>
-  </div>
 
+  </div>
 </div>
 
