@@ -89,9 +89,9 @@
             <%= f.input :feedback, as: :text, label: 'Description', error: 'Put a feedback !', placeholder: 'Really great challenge...' %>
             <div class="d-flex justify-content-around">
               <%= f.input :appreciation, collection: (1..5).to_a, label: content_tag(:i, "" , class: "fas fa-heart") + "  LIKE", input_html: {class: "modal-rating"} %>
-              <%= f.input :difficulty, collection: (1..5).to_a, label: image_tag('dragon_logo', size: "20") + "  DIFFICULTY", input_html: {class: "modal-rating"} %>
+              <%= f.input :difficulty, collection: (1..5).to_a, label: image_tag('dragon_logo.png', size: "20") + "  DIFFICULTY", input_html: {class: "modal-rating"} %>
             </div>
-        
+
             <div class="d-flex justify-content-left. align-items-center">
               <%= f.submit "Validate", id:"btn-confetti#{participation.id}", class: "newchallenge"%>
               <%= image_tag "emoji/102-love.png", size: 50 %>
