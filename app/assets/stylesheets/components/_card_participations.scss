@@ -14,9 +14,10 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 15px;
-  border: 3px solid $scrollbar;
- h6 {
+  width: 130px;
+  height: 130px;
+  padding: 20px;
+  h6 {
   color: black;
   }
   img {
@@ -30,6 +31,7 @@
 
 .card-image img{
   height: 80px;
+  width: 80px;
 }
 
 .card-content {
@@ -49,6 +51,10 @@
 }
 
 .card-title {
+  text-align: center;
+}
+
+.card-title-rm {
   text-align: left;
   margin-left: 10px;
 }
