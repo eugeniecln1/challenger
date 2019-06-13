@@ -1,24 +1,59 @@
+.titles {
+  display: flex;
+  justify-content: space-between;
+  #right {
+    padding-right: 26px;
+  }
+  padding-left: 5px;
+}
+
+.bottom-dash {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.chart-space,
+.rewards {
+  flex: 0 0 50%;
+  padding: 20px;
+}
+
+
 .follow {
   margin-bottom: 8px;
+  display: flex;
+}
+
+.inspiration {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  text-align: center;
 }
 
 .notification {
-  display: flex;
   align-items: center;
   margin-bottom: 0px;
   background: white;
   padding: 8px 16px;
   border: 2px solid rgb(235,235,235);
   border-radius: 5px;
+  font-size: 24px;
+  flex-grow: 1;
+  margin-right: 8px;
 }
 
 .notification .notification-content {
   flex-grow: 1;
   padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  margin: 18px;
 }
 
 .notification p {
-  margin: 0;
+  margin: 0px;
   line-height: 1.4;
 }
 
@@ -28,16 +63,33 @@
   color: $navbar;
 }
 
-.notification a:hover {
-  opacity: 0.8;
-  font-weight: bold;
-  text-decoration: none;
+.profile {
+  display: flex;
+  align-items: center;
+  background: white;
+  width: 150px;
+  padding: 8px 16px;
+  border: 2px solid rgb(235,235,235);
+  border-radius: 5px;
+  font-size: 18px;
+  position: relative;
+  .avatar-small {
+    margin-bottom: 5px;
+    width: 55px;
+    height: 55px;
+  }
 }
+// .notification a:hover {
+//   opacity: 0.8;
+//   font-weight: bold;
+//   text-decoration: none;
+// }
 
 .notification .notification-actions {
   opacity: 1;
   display: flex;
   transition: ease .3s;
+  // flex: 0 0 20%;
 }
 
 .notification .notification-actions a {
@@ -59,62 +111,46 @@
   opacity: 0.5;
 }
 
-.scrollbar {
-margin: 50px 20px 25px 18px;
-float: left;
-height: 250px;
-background: #fff;
-overflow-y: scroll;
-background-color: $background;
-}
+// .scrollbar {
+// margin: 50px 20px 25px 18px;
+// float: left;
+// height: 250px;
+// background: #fff;
+// overflow-y: scroll;
+// background-color: $background;
+// }
 
-.force-overflow {
-min-height: 250px;
-min-width: 700px;
-margin-left: 20px;
-}
+// .scrollbar-primary::-webkit-scrollbar {
+// width: 12px;
+// background-color: $background;
+// }
 
-.scrollbar-primary::-webkit-scrollbar {
-width: 12px;
-background-color: $background;
-}
-
-.scrollbar-primary::-webkit-scrollbar-thumb {
-border-radius: 10px;
--webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
-background-color: $scrollbar;
-}
+// .scrollbar-primary::-webkit-scrollbar-thumb {
+// border-radius: 10px;
+// -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+// background-color: $scrollbar;
+// }
 
 #polarChart {
-  margin: 30px;
-  padding-bottom: 15px;
-  background-color: white;
-  border-radius: 4px;
+  border-radius: 5px;
 }
 
-.scrollbar.box {
-  width: 100%;
-  max-height: 225px;
-  margin: 30px 10px 30px 0px;
-}
+// .scrollbar.box {
+//   width: 100%;
+//   max-height: 225px;
+//   // margin: 30px 10px 30px 0px;
+// }
 
-.force-overflow.rewards {
-  min-width: 200px;
-}
+// .force-overflow.rewards {
+//   min-width: 200px;
+// }
 
 .reward {
   display: flex;
   align-items: center;
   margin-bottom: 8px;
-  background: white;
-  padding: 8px 16px;
-  border-radius: 5px;
-  border: 1px solid rgb(235,235,235);
-}
-
-.reward .reward-content {
-  flex-grow: 1;
-  padding: 0 24px;
+  // padding: 8px 16px;
+  border-radius: 50px;
 }
 
 .reward p {
@@ -130,11 +166,13 @@ background-color: $scrollbar;
   font-size: 16px;
 }
 
-//background color progress bar
-.done-back {
-  background-color: #8cb2ea;
+.progress {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  margin-bottom: 10px;
 }
 
+//background color progress bar
 .progress .dailyactivities {
   background-color: $daily-activities;
 }
@@ -152,53 +190,57 @@ background-color: $scrollbar;
 }
 
 // color for medal
-.reward .dailyactivities {
-  color: $daily-activities;
-}
+// .reward .dailyactivities {
+//   color: $daily-activities;
+// }
 
-.reward .futureme {
-  color: $future-me;
-}
+// .reward .futureme {
+//   color: $future-me;
+// }
 
-.reward .interactions {
-  color: $interactions;
-}
+// .reward .interactions {
+//   color: $interactions;
+// }
 
-.reward .curiosity {
-  color: $curiosity;
-}
+// .reward .curiosity {
+//   color: $curiosity;
+// }
 
-.notification small a {
-  font-size: 16px;
-  color: #999999;
-  opacity: 0.6;
-}
+// .notification small a {
+//   font-size: 16px;
+//   color: #999999;
+//   opacity: 0.6;
+// }
 
-.notification small a:hover {
-  text-decoration: none;
-  opacity: 1;
-}
+// .notification small a:hover {
+//   text-decoration: none;
+//   opacity: 1;
+// }
 
-.bronze {
-  color: $bronze;
-}
+// .bronze {
+//   color: $bronze;
+// }
 
-.silver {
- color: $silver;
-}
+// .silver {
+//  color: $silver;
+// }
 
-.gold {
-  color: $gold;
-}
+// .gold {
+//   color: $gold;
+// }
 
-strong.bronze {
-  color: $bronze;
-}
+// strong.bronze {
+//   color: $bronze;
+// }
 
-strong.silver {
-  color: $silver;
-}
+// strong.silver {
+//   color: $silver;
+// }
 
-strong.gold {
-  color: $gold;
+// strong.gold {
+//   color: $gold;
+// }
+
+.dashboard-element {
+  margin-left: 15px;
 }

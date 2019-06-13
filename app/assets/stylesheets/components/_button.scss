@@ -1,3 +1,19 @@
+
+#validatechallenge {
+  color: white;
+  background-color: $navbar;
+  margin: 10px 10px;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 18px;
+  // animation-play-state: paused;
+}
+
+#validatechallenge:hover {
+  transform: scale(1.2);
+}
+
 .newchallenge {
   color: white;
   background-color: $navbar;
