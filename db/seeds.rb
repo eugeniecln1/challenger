@@ -20,7 +20,7 @@ user4 = User.create(email:'demo@gmail.com', password: "challenge", username: "eu
 
 
 
-mascotte = RoleModel.create(first_name:"Super", last_name: "Challenger", gender:"Neutral", sector:"Entertainment", description: "I am here to motivate you and help you grow into the best version of yourself!", picture: "dragon_model.png")
+mascotte = RoleModel.create(first_name:"Super", last_name: "Challenger", gender:"Other", sector:"Entertainment", description: "I am here to motivate you and help you grow into the best version of yourself!", picture: "dragon_model.png")
 
 elon = RoleModel.create(first_name: "Elon", last_name: "Musk", gender:"Male", sector: "Tech, Entrepreneur", description: "Entrepreneur and businessman who founded X.com in 1999 (which later became PayPal), SpaceX in 2002 and Tesla Motors in 2003. Musk became a multimillionaire in his late 20s when he sold his start-up company, Zip2, to a division of Compaq Computers.", picture: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Elon_Musk_Royal_Society.jpg/260px-Elon_Musk_Royal_Society.jpg")
 riri = RoleModel.create(first_name: "Rihanna", last_name: "Fenty", sector: "Entrepreneur, Entertainment", gender: "Female", description: "Famour singer, entrepreneur, business woman", picture: "https://www.themartinicanwayoflife.com/wp-content/uploads/2016/04/o-RIHANNA-900.jpg")
