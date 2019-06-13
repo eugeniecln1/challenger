@@ -13,14 +13,13 @@
 
   <div class="profile">
     <div class="notification-content">
-        <div class="inspiration">
-            <%= link_to '', role_model_path(participation.challenge.role_model), class: "stretched-link" %>
-            <%= image_tag(participation.challenge.role_model.picture, class:"avatar-small", alt:"avatar-small" ) %>
-            <p><%= "#{participation.challenge.role_model.first_name} #{participation.challenge.role_model.last_name}" %></p>
-        </div>
+      <div class="inspiration">
+        <%= link_to '', role_model_path(participation.challenge.role_model), class: "stretched-link" %>
+        <%= image_tag(participation.challenge.role_model.picture, class:"avatar-small", alt:"avatar-small" ) %>
+        <p><%= "#{participation.challenge.role_model.first_name} #{participation.challenge.role_model.last_name}" %></p>
+      </div>
     </div>
   </div>
-
 </div>
 
 
