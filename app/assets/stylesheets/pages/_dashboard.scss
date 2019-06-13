@@ -1,3 +1,13 @@
+
+.titles {
+  display: flex;
+  justify-content: space-between;
+  #right {
+    padding-right: 26px;
+  }
+  padding-left: 5px;
+}
+
 .bottom-dash {
   display: flex;
 }
@@ -10,21 +20,35 @@
 
 .follow {
   margin-bottom: 8px;
+  display: flex;
+}
+
+.inspiration {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  text-align: center;
 }
 
 .notification {
-  display: flex;
   align-items: center;
   margin-bottom: 0px;
   background: white;
   padding: 8px 16px;
   border: 2px solid rgb(235,235,235);
   border-radius: 5px;
+  font-size: 24px;
+  flex-grow: 1;
+  margin-right: 8px;
 }
 
 .notification .notification-content {
   flex-grow: 1;
   padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  margin: 18px;
 }
 
 .notification p {
@@ -38,16 +62,33 @@
   color: $navbar;
 }
 
-.notification a:hover {
-  opacity: 0.8;
-  font-weight: bold;
-  text-decoration: none;
+.profile {
+  display: flex;
+  align-items: center;
+  background: white;
+  width: 150px;
+  padding: 8px 16px;
+  border: 2px solid rgb(235,235,235);
+  border-radius: 5px;
+  font-size: 18px;
+  position: relative;
+  .avatar-small {
+    margin-bottom: 5px;
+    width: 55px;
+    height: 55px;
+  }
 }
+// .notification a:hover {
+//   opacity: 0.8;
+//   font-weight: bold;
+//   text-decoration: none;
+// }
 
 .notification .notification-actions {
   opacity: 1;
   display: flex;
   transition: ease .3s;
+  // flex: 0 0 20%;
 }
 
 .notification .notification-actions a {

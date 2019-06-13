@@ -1,21 +1,3 @@
-.navbar-challenger {
-  justify-content: space-between;
-  background-color: transparent;
-  background: transparent;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  transition: 0.3s background-color ease;
-
-  .logo-black {
-    display: none;
-  }
-  a.navlink-top:hover {
-    color: $navbar;
-  }
-}
-
 .navbar-home {
   justify-content: space-between;
   background-color: transparent;
@@ -31,6 +13,28 @@
   }
 }
 
+.navbar-challenger {
+  justify-content: space-between;
+  background-color: transparent;
+  background: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: 0.3s background-color ease;
+  .logo-black {
+    display: block;
+  }
+  a.navlink-top:hover {
+    color: $navbar;
+  }
+  .logo-black:hover {
+    animation-play-state: running;
+    animation-iteration-count: infinite;
+  }
+}
+
+
 .navbar-challenger-white {
   background: white;
   z-index: 1000000;
@@ -43,9 +47,6 @@
   }
   .logo-black {
     display: block;
-  }
-  .logo-white {
-    display: none;
   }
 }
 
