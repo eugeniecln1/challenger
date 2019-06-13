@@ -2,7 +2,7 @@
 
 <div class="container" style="margin-top: 100px";>
   <div class="row justify-content-center">
-    <div class="col-md journal">
+    <div class="col-10 journal">
       <center>
         <p><strong class='journal-title'>Challenges completed</strong></p>
         <p></p>
@@ -14,33 +14,42 @@
         <% if participation.validated? %>
           <div class="card-participation border-<%= participation.challenge.category.gsub(/\s+/, "").downcase %>">
             <div class="card-content">
-              <div class="card-title">
-                <h5><%= participation.challenge.title %></h5>
-              </div>
               <div class="card-image">
                 <%= image_tag participation.challenge.show_category_logo %>
               </div>
-            <div class="card-feedback">
-              <div class="card-rating">
-                <% participation.difficulty.times do %>
-                  <i class="fas fa-dragon color-<%= participation.challenge.category.gsub(/\s+/, "").downcase %>"></i>
-                <% end %>
-                <% (5 - participation.difficulty).times  do %>
-                  <%= image_tag(participation.challenge.show_category_color_on_difficulty_icon, size: "30") %>
-                <% end %>
-                  <br>
-                <% participation.appreciation.times do %>
-                  <i class="fas fa-heart color-<%= participation.challenge.category.gsub(/\s+/, "").downcase %>"></i>
-                <% end %>
-                <% (5 - participation.appreciation).times do %>
-                  <i class="far fa-heart color-<%= participation.challenge.category.gsub(/\s+/, "").downcase %>"></i>
-                <% end %>
+              <div class="caaard">
+                <div class="card-title">
+                  <h5><%= participation.challenge.title %></h5>
+                </div>
+                <div class="card-rating">
+                  <% participation.difficulty.times do %>
+                    <i class="fas fa-dragon color-<%= participation.challenge.category.gsub(/\s+/, "").downcase %>"></i>
+                  <% end %>
+                  <% (5 - participation.difficulty).times  do %>
+                    <%= image_tag(participation.challenge.show_category_color_on_difficulty_icon, size: "30") %>
+                  <% end %>
+                    <br>
+                  <% participation.appreciation.times do %>
+                    <i class="fas fa-heart color-<%= participation.challenge.category.gsub(/\s+/, "").downcase %>"></i>
+                  <% end %>
+                  <% (5 - participation.appreciation).times do %>
+                    <i class="far fa-heart color-<%= participation.challenge.category.gsub(/\s+/, "").downcase %>"></i>
+                  <% end %>
+                </div>
+                <div class="card-feedback-text">
+                  <p><%= participation.feedback %></p>
+                </div>
               </div>
-              <div class="card-feedback-text">
-                <p><%= participation.feedback %></p>
+              <div class="card-role-model">
+                <div class="card-inspiration">
+                  <p id="proposed-to-you"><em>Proposed to you by</em></p>
+                <%= link_to role_model_path(participation.challenge.role_model) do %>
+                  <%= image_tag(participation.challenge.role_model.picture, class:"avatar-journal" ) %>
+                  <p><%= "#{participation.challenge.role_model.first_name} #{participation.challenge.role_model.last_name}" %></p>
+                  <% end %>
               </div>
-            </div>
 
+              </div>
             </div>
           </div>
         <% end %>
