@@ -22,6 +22,7 @@
 .follow {
   margin-bottom: 8px;
   display: flex;
+  align-items: center;
 }
 
 .inspiration {
@@ -37,19 +38,25 @@
   margin-bottom: 0px;
   background: white;
   padding: 8px 16px;
-  border: 2px solid rgb(235,235,235);
+  // border: 2px solid rgb(235,235,235);
   border-radius: 5px;
   font-size: 24px;
   flex-grow: 1;
-  margin-right: 8px;
+  margin-right: 15px;
 }
 
 .notification .notification-content {
   flex-grow: 1;
-  padding: 0 24px;
-  display: flex;
+  padding: 0;
+  display: block;
   justify-content: space-between;
   margin: 18px;
+  margin-left: 0px;
+  #sub-description {
+    font-size: 15px;
+    color: grey;
+    max-width: 100ch;
+  }
 }
 
 .notification p {
@@ -68,7 +75,7 @@
   align-items: center;
   background: white;
   width: 150px;
-  padding: 8px 16px;
+  padding: 10px 16px;
   border: 2px solid rgb(235,235,235);
   border-radius: 5px;
   font-size: 18px;
