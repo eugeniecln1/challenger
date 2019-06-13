@@ -49,12 +49,13 @@ ActiveRecord::Schema.define(version: 2019_06_10_100807) do
   create_table "role_models", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
-    t.string "sector"
     t.string "gender"
     t.string "description"
     t.string "picture"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "status"
+    t.string "sector"
   end
 
   create_table "users", force: :cascade do |t|
