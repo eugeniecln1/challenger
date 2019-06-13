@@ -1,3 +1,4 @@
+
 #validatechallenge {
   color: white;
   background-color: $navbar;
@@ -13,7 +14,7 @@
   transform: scale(1.2);
 }
 
-#newchallenge {
+.newchallenge {
   color: white;
   background-color: $navbar;
   margin: 10px 10px;
@@ -23,9 +24,12 @@
   // animation-play-state: paused;
 }
 
-#newchallenge:hover {
+.newchallenge:hover {
   // border: 0.5px solid $dashboard;
+  color: white;
   opacity: 0.9;
+  transform: scale(1.1);
+  text-decoration: none;
   // animation-play-state: play;
 }
 // landing button
@@ -121,6 +125,7 @@
   margin: auto 0;
   text-transform: uppercase;
   color: white;
+  text-decoration: none;
   }
 
   &:hover {
