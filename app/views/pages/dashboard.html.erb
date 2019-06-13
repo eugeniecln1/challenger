@@ -1,92 +1,83 @@
 <%= content_for(:page, "dashboard") %>
 
 <div class="container" style="margin-top: 100px";>
-  <div class="bottom-dash d-flex justify-content-around">
-    <div class="row">
-      <div class="col-sm-6">
-        <canvas id="polarChart" data-daily="<%= @counter[:dailyactivities] %>" data-future="<%= @counter[:futureme] %>" data-interactions="<%= @counter[:interactions] %>" data-curiosity="<%= @counter[:curiosity] %>"></canvas>
-      </div>
-      <div class="col-sm-6">
-        <div class="scrollbar scrollbar-primary box">
-          <div class="force-overflow rewards">
-            <% @counter.each do |key, value| %>
-              <% if value >= 3 %>
-                <div class="reward">
-                  <i class=" <%= key %> fas fa-medal fa-lg"></i>
-                  <div class="reward-content">
-                    <% if key == :futureme %>
-                      <% cat = "Future me" %>
-                      <p><strong class=" <%= key %> "><%= cat %></strong></p>
-                      <p>Congratulations ! You completed 3 challenges</p>
-                    <% elsif key == :dailyactivities %>
-                      <% cat = "Daily activities" %>
-                      <p><strong class=" <%= key %> "><%= cat %></strong></p>
-                      <p>Congratulations ! You completed 3 challenges</p>
-                    <% elsif key == :interactions %>
-                      <p><strong class=" <%= key %> "><%= key.capitalize %></strong></p>
-                      <p>Congratulations ! You completed 3 challenges</p>
-                    <% elsif key == :curiosity %>
-                      <p><strong class=" <%= key %> "><%= key.capitalize %></strong></p>
-                      <p>Congratulations ! You completed 3 challenges</p>
-                    <% end %>
-                  </div>
-                </div>
+  <div class="bottom-dash">
+    <div class="chart-space">
+      <canvas id="polarChart" data-daily="<%= @counter[:dailyactivities] %>" data-future="<%= @counter[:futureme] %>" data-interactions="<%= @counter[:interactions] %>" data-curiosity="<%= @counter[:curiosity] %>"></canvas>
+    </div>
+
+    <div class="rewards">
+      <% @counter.each do |key, value| %>
+        <% if value >= 3 %>
+          <div class="reward">
+            <div class="reward-content">
+              <% if key == :futureme %>
+                <i class=" <%= key %> fas fa-medal fa-lg"></i>
+                <p>Congratulations ! You completed 3 challenges</p>
+              <% elsif key == :dailyactivities %>
+                <i class=" <%= key %> fas fa-medal fa-lg"></i>
+                <p>Congratulations ! You completed 3 challenges</p>
+              <% elsif key == :interactions %>
+                <i class=" <%= key %> fas fa-medal fa-lg"></i>
+                <p>Congratulations ! You completed 3 challenges</p>
+              <% elsif key == :curiosity %>
+                <i class=" <%= key %> fas fa-medal fa-lg"></i>
+                <p>Congratulations ! You completed 3 challenges</p>
               <% end %>
-            <% end %>
-            <% if @counter[:dailyactivities] == @counter[:futureme] && @counter[:futureme] == @counter[:interactions] && @counter[:interactions] == @counter[:curiosity] %>
-              <% if @counter[:dailyactivities] >= 1 %>
-                <div class="reward">
-                  <i class="bronze fas fa-trophy fa-lg"></i>
-                  <div class="reward-content">
-                    <p><strong class="bronze">Bronze Award</strong></p>
-                    <p>Congratulations ! You completed 1 challenge of each category</p>
-                  </div>
-                </div>
-              <% end %>
-              <% if @counter[:dailyactivities] >= 2 %>
-                <div class="reward">
-                  <i class="silver fas fa-trophy fa-lg"></i>
-                  <div class="reward-content">
-                    <p><strong class="silver">Silver Award</strong></p>
-                    <p>Congratulations ! You completed 2 challenges of each category</p>
-                  </div>
-                </div>
-              <% end %>
-              <% if @counter[:dailyactivities] >= 3 %>
-                <div class="reward">
-                  <i class="gold fas fa-trophy fa-lg"></i>
-                  <div class="reward-content">
-                    <p><strong class="gold">Gold Award</strong></p>
-                    <p>Congratulations ! You completed 3 challenges of each category</p>
-                  </div>
-                </div>
-              <% end %>
-            <% end %>
+            </div>
           </div>
-        </div>
-      </div>
+        <% end %>
+      <% end %>
+      <% if @counter[:dailyactivities] == @counter[:futureme] && @counter[:futureme] == @counter[:interactions] && @counter[:interactions] == @counter[:curiosity] %>
+        <% if @counter[:dailyactivities] >= 1 %>
+          <div class="reward">
+            <i class="bronze fas fa-trophy fa-lg"></i>
+            <div class="reward-content">
+              <p><strong class="bronze">Bronze Award</strong></p>
+              <p>Congratulations ! You completed 1 challenge of each category</p>
+            </div>
+          </div>
+        <% end %>
+        <% if @counter[:dailyactivities] >= 2 %>
+          <div class="reward">
+            <i class="silver fas fa-trophy fa-lg"></i>
+            <div class="reward-content">
+              <p><strong class="silver">Silver Award</strong></p>
+              <p>Congratulations ! You completed 2 challenges of each category</p>
+            </div>
+          </div>
+        <% end %>
+        <% if @counter[:dailyactivities] >= 3 %>
+          <div class="reward">
+            <i class="gold fas fa-trophy fa-lg"></i>
+            <div class="reward-content">
+              <p><strong class="gold">Gold Award</strong></p>
+              <p>Congratulations ! You completed 3 challenges of each category</p>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
     </div>
   </div>
+</div>
 
-
-  <div class="container d-flex flex-column">
+<div class="container">
   <!-- <div class="scrollbar scrollbar-primary"> -->
-    <div class="force-overflow">
-      <div class="force-overflow dashboard-element">
-        <h3><em>Ongoing challenges</em> (<%= @undone_participations.length %>)</h3>
-        <br>
-        <% if @undone_participations.empty? %>
-          <div class="d-flex justify-content-center align-items-center">
-            <%= link_to "Challenge me", challenges_home_path, id:"newchallenge" %>
-            <%= image_tag "emoji/026-grinning.png", size: 50 %>
-          </div>
-        <% else %>
-          <% @undone_participations.each do |participation| %>
-            <%= render 'non_done_card', participation: participation %>
-          <% end %>
+  <div class="force-overflow">
+    <div class="force-overflow dashboard-element">
+      <h3><em>Ongoing challenges</em> (<%= @undone_participations.length %>)</h3>
+      <br>
+      <% if @undone_participations.empty? %>
+        <div class="d-flex justify-content-center align-items-center">
+          <%= link_to "Challenge me", challenges_home_path, id:"newchallenge" %>
+          <%= image_tag "emoji/026-grinning.png", size: 50 %>
+        </div>
+      <% else %>
+        <% @undone_participations.each do |participation| %>
+          <%= render 'non_done_card', participation: participation %>
         <% end %>
-        <br>
-      </div>
+      <% end %>
+      <br>
     </div>
   </div>
 </div>
