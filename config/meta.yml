@@ -1,5 +1,5 @@
-# meta_product_name: "Challenger"
-# meta_title: "Challenger - Challenge yourself everyday"
-# meta_description: "Challenger helps you grow and challenge yourself everyday"
-# meta_image: "challenger.png" # should exist in `app/assets/images/`
+meta_product_name: "Challenger"
+meta_title: "Challenger - Challenge yourself everyday"
+meta_description: "Challenger helps you grow and challenge yourself everyday"
+meta_image: "challenger.jpg" # should exist in `app/assets/images/`
 # twitter_account: "@product_twitter_account"   # required for Twitter Cards
