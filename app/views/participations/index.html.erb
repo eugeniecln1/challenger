@@ -29,6 +29,7 @@
                 </div>
                 <div class="card-journal-inner">
                   <div class="card-title-rm">
+                    <p><%= participation.updated_at.strftime('%d/%m/%Y') %></p>
                     <h5><%= participation.challenge.title %></h5>
                     <p>"<%= participation.feedback %>"</p>
                   </div>
