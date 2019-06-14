@@ -12,16 +12,16 @@
           <div class="reward">
             <div class="reward-content">
               <% if key == :futureme %>
-                <%= image_tag('medal-test', size: "100") %>
+                <%= image_tag('medailles/dragon_3_future_me.png', size: "100") %> <!-- dragon couleur cat -->
                 <!-- <i class=" <%= key %> fas fa-medal fa-lg"></i> -->
               <% elsif key == :dailyactivities %>
-                <%= image_tag('medal-test', size: "100") %>
+                <%= image_tag('medailles/dragon_3_daily_activities.png', size: "100") %> <!-- dragon couleur cat -->
                 <!--  <i class=" <%= key %> fas fa-medal fa-lg"></i> -->
               <% elsif key == :interactions %>
-                <%= image_tag('medal-test', size: "100") %>
+                <%= image_tag('medailles/dragon_3_interactions.png', size: "100") %> <!-- dragon couleur cat -->
                 <!-- <i class=" <%= key %> fas fa-medal fa-lg"></i> -->
               <% elsif key == :curiosity %>
-                <%= image_tag('medal-test', size: "100") %>
+                <%= image_tag('medailles/dragon_3_curiosity.png', size: "100") %> <!-- dragon couleur cat -->
                 <!-- <i class=" <%= key %> fas fa-medal fa-lg"></i> -->
               <% end %>
             </div>
@@ -31,19 +31,19 @@
       <% if @counter[:dailyactivities] == @counter[:futureme] && @counter[:futureme] == @counter[:interactions] && @counter[:interactions] == @counter[:curiosity] %>
         <% if @counter[:dailyactivities] >= 1 %>
           <div class="reward">
-            <%= image_tag('medal-test', size: "100") %>
+            <%= image_tag('medailles/dragon_1_all.png', size: "100") %> <!-- bébé dragon -->
             <!-- <i class="bronze fas fa-trophy fa-lg"></i> -->
           </div>
         <% end %>
         <% if @counter[:dailyactivities] >= 2 %>
           <div class="reward">
-            <%= image_tag('medal-test', size: "100") %>
+            <%= image_tag('medailles/dragon_2_all.png', size: "100") %> <!-- petit dragon -->
             <!-- <i class="silver fas fa-trophy fa-lg"></i> -->
           </div>
         <% end %>
         <% if @counter[:dailyactivities] >= 3 %>
           <div class="reward">
-            <%= image_tag('medal-test', size: "100") %>
+            <%= image_tag('medailles/dragon_3_all.png', size: "100") %> <!-- grand dragon -->
             <!-- <i class="gold fas fa-trophy fa-lg"></i> -->
           </div>
         <% end %>

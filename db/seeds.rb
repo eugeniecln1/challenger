@@ -72,7 +72,7 @@ challenge11 = Challenge.create(title: "Time to clean up the dirt", category: "Fu
 challenge20 = Challenge.create(title: "Better world", category: "Future me", description: "Think of three ideas that would make the world better. No constraint. Use your imagination !", role_model_id: temeraire.id)
 
 # Daily activities
-challenge7 = Challenge.create(title: "When was the last time you had a sense of success ?", category: "Daily activities", description: "Write down a success of yours in a dairy or on a word document with the competences you needed to make it a success", role_model_id: mascotte.id)
+challenge7 = Challenge.create(title: "Celebrate success", category: "Daily activities", description: "Write down a success of yours in a dairy or on a word document with the competences you needed to make it a success", role_model_id: mascotte.id)
 challenge2 = Challenge.create(title: "Go outside", category: "Daily activities", description: "Go out in the sun and take a moment to appreciate the beauty of your world. It is important to feel grateful now and then to be at peace with yourself and with others", role_model_id: aragorn.id)
 challenge12 = Challenge.create(title: "I am awesome", category: "Daily activities", description: "Write down up to 5 things you like about yourself. Not so simple right ?", role_model_id: riri.id)
 challenge13 = Challenge.create(title: "Favorite values", category: "Daily activities", description: "Write down up to 5 qualities you like in others", role_model_id: riri.id)
