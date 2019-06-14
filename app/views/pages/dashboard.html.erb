@@ -1,7 +1,7 @@
 <%= content_for(:page, "dashboard") %>
 
 <div class="container" style="margin-top: 100px";>
-    <h4 class="titles"><em>Stats</em></h4>
+    <h4 class="title"><em>Stats</em></h4>
   <div class="bottom-dash">
     <div class="chart-space">
       <canvas id="polarChart" data-daily="<%= @counter[:dailyactivities] %>" data-future="<%= @counter[:futureme] %>" data-interactions="<%= @counter[:interactions] %>" data-curiosity="<%= @counter[:curiosity] %>"></canvas>
