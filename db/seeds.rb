@@ -67,32 +67,32 @@ mdbappe = RoleModel.create(first_name: "Kylian", last_name: "Mbappé", gender: "
 challenge = Challenge.create(title: "Start planning for the future", category: "Future me", description: "Where do you picture yourself in 5 years ? At university ? Studying ? Travelling ? Where ? What ? Why ? Now is the time to be ambitious ! Write it down to remember it", role_model_id: sherlock.id)
 challenge8 = Challenge.create(title: "Find your Ikagai", category: "Future me", description: "Each individual's ikigai is personal to them and specific to their lives, values and beliefs. It reflects the inner self of an individual and expresses that faithfully, while simultaneously creating a mental state in which the individual feels at ease. Find your Ikagai!", role_model_id: po.id)
 challenge9 = Challenge.create(title: "Do research", category: "Future me", description: "Go find about a sector that you are interested in. Is it tech ? Agriculture ? Fashion ? Entrepreneurship ? Remember to think outside of the box !", role_model_id: terry.id)
-challenge10 = Challenge.create(title: "Find inspiration", category: "Future me", description: "Reach out to somebody that you admire on a personal or professional level and start a conversation", role_model_id: mascotte.id)
+challenge10 = Challenge.create(title: "Find inspiration", category: "Future me", description: "Reach out to somebody that you admire on a personal or professional level and start a conversation", role_model_id: mbappe.id)
 challenge11 = Challenge.create(title: "Time to clean up the dirt", category: "Future me", description: "Clear up your social media from anything makes you sad of insecure", role_model_id: sofia.id)
 challenge20 = Challenge.create(title: "Better world", category: "Future me", description: "Think of three ideas that would make the world better. No constraint. Use your imagination !", role_model_id: temeraire.id)
 
 # Daily activities
-challenge7 = Challenge.create(title: "Celebrate success", category: "Daily activities", description: "Write down a success of yours in a dairy or on a word document with the competences you needed to make it a success", role_model_id: mascotte.id)
+challenge7 = Challenge.create(title: "Celebrate success", category: "Daily activities", description: "Write down a success of yours in a dairy or on a word document with the competences you needed to make it a success", role_model_id: emma.id)
 challenge2 = Challenge.create(title: "Go outside", category: "Daily activities", description: "Go out in the sun and take a moment to appreciate the beauty of your world. It is important to feel grateful now and then to be at peace with yourself and with others", role_model_id: aragorn.id)
 challenge12 = Challenge.create(title: "I am awesome", category: "Daily activities", description: "Write down up to 5 things you like about yourself. Not so simple right ?", role_model_id: riri.id)
-challenge13 = Challenge.create(title: "Favorite values", category: "Daily activities", description: "Write down up to 5 qualities you like in others", role_model_id: riri.id)
+challenge13 = Challenge.create(title: "Favorite values", category: "Daily activities", description: "Write down up to 5 qualities you like in others", role_model_id: michelle.id)
 challenge14 = Challenge.create(title: "Me insecure ? Never !", category: "Daily activities", description: "Write down up to 3 insecurities on a piece of paper and get rid of it (trash, fireplace ... Make it eco-friendly 🌿) how did it feel ? Don’t be afraid to be to too dramatic", role_model_id: baloo.id)
 challenge15 = Challenge.create(title: "Baby you're a firework !", category: "Daily activities", description: "Need to get relieved of tensions ? Scream now ! Feeling shy ? Scream louder !! This challenge is for you", role_model_id: audrey.id)
-challenge16 = Challenge.create(title: "Be autonomous", category: "Daily activities", description: "Are you afraid of loneliness ? Do be, doing activities on your own can be very empowering ! Try it out : go for a walk, a museum, a cinema, shopping and experience autonomy and independence !", role_model_id: mascotte.id)
+challenge16 = Challenge.create(title: "Be autonomous", category: "Daily activities", description: "Are you afraid of loneliness ? Do be, doing activities on your own can be very empowering ! Try it out : go for a walk, a museum, a cinema, shopping and experience autonomy and independence !", role_model_id: mary.id)
 challenge22 = Challenge.create(title: "Passion", category: "Daily activities", description: "Do you have passion, or a dream passion ? Do you take enough time to pratice it ? Pratice for one hour today !", role_model_id: frederic.id)
 
 # Curiosity
 challenge3 = Challenge.create(title: "Discover the world", category: "Curiosity", description: "There's a great documentary for you to watch", role_model_id: elon.id)
 challenge4 = Challenge.create(title: "Interested in politics?", category: "Curiosity", description: "Did you know that agriculture is the most polluting industry in the world?", role_model_id: hayao.id)
-challenge17 = Challenge.create(title: "Learn from others", category: "Curiosity", description: "Go find a new role model in your inspiration section ! 😉", role_model_id: mascotte.id)
+challenge17 = Challenge.create(title: "Learn from others", category: "Curiosity", description: "Go find a new role model in your inspiration section ! 😉", role_model_id: sheryl.id)
 challenge21 = Challenge.create(title: "Language", category: "Curiosity", description: "If your where able to learn in one second a whole language, which ones would you learn ?", role_model_id: temeraire.id)
 
 
 # Interactions
 challenge5 = Challenge.create(title: "What could you do better ?", category: "Interactions", description: "Ask a friend, a family member (someone trustworthy) if they believe that you are a good friend", role_model_id: baloo.id)
-challenge6 = Challenge.create(title: "Be a good friend", category: "Interactions", description: "What is a good friend ? Find some attributes good friends have according to you and impersonnate them for one entire day.", role_model_id: mascotte.id)
+challenge6 = Challenge.create(title: "Be a good friend", category: "Interactions", description: "What is a good friend ? Find some attributes good friends have according to you and impersonnate them for one entire day.", role_model_id: barack.id)
 challenge18 = Challenge.create(title: "Support others", category: "Interactions", description: "Spot someone around you who looks sad or lonely. Start a conversation or send them a message today to ask them how they are doing.", role_model_id: sixto.id)
-challenge19 = Challenge.create(title: "Make friends", category: "Interactions", description: "Talk to somebody that you seed everybody but to whom you harldy ever talk to or have never talked to. Introduce yourself and start a conversation ! Never miss an opportunity to make friends. And remember, networking is key for a prosperous careers!", role_model_id: mascotte.id)
+challenge19 = Challenge.create(title: "Make friends", category: "Interactions", description: "Talk to somebody that you seed everybody but to whom you harldy ever talk to or have never talked to. Introduce yourself and start a conversation ! Never miss an opportunity to make friends. And remember, networking is key for a prosperous careers!", role_model_id: marie.id)
 
 Participation.create(user_id: user.id, challenge_id: challenge.id, feedback: "I loved it", appreciation: 5, difficulty: 2)
 Participation.create(user_id: user.id, challenge_id: challenge2.id, feedback: "It sucked", appreciation: 1, difficulty: 4)
