@@ -21,6 +21,11 @@ const initPolar = () => {
         }]
       },
       options: {
+        scale: {
+          ticks: {
+            display: false
+          }
+        },
         legend: {
           position: 'left',
           labels: {

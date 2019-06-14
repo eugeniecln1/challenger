@@ -38,6 +38,10 @@
   width: 80px;
 }
 
+.card-image{
+  max-width: 150px;
+}
+
 .card-content {
   padding: 16px;
   display: flex;
@@ -81,7 +85,7 @@
 }
 
 .card-role-model a{
-  font-size: 18px;
+  font-size: 14px;
   color: black;
 }
 
