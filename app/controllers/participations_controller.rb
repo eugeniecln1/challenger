@@ -9,7 +9,7 @@ class ParticipationsController < ApplicationController
     @participation = Participation.new(challenge: @challenge, user: current_user)
     if @participation.save
       flash[:notice] = "YAASS Let's get challenged ! 🎉"
-      redirect_to dashboard_path
+      redirect_to dashboard_path(participation_id: @participation.id)
     else
       flash[:alert] = "Oops! 😱 a problem has occurred"
       redirect_to dashboard_path

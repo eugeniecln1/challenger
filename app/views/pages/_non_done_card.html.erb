@@ -1,5 +1,5 @@
 <div class="follow" data-participation-id="<%= participation.id %>">
-  <div class="notification">
+  <div class="notification <%= 'animated fadeInLeft' if params[:participation_id].to_i == participation.id %> ">
     <div class="notification-content align-items-center">
       <p><strong><%= participation.challenge.title %></strong></p>
       <p id="sub-description"><%= participation.challenge.description %></p>
